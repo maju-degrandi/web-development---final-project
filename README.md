@@ -10,7 +10,7 @@
 
 <img src="https://user-images.githubusercontent.com/82612544/234600077-f9ad1c50-9993-46e3-9940-7b80fc1bc8bb.png" alt="cover" height="200px">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+> A plant store that connects people with nature and themselves, for a greener world.
 
 ### Ajustes e melhorias
 

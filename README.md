@@ -1,4 +1,4 @@
-# Beleaf
+# BELEAF : together we grow
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
@@ -11,6 +11,35 @@
 <img src="https://user-images.githubusercontent.com/82612544/234600077-f9ad1c50-9993-46e3-9940-7b80fc1bc8bb.png" alt="cover" height="200px">
 
 > A plant store that connects people with nature and themselves, for a greener world.
+
+## Requerimentos
+### Especificados:
+* The system must have 2 types of users: Clients and Administrators
+* Administrators are responsible for registering/managing administrators, customers, and products/services provided. The application already comes with an account admin with password admin.
+* Customers are users who access the system to buy products/services.
+* The admin record includes, at least: name, id, phone, email.
+* Each customer's record includes, at least: name, id, address, phone, email
+* Product/services records include, at least: name, id, photo, description, price, quantity (in stock), quantity sold.
+* Your store may sell products, services or both (you decide)
+* Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
+* Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
+* Your functionality: Create a functionality that is specific to your application. It does not have to be something complicated. For instance, if you are selling cars, you may allow users to use an accelerator to hear how each car engine roars up and down.   
+* The system must provide accessibility requirements and provide good usability. The system must be responsive, meaning that it should complete assigned tasks within a reasonable time.
+### Coletados pelo grupo:
+
+## Descrição do projeto
+
+## Comentários sobre o código
+
+## Plano de teste
+
+## Resultados dos testes
+
+## Procedimentos de construção
+
+## Problemas
+
+## Comentários adicionais
 
 ### Ajustes e melhorias
 

@@ -88,13 +88,25 @@ input {
     color: black;
     font-family: 'Advent Pro', sans-serif;
     width: 700px;
+    text-align: justify;
 }
 
 #shop {
     align-self: flex-end;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 700;
+    color:rgba(95, 108, 55, 1);
+    font-size: larger;
+}
+
+#qtt {
+    width: 75px;
+    color:rgba(95, 108, 55, 1);
+    align-content: center;
 }
 
 #buy-button {
+    font-size: x-large;
     width: 150px;
     height: 75px;
     overflow: auto;

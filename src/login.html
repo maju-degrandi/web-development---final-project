@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <body>
-        <iframe name="frame-header" src="header.html" frameborder="0" scrolling="no"></iframe>
-        
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Advent+Pro:wght@200&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body> 
+    <iframe name='frame-header' src="header.html" frameborder="0" scrolling="no"></iframe>
+
+    <div id="login">
+        <img id="background-image1" src="../img/flor-fundo1.png">
         <div class="login-form">
-            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" />
+            <label for="password">Password:</label>
+            <input type="password" id="password" />
+            <button id="login-button">LOGIN</button> <br>
         </div>
         
         <div class="no-account-yet">
-
+            <a href="#">Don't have an account yet?</a>
         </div>
-        
-        <iframe name="frame-footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
-    </body>
+    </div>
+
+    <iframe name='frame-footer' src="footer.html" frameborder="0" scrolling="no"></iframe>
+</body>
+
 </html>

@@ -1,8 +1,15 @@
 * {margin: 0; padding: 0;}
 
+body{ 
+    min-height: 100vh; 
+    margin: 0; 
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+ /*IFRAMES*/
 iframe[name='frame-header'] {
     width: 100%; height: 182px;
-    position: fixed;
     top: 0;
 }
 iframe[name='frame-footer'] {
@@ -16,125 +23,124 @@ a{
     color: inherit;
 }
 
-/* HEADER */
-.head-logo { 
-    position: absolute;
-    width: 138px; height: 138px;
-} 
-
-.header-bar {
-    margin: 0px 7px 0px 7px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.list-inline { 
-    padding: 30px;
+/*LOGIN*/
+#login {
+    margin: 30px;
+    background-color: white;
+    justify-self: center;
     display: flex;
-    justify-content: flex-end;
-    list-style: none;
-}
-
-#black {
-    color: black;
-}
-
-header {
-    position: absolute;
-    width: 100vw;
-    height: 138px;
-    letter-spacing: 0.01em;
-}
-
-
-/* FOOTER */
-.footer-logo { 
-    position: absolute;
-    width: 200px; height: 200px;
-} 
-
-.fa { 
-    font-size: 30px;
-    width: 30px; height: 30px;
-    text-decoration: none;
-    color: rgb(95, 108, 55);
-}
-
-.footer-bar {
-    position: absolute;
-    bottom: 20px;
-    width: 100vw; height: 20px;
-    background-color: #FFFDF5;
-    padding: 10px;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    list-style: none;
-}
-
-.footer-info {
-    position: absolute;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 312px;
-}
-
-#footer-img{
-    display: flex ;
-    width: 33%;
-    max-height: 700px;
-    
+    align-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    top: 50%;
 }
 
-#footer-list{
+.login-form {
+    font-family: 'Abril Fatface', cursive;
+    color:rgba(95, 108, 55, 1);
+    font-size: x-large;
     display: flex;
-
-    margin: 50px;
-    padding: 10px;
-    width: 60%;
-
-    float: right;
-    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.footer-list-wrap{
-    float: left;
-    margin: 5px;
-    width: 33%;
-    max-width: 33%;
-    
-    box-sizing: border-box;
+input {
+    border: 2px solid rgba(95, 108, 55, 1);
+    border-radius: 10px;
+    width: 220px;
+    height: 55px;
+    overflow: auto;
+    justify-content: flex-start;
+    font-size: large;
+    padding: 5px;;
 }
 
-.footer-list-wrap h6{
-    font-size: 200%;
-    margin: 0px 0px 10px 0px;
-    color: #424B25;
+.no-account-yet {
+    margin: 10px;
+    color:rgba(95, 108, 55, 1);
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 700;
 }
 
-.footer-list-wrap li{
-    font-size: 17px;
-    margin: 0px 0px 8px 0px;
-    color: #32391C;
+#login-button {
+    align-self: center;
 }
 
-.footer-list-wrap-ul{
-    list-style: none;
+button {
+    background-color: rgb(73, 120, 86);
+    border: 2px solid rgb(73, 120, 86);
+    font-family: 'Advent Pro', sans-serif;
+    font-size: large;
+    color: white;
+    width: 100px;
+    height: 55px;
+    overflow: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    margin : 5px;
 }
 
-footer {
+#background-image1 {
     position: absolute;
-    width: 100vw;
-    height: 383px;
-    background-color: rgba(144, 166, 128, 0.63);
-    box-sizing: border-box;
+    width: 250px;
+    height: 400px;
+    right: 0;
+    bottom: 382;
+    filter: opacity(50%);
+}
+
+#background-image2 {
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    bottom: calc(100vh - 382px);
+    transform: rotate(-90deg);
+    filter: opacity(50%);
+    right: 0;
+}
+
+#item-image {
+    margin: 0px 25px 25px 80px;
+    width: 482px;
+    height: 569px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 0 25px 0 25px;
+}
+
+#item-header {
+    color:rgba(95, 108, 55, 1);
+    font-family: 'Abril Fatface', cursive;
+}
+
+#principal {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: 'Advent Pro', sans-serif;
+    width: 700px;
+}
+
+#shop {
+    align-self: flex-end;
+}
+
+#buy-button {
+    width: 150px;
+    height: 75px;
+    overflow: auto;
+}
+
+.item {
+    display: flex;
+}
+
+.item-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 #ellipse-1 {

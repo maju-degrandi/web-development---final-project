@@ -23,11 +23,14 @@
 * Your store may sell products, services or both (you decide)
 * Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
 * Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
-* Your functionality: Create a functionality that is specific to your application. It does not have to be something complicated. For instance, if you are selling cars, you may allow users to use an accelerator to hear how each car engine roars up and down.   
+* Group functionality: (FAZER ISSO!!!!) Create a functionality that is specific to your application. It does not have to be something complicated. For instance, if you are selling cars, you may allow users to use an accelerator to hear how each car engine roars up and down.   
 * The system must provide accessibility requirements and provide good usability. The system must be responsive, meaning that it should complete assigned tasks within a reasonable time.
 ### Coletados pelo grupo:
 
 ## Descrição do projeto
+O projeto, de maneira geral, consiste na criação de uma plataforma de vendas on-line para quaisquer produtos ou serviços. A partir desta proposta, e de acordo com as especificações, o grupo 16 pensou em implementar uma loja de plantas - a BELEAF - que possui dois tipos de usuários, o usuário comum, que pode criar uma conta, logar, pesquisar e comprar as plantas no estoque, e o administrador, que gerencia o estoque da loja. Ademais, como toda empresa de vendas, há uma tela de apresentação, com seu nome, valores, estética, produtos mais vendidos, coleções, categorias de produtos e tópicos importantes para que o comprador saiba mais sobre a ela - além de uma página denominada "About us" com informações textuais sobre a loja.
+
+Além disso, o site dá ao usuário (de ambos os tipos) a possibilidade de navegar por listas de produtos, separados por categorias, expandir produtos a fim de ver mais detalhes e a foto maior, selecionar um produto e sua quantidade e adicionar ao carrinho de compras, e navegar pelo site através do header e do footer mostrados na tela.
 
 ## Comentários sobre o código
 

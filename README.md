@@ -29,6 +29,7 @@
 
 ## Descrição do projeto
 O projeto, de maneira geral, consiste na criação de uma plataforma de vendas on-line para quaisquer produtos ou serviços. A partir desta proposta, e de acordo com as especificações, o grupo 16 pensou em implementar uma loja de plantas - a BELEAF - que possui dois tipos de usuários, o usuário comum, que pode criar uma conta, logar, pesquisar e comprar as plantas no estoque, e o administrador, que gerencia o estoque da loja. Ademais, como toda empresa de vendas, há uma tela de apresentação, com seu nome, valores, estética, produtos mais vendidos, coleções, categorias de produtos e tópicos importantes para que o comprador saiba mais sobre a ela - além de uma página denominada "About us" com informações textuais sobre a loja.
+
 Além disso, o site dá ao usuário (de ambos os tipos) a possibilidade de navegar por listas de produtos, separados por categorias, expandir produtos a fim de ver mais detalhes e a foto maior, selecionar um produto e sua quantidade e adicionar ao carrinho de compras, e navegar pelo site através do header e do footer mostrados na tela.
 
 ## Comentários sobre o código

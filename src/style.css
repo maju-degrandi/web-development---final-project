@@ -1,9 +1,22 @@
 * {margin: 0; padding: 0;}
 
-iframe {
-    width: 100%; height: 100%;
+iframe[name='frame-header'] {
+    width: 100%; height: 182px;
+    position: fixed;
+    top: 0;
+}
+iframe[name='frame-footer'] {
+    width: 100%; height: 382px;
+    position: static;
+    bottom: 0;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
 .head-logo { 
     position: absolute;
     width: 138px; height: 138px;
@@ -17,7 +30,7 @@ iframe {
 }
 
 .list-inline { 
-    padding: 20px;
+    padding: 30px;
     display: flex;
     justify-content: flex-end;
     list-style: none;
@@ -27,16 +40,18 @@ iframe {
     color: black;
 }
 
-head {
+header {
     position: absolute;
     width: 100vw;
     height: 138px;
     letter-spacing: 0.01em;
 }
 
+
+/* FOOTER */
 .footer-logo { 
     position: absolute;
-    width: 230px; height: 230px;
+    width: 200px; height: 200px;
 } 
 
 .fa { 
@@ -57,11 +72,61 @@ head {
     list-style: none;
 }
 
-.footer-info { /* ainda não tem no html */
+.footer-info {
     position: absolute;
     font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     font-weight: 500;
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 312px;
+}
+
+#footer-img{
+    display: flex ;
+    width: 33%;
+    max-height: 700px;
+    
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#footer-list{
+    display: flex;
+
+    margin: 50px;
+    padding: 10px;
+    width: 60%;
+
+    float: right;
+    box-sizing: border-box;
+}
+
+.footer-list-wrap{
+    float: left;
+    margin: 5px;
+    width: 33%;
+    max-width: 33%;
+    
+    box-sizing: border-box;
+}
+
+.footer-list-wrap h6{
+    font-size: 200%;
+    margin: 0px 0px 10px 0px;
+    color: #424B25;
+}
+
+.footer-list-wrap li{
+    font-size: 17px;
+    margin: 0px 0px 8px 0px;
+    color: #32391C;
+}
+
+.footer-list-wrap-ul{
+    list-style: none;
 }
 
 footer {
@@ -69,6 +134,7 @@ footer {
     width: 100vw;
     height: 383px;
     background-color: rgba(144, 166, 128, 0.63);
+    box-sizing: border-box;
 }
 
 #ellipse-1 {

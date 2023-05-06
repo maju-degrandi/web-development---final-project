@@ -23,7 +23,7 @@
 * Your store may sell products, services or both (you decide)
 * Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
 * Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
-* Group functionality: (FAZER ISSO!!!!) Create a functionality that is specific to your application. It does not have to be something complicated. For instance, if you are selling cars, you may allow users to use an accelerator to hear how each car engine roars up and down.   
+* Group functionality: Todas as plantas têm um indicador de quantidade de luz solar e água necessárias para sua espécie.
 * The system must provide accessibility requirements and provide good usability. The system must be responsive, meaning that it should complete assigned tasks within a reasonable time.
 ### Coletados pelo grupo:
 

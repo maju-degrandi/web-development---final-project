@@ -33,6 +33,9 @@ O projeto, de maneira geral, consiste na criação de uma plataforma de vendas o
 
 Além disso, o site dá ao usuário (de ambos os tipos) a possibilidade de navegar por listas de produtos, separados por categorias, expandir produtos a fim de ver mais detalhes e a foto maior, selecionar um produto e sua quantidade e adicionar ao carrinho de compras, e navegar pelo site através do header e do footer mostrados na tela.
 
+## Protótipos e design
+Encontram-se na pasta "prototipos".
+
 ## Diagramas 
 Os diagramas para usuário cliente e usuário administrador podem ser conferidos abaixo, além de estarem armazenados na pasta "flowcharts" em maior qualidade.
 ![CLIENT](https://user-images.githubusercontent.com/82612544/236633960-7aec3cb3-2ad6-4a60-b1cb-dba3cb814b8a.png)

@@ -24,6 +24,7 @@
 * Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
 * Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
 * Group functionality: Todas as plantas têm um indicador de quantidade de luz solar e água necessárias para sua espécie.
+(ADENDO: essa funcionalidade depende de um banco de dados e outras coisas que impedem que ela já esteja implementada nessa primeira entrega)
 * The system must provide accessibility requirements and provide good usability. The system must be responsive, meaning that it should complete assigned tasks within a reasonable time.
 ### Coletados pelo grupo:
 

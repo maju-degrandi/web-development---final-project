@@ -33,6 +33,22 @@ O projeto, de maneira geral, consiste na criação de uma plataforma de vendas o
 
 Além disso, o site dá ao usuário (de ambos os tipos) a possibilidade de navegar por listas de produtos, separados por categorias, expandir produtos a fim de ver mais detalhes e a foto maior, selecionar um produto e sua quantidade e adicionar ao carrinho de compras, e navegar pelo site através do header e do footer mostrados na tela.
 
+## Funcionalidades
+* Visualização dos produtos do site - Cliente e Admin.
+* Cadastro, alteração, login de usuário - feito pelos clientes.
+* Cadastro de produtos - feito pelo Admin.
+* Alteração de dados dos produtos - feito pelo Admin.
+* Adição de produto no carrinho - feito pelo Cliente.
+* Compra de produtos no carrinho - feito pelo Cliente.
+* Visualização do histórico de compras - feito pelo Cliente.
+
+## Dados que serão armazenados
+* Usuário: Email, nome, data_nascimento, endereço(CEP, rua, número, complemento - opcional), tipo(físico, jurídico), CPF (só físico), CNPJ (só jurídico), senha.
+* Produto: Nome, categoria, preço, quantidade_de_agua, quantidade_de_luz.
+* Categorias: Nome (succulents, flowers, fruit_trees, climbing_plants).
+* Item_compra: Compra, Produto, quantidade.
+* Compra: Usuário, Itens_compra, preco_total.
+
 ## Protótipos e design
 Encontram-se na pasta "prototipos".
 

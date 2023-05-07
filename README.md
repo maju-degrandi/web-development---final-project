@@ -50,7 +50,7 @@ Além disso, o site dá ao usuário (de ambos os tipos) a possibilidade de naveg
 * Compra: Usuário, Itens_compra, preco_total.
 
 #### Protótipos e design
-Encontram-se na pasta "prototipos".
+Encontram-se na pasta "prototypes".
 
 #### Diagramas 
 Os diagramas para usuário cliente e usuário administrador podem ser conferidos abaixo, além de estarem armazenados na pasta "flowcharts" em maior qualidade.

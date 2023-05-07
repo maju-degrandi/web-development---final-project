@@ -71,7 +71,7 @@ input {
     padding: 5px;;
 }
 
-.no-account-yet {
+.links-loginscreen {
     margin: 10px;
     color:rgba(95, 108, 55, 1);
     font-family: 'Advent Pro', sans-serif;
@@ -280,6 +280,7 @@ button {
     margin: 20px 0 60px 0;
     font-size: 20px;
     font-family: Advent_Pro;
+    text-align: justify;
 }
 
 #home-img{

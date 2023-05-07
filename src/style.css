@@ -267,6 +267,11 @@ button {
     justify-content: center;
 }
 
+#header-frame{
+    position: inherit;
+    z-index: 1;
+}
+
 #home-main-button:hover{
     background-color: #497856;
 }

@@ -23,11 +23,39 @@
 * Your store may sell products, services or both (you decide)
 * Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
 * Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
-* Your functionality: Create a functionality that is specific to your application. It does not have to be something complicated. For instance, if you are selling cars, you may allow users to use an accelerator to hear how each car engine roars up and down.   
+* Group functionality: Todas as plantas têm um indicador de quantidade de luz solar e água necessárias para sua espécie.
+(ADENDO: essa funcionalidade depende de um banco de dados e outras coisas que impedem que ela já esteja implementada nessa primeira entrega)
 * The system must provide accessibility requirements and provide good usability. The system must be responsive, meaning that it should complete assigned tasks within a reasonable time.
 ### Coletados pelo grupo:
 
 ## Descrição do projeto
+O projeto, de maneira geral, consiste na criação de uma plataforma de vendas on-line para quaisquer produtos ou serviços. A partir desta proposta, e de acordo com as especificações, o grupo 16 pensou em implementar uma loja de plantas - a BELEAF - que possui dois tipos de usuários, o usuário comum, que pode criar uma conta, logar, pesquisar e comprar as plantas no estoque, e o administrador, que gerencia o estoque da loja. Ademais, como toda empresa de vendas, há uma tela de apresentação, com seu nome, valores, estética, produtos mais vendidos, coleções, categorias de produtos e tópicos importantes para que o comprador saiba mais sobre a ela - além de uma página denominada "About us" com informações textuais sobre a loja.
+
+Além disso, o site dá ao usuário (de ambos os tipos) a possibilidade de navegar por listas de produtos, separados por categorias, expandir produtos a fim de ver mais detalhes e a foto maior, selecionar um produto e sua quantidade e adicionar ao carrinho de compras, e navegar pelo site através do header e do footer mostrados na tela.
+
+## Funcionalidades
+* Visualização dos produtos do site - Cliente e Admin.
+* Cadastro, alteração, login de usuário - feito pelos clientes.
+* Cadastro de produtos - feito pelo Admin.
+* Alteração de dados dos produtos - feito pelo Admin.
+* Adição de produto no carrinho - feito pelo Cliente.
+* Compra de produtos no carrinho - feito pelo Cliente.
+* Visualização do histórico de compras - feito pelo Cliente.
+
+## Dados que serão armazenados
+* Usuário: Email, nome, data_nascimento, endereço(CEP, rua, número, complemento - opcional), tipo(físico, jurídico), CPF (só físico), CNPJ (só jurídico), senha.
+* Produto: Nome, categoria, preço, quantidade_de_agua, quantidade_de_luz.
+* Categorias: Nome (succulents, flowers, fruit_trees, climbing_plants).
+* Item_compra: Compra, Produto, quantidade.
+* Compra: Usuário, Itens_compra, preco_total.
+
+## Protótipos e design
+Encontram-se na pasta "prototipos".
+
+## Diagramas 
+Os diagramas para usuário cliente e usuário administrador podem ser conferidos abaixo, além de estarem armazenados na pasta "flowcharts" em maior qualidade.
+![CLIENT](https://user-images.githubusercontent.com/82612544/236633960-7aec3cb3-2ad6-4a60-b1cb-dba3cb814b8a.png)
+![USER](https://user-images.githubusercontent.com/82612544/236633966-ba5cd309-04d6-4b73-b9c5-831fb1b5bc94.png)
 
 ## Comentários sobre o código
 

@@ -320,7 +320,8 @@ button {
     padding: 10px;
     background-color: white;
     margin: 10px;
-    border-radius: 0 10px 0 10px;
+    border-radius: 0 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: #5F6C37;
     justify-content: center;
     align-items: center;
@@ -405,7 +406,8 @@ button {
     width: 100%;
     height: 400px;
 	object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .add.button-full{
@@ -448,6 +450,7 @@ button {
 .mini.paragraph{
     margin-bottom: 10px;
     text-align: justify;
+    min-height: 100px;
 }
 
 #background-img{

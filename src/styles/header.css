@@ -2,6 +2,7 @@
     position: absolute;
     width: 138px; height: 138px;
 } 
+
 .header-bar {
     margin: 0px 7px 0px 7px;
     font-family: 'Quicksand', sans-serif;
@@ -20,16 +21,9 @@
     color: black;
 }
 
-header {
+#header {
     position: absolute;
     width: 100vw;
     height: 138px;
     letter-spacing: 0.01em;
-}
-
-.fa { 
-    font-size: inherit;
-    width: 30px; height: 30px;
-    text-decoration: none;
-    color: rgb(95, 108, 55);
 }

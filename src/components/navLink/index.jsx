@@ -1,6 +1,6 @@
 import React from 'react'
 
-const navLink = ({href, text, liClassName, aClassName}) => {
+const NavLink = ({href, text, liClassName, aClassName}) => {
     return (
         <li className={liClassName}>
             <a href={href} className={aClassName}>{text}</a>
@@ -8,4 +8,4 @@ const navLink = ({href, text, liClassName, aClassName}) => {
     );
 };
 
-export default navLink;
+export default NavLink;

@@ -1,17 +1,18 @@
 import * as React from 'react';
-import NavLink from './navLink.jsx';
+import NavLink from '../navLink/index.jsx';
 import '../../styles/header.css'
-import SearchBar from './searchBar.jsx';
+import SearchBar from './SearchBar.jsx';
+
+import logo from '../../assets/logo.png';
 
 export const Header = () => {
     return (
-        <header>
+        <div id='header'>
             <a href="/">
                 <figure>
-                    <img className="head-logo" src="../../assets/logo.png" alt='Logo da loja'/>
+                    <img className="head-logo" src={logo} alt='Logo da loja'/>
                 </figure>
             </a>
-            
             <ul className='list-inline'>
                 <NavLink href={'/'} text={'HOME'} liClassName='header-bar'/>
                 <NavLink href={'/'} text={'ABOUT US'} liClassName='header-bar'/>
@@ -24,6 +25,6 @@ export const Header = () => {
                 <NavLink href={'/'} text={''} liClassName='header-bar' aClassName='fa fa-shopping-cart black'/>
             </ul>
             
-        </header>
+        </div>
     );
 };

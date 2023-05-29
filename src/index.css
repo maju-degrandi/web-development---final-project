@@ -9,6 +9,13 @@ a{
   color: inherit;
 }
 
+.fa { 
+  font-size: inherit;
+  width: 30px; height: 30px;
+  text-decoration: none;
+  color: rgb(95, 108, 55);
+}
+
 body{ 
   min-height: 100vh; 
   display: grid;

@@ -1,0 +1,64 @@
+.buy-button {
+    font-size: x-large;
+    width: 150px;
+    height: 75px;
+    overflow: auto;
+}
+
+.item {
+    display: flex;
+}
+
+.item-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+#item-image {
+    margin: 0px 25px 25px 80px;
+    width: 482px;
+    height: 569px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 0 25px 0 25px;
+}
+
+#item-header {
+    color:rgba(95, 108, 55, 1);
+    font-family: 'Abril Fatface', cursive;
+}
+
+#item-desc {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: 'Advent Pro', sans-serif;
+    width: 700px;
+    text-align: justify;
+}
+
+#shop {
+    align-self: flex-end;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 700;
+    color:rgba(95, 108, 55, 1);
+    font-size: larger;
+}  
+
+#qtt {
+    width: 75px;
+    color:rgba(95, 108, 55, 1);
+    align-content: center;
+}
+
+#background-image2 {
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    bottom: calc(100vh - 382px);
+    transform: rotate(-90deg);
+    filter: opacity(50%);
+    right: 0;
+}

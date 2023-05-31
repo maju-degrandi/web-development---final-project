@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+#wrapper{
+  position: relative;
+  overflow-x: hidden;  
+}
+
 a{
   text-decoration: none;
   color: inherit;
@@ -20,6 +25,17 @@ body{
   min-height: 100vh; 
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+input {
+  border: 2px solid rgba(95, 108, 55, 1);
+  border-radius: 10px;
+  width: 220px;
+  height: 55px;
+  overflow: auto;
+  justify-content: flex-start;
+  font-size: large;
+  padding: 5px;;
 }
 
 code {

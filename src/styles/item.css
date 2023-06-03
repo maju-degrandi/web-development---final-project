@@ -58,7 +58,7 @@
     position: absolute;
     width: 250px;
     height: 400px;
-    bottom: calc(100vh - 382px);
+    /* bottom: calc(100vh - 382px); */
     transform: rotate(-90deg);
     filter: opacity(50%);
     right: 0;

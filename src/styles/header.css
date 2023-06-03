@@ -22,7 +22,7 @@
 }
 
 #header {
-    position: absolute;
+    position: inherit;
     width: 100vw;
     height: 138px;
     letter-spacing: 0.01em;

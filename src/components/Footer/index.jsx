@@ -3,7 +3,7 @@ import '../../styles/footer.css'
 
 import logoImg from '../../assets/logo.png'
 import { FooterList } from './footerList';
-import NavLink from '../NavLink';
+import NavLink from '../ListLink';
 
 export const Footer = () => {
     return (

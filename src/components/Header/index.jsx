@@ -1,5 +1,5 @@
 import * as React from 'react';
-import NavLink from '../NavLink/index.jsx';
+import NavLink from '../ListLink/index.jsx';
 import '../../styles/header.css'
 import SearchBar from './SearchBar.jsx';
 
@@ -14,6 +14,7 @@ export const Header = () => {
                 </figure>
             </a>
             <ul className='list-inline'>
+                <li className='header-bar'><a href="\">HOME</a></li>
                 <NavLink href={'/'} text={'HOME'} liClassName='header-bar'/>
                 <NavLink href={'/'} text={'ABOUT US'} liClassName='header-bar'/>
                 <NavLink href={'/'} text={'SHOP'} liClassName='header-bar'/>

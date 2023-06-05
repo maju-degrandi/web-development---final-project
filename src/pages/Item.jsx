@@ -10,9 +10,7 @@ export const PageItem = () => {
     console.log(itemId);
     return (
         <>
-            <Header/>
             <Item id={itemId}/>
-            <Footer/>
         </>
     );
 };

@@ -1,0 +1,26 @@
+.jh-plant-list {
+	list-style-type: none;
+    justify-content: center;
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.add{
+    width: 180px;
+    height: 60px;
+	font-family: 'Advent Pro';
+    font-size: 30px;
+
+    background: #497856;
+    color: white;
+}
+
+.add:hover{
+    background-color: #a8a8a8;
+}
+
+.plant{
+	margin: 10px 10px;
+	border-radius: 20px;
+    /* border: 2px solid rgb(129, 129, 129); */
+}

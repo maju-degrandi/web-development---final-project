@@ -15,9 +15,9 @@ export const Header = () => {
             </a>
             <ul className='list-inline'>
                 <li className='header-bar'><Link to='/'>HOME</Link></li>
-                <li className='header-bar'><Link to='/'>ABOUT US</Link></li>
-                <li className='header-bar'><Link to='/'>SHOP</Link></li>
-                <li className='header-bar'><Link to='/'>CONTACT</Link></li> 
+                <li className='header-bar'><Link to='/about'>ABOUT US</Link></li>
+                <li className='header-bar'><Link to='/shoplist'>SHOP</Link></li>
+                <li className='header-bar'><Link to='/contact'>CONTACT</Link></li> 
 
                 {/* <Search /> */}
                 <SearchBar liClassName='header-bar'/>

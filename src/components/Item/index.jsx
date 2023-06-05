@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '../Button';
+import { plants } from "../../datas/plants";
+import CareScale from "./carescale";
 
 import '../../styles/item.css'
 import BackgroundImage from "../../assets/flor-fundo2.png";
@@ -9,18 +11,29 @@ export const Item = ( {id} ) => {
     const [title, setTitle] = useState([]);
     const [desc, setDesc] = useState([]);
     const [price, setPrice] = useState([]);
+    const [plant, setPlant] = useState([]);
+    const [stock, setStock] = useState([]);
     
     useEffect(() => {
-        if (id === "1"){
-            const img = 'https://cactariohorst.com.br/images/resize/800/null/0005916.jpg';
-            setSrc(img); 
-            setTitle("ECHEVERIA \n l");
-            setDesc(["'Perle von Nurnberg' is a beautiful evergreen gray succulent that turns pink and purple under full sun. It has pink flowers with yellow interiors that bloom in the summer.\nIf you are searching for an uncomplaining plant with cherubic appeal and beautiful form and color, look no further than Perle von Nurnberg Echeveria. This little succulent produces pups and will eventually grow as big as a dinner plate with good light and care. Warm region gardeners can add this plant to their landscape, while the rest of us should enjoy them in the summer and bring them indoors for winter."]);
-            setPrice("7,00");
-        };
-    }, [id]);
+
+        setPlant(plants.find(plant => plant.id == id));
+        setSrc(plant.cover); 
+        setTitle(plant.name);
+        setDesc([plant.description]);
+        setPrice(Number(plant.price).toFixed(2));
+        setStock(plant.stock);
+    }, [plant]);
     
+    const handleClick = (type, amount, e) => {
+        let string_alert = 'This plant requires a '
+        if(amount === 3) string_alert += 'large'
+        else if(amount === 2) string_alert += 'medium'
+        else string_alert += 'small'
+        string_alert += ' amount of ' + type
     
+        alert(string_alert)
+    }
+
     return (
         <>
             <div className="item" id="wrapper">
@@ -34,7 +47,19 @@ export const Item = ( {id} ) => {
                         {desc.map((linha, index) => (
                             <h2 key={index}>{linha}</h2>
                         ))}    
+
+                        <div className="plant-info">
+                            <div className="plant-info"  onClick={() => handleClick("light", plant.light)}>
+                                <CareScale careType="light" scaleValue={plant.light} />
+                            </div>
+                            <div className="plant-info"  onClick={() => handleClick("water", plant.water)}>
+                                <CareScale careType="water" scaleValue={plant.water} />
+                            </div>
+                        </div>
+
+                        <span className='plant-info'>{stock} in stock</span>
                     </div>
+                    
                     <div id="shop">
                         <label htmlFor="quant">QUANTITY:</label>
                         <input name="quant" type="number" min="1" id="qtt" placeholder="1" />

@@ -1,5 +1,5 @@
 import React from 'react'
-import ListLink from '../ListLink';
+import { Link } from 'react-router-dom';
 
 import '../../styles/footer.css'
 
@@ -10,7 +10,10 @@ export const FooterList = ({title, className, links}) => {
             {title && (<h6>{title}</h6>)}
             <ul className="footer-list-wrap-ul">
                 {items.map(([text, link], i) => (
-                    <ListLink key={i} href={link} text={text} liClassName=''/>
+                    <li key={i}>
+                        <Link to={link}>{text}</Link>
+                    </li>
+                    
                 ))}
             </ul>
         </div>

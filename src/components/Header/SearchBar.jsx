@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/searchBar.css'
 
-function SearchBar(liClassName) {
+export const SearchBar = ( {liClassName} ) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isFocus, setFocus] = useState(false);
   
@@ -29,5 +29,3 @@ function SearchBar(liClassName) {
     </div>
   );
 }
-
-export default SearchBar;

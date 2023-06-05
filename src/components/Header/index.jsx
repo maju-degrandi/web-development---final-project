@@ -1,8 +1,8 @@
 import * as React from 'react';
-import NavLink from '../ListLink/index.jsx';
-import '../../styles/header.css'
-import SearchBar from './SearchBar.jsx';
+import { Link } from 'react-router-dom';
+import { SearchBar } from './SearchBar.jsx';
 
+import '../../styles/header.css'
 import logo from '../../assets/logo.png';
 
 export const Header = () => {
@@ -14,16 +14,15 @@ export const Header = () => {
                 </figure>
             </a>
             <ul className='list-inline'>
-                <li className='header-bar'><a href="\">HOME</a></li>
-                <NavLink href={'/'} text={'HOME'} liClassName='header-bar'/>
-                <NavLink href={'/'} text={'ABOUT US'} liClassName='header-bar'/>
-                <NavLink href={'/'} text={'SHOP'} liClassName='header-bar'/>
-                <NavLink href={'/'} text={'CONTACT'} liClassName='header-bar'/>
+                <li className='header-bar'><Link to='/'>HOME</Link></li>
+                <li className='header-bar'><Link to='/'>ABOUT US</Link></li>
+                <li className='header-bar'><Link to='/'>SHOP</Link></li>
+                <li className='header-bar'><Link to='/'>CONTACT</Link></li> 
 
                 {/* <Search /> */}
                 <SearchBar liClassName='header-bar'/>
-                <NavLink href={'/'} text={''} liClassName='header-bar' aClassName='fa fa-user black'/>
-                <NavLink href={'/'} text={''} liClassName='header-bar' aClassName='fa fa-shopping-cart black'/>
+                <li className='header-bar'><Link to='/' className='fa fa-user-o black'></Link></li> 
+                <li className='header-bar'><Link to='/' className='fa fa-shopping-cart black'></Link></li> 
             </ul>
             
         </div>

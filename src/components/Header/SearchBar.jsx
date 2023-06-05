@@ -16,16 +16,18 @@ export const SearchBar = ( {liClassName} ) => {
   };
   
   return (
-    <div className={liClassName} onBlur={handleInputBlur}>
-      <span className="fa fa-search" onClick={handleIconClick}></span>
-      {isExpanded && (
-        <input
-          type="text"
-          
-          className='expanded'
-          placeholder="Digite sua pesquisa..."
-        />
-      )}
-    </div>
+    <form>
+      <div className={liClassName} onBlur={handleInputBlur}>
+        <span className="fa fa-search" onClick={handleIconClick}></span>
+        {isExpanded && (
+          <input
+            type="text"
+            
+            className='expanded'
+            placeholder="Digite sua pesquisa..."
+          />
+        )}
+      </div>
+    </form>
   );
 }

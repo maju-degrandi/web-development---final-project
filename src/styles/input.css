@@ -1,0 +1,17 @@
+
+.input-input {
+    border: 2px solid rgba(95, 108, 55, 1);
+    border-radius: 10px;
+    width: 220px;
+    height: 55px;
+    overflow: auto;
+    justify-content: flex-start;
+    font-size: large;
+    padding: 5px;;
+}
+
+.input-label{
+    font-family: 'Abril Fatface', cursive;
+    color:rgba(95, 108, 55, 1);
+    font-size: x-large;
+}

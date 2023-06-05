@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { SearchBar } from './SearchBar.jsx';
 
-import '../../styles/header.css'
+import '../../styles/header.css';
 import logo from '../../assets/logo.png';
 
 export const Header = () => {
@@ -21,7 +21,7 @@ export const Header = () => {
 
                 {/* <Search /> */}
                 <SearchBar liClassName='header-bar'/>
-                <li className='header-bar'><Link to='/' className='fa fa-user-o black'></Link></li> 
+                <li className='header-bar'><Link to='/login' className='fa fa-user-o black'></Link></li> 
                 <li className='header-bar'><Link to='/' className='fa fa-shopping-cart black'></Link></li> 
             </ul>
             

@@ -17,7 +17,7 @@ export const Header = () => {
                 <li className='header-bar'><Link to='/'>HOME</Link></li>
                 <li className='header-bar'><Link to='/about'>ABOUT US</Link></li>
                 <li className='header-bar'><Link to='/shoplist'>SHOP</Link></li>
-                <li className='header-bar'><Link to='/contact'>CONTACT</Link></li> 
+                {/* <li className='header-bar'><Link to='/contact'>CONTACT</Link></li>  */}
 
                 {/* <Search /> */}
                 <SearchBar liClassName='header-bar'/>

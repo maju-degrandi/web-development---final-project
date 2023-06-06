@@ -6,6 +6,7 @@ import { PageHome } from './pages/Home.jsx';
 import { PageShopList } from "./pages/ShopList.jsx";
 import { About } from "./components/About/index.jsx"
 import { PageLogin } from "./pages/Login.jsx"
+import { PageRegister } from "./pages/Register.jsx"
 
 export function routes() {
     return (
@@ -15,6 +16,7 @@ export function routes() {
             <Route element={<About />} path="/about" />
             <Route element={<PageShopList />} path="/shoplist" />
             <Route element={<PageLogin />} path="/login" />
+            <Route element={<PageRegister />} path="/register" />
         </Routes>
     )
 }

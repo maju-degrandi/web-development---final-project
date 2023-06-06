@@ -1,17 +1,36 @@
 
-.input-input {
+.email,
+.text,
+.password,
+.date {
     border: 2px solid rgba(95, 108, 55, 1);
     border-radius: 10px;
-    width: 220px;
-    height: 55px;
     overflow: auto;
     justify-content: flex-start;
-    font-size: large;
-    padding: 5px;;
+    padding: 5px;
+    width: 220px;
+    height: 30px;
 }
 
-.input-label{
+.label-email{
     font-family: 'Abril Fatface', cursive;
     color:rgba(95, 108, 55, 1);
-    font-size: x-large;
+}
+
+.label-radio{
+    font-family: 'Advent Pro', cursive;
+    color:rgba(95, 108, 55, 1);
+}
+
+.radio{
+    border: 2px solid rgba(95, 108, 55, 1);
+    border-radius: 10px;
+    overflow: auto;
+    justify-content: flex-start;
+    width: 50px;
+    margin: 0;
+}
+
+.card{ 
+    margin: 5px;
 }

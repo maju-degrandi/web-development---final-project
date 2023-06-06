@@ -23,12 +23,14 @@
 }
 
 button {
-    font-family: Advent_Pro;
-    font-size: large;
+    background-color: rgb(73, 120, 86);
+    border: 2px solid rgb(73, 120, 86);
+    font-family: 'Advent Pro';
+    font-size: x-large;
+    color: white;
     width: 100px;
     height: 55px;
     overflow: auto;
     border-radius: 10px;
     cursor: pointer;
-    margin : 5px;
 }

@@ -80,3 +80,13 @@
 .fa{
     display: inline-block;
 }
+
+@media screen and (max-width: 600px) {
+    .footer-info, .footer-list-wrap h6, .footer-list-wrap li    {
+        font-size: small;
+    }
+    .footer-logo{
+        width: 100px; height: auto;
+        margin: 0 0 0 10px;
+    }
+}

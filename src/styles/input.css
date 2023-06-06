@@ -34,3 +34,11 @@
 .card{ 
     margin: 5px;
 }
+
+@media screen and (max-width: 600px) {
+    .person-form, .flex-form{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center ;
+    }
+}

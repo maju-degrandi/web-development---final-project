@@ -27,3 +27,43 @@
     height: 138px;
     letter-spacing: 0.01em;
 }
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #32391C;
+    z-index: 2;
+    list-style: none;
+    font-size: x-large;
+    color: white;
+}
+
+.hidden{
+    font-size: x-large;
+    position: fixed;
+    top: 0;
+    right: 0;
+    list-style: none;
+}
+
+.header-side-bar{
+    margin: 12px 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 600px) {
+    .sidebar, .hidden{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .list-inline{
+        display: none;
+    }
+  }

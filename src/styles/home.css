@@ -1,0 +1,384 @@
+* {margin: 0; padding: 0;}
+
+body{ 
+    min-height: 100vh; 
+    margin: 0; 
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+#wrapper{
+    position: relative;
+    overflow-x: hidden;   
+}
+
+/*GENERAL, IMAGES AND FORMS*/
+button {
+    background-color: rgb(73, 120, 86);
+    border: 2px solid rgb(73, 120, 86);
+    font-family: Advent_Pro;
+    font-size: large;
+    color: white;
+    width: 100px;
+    height: 55px;
+    overflow: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    margin : 5px;
+}
+
+#background-image1 {
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    right: 0;
+    bottom: 382;
+    filter: opacity(50%);
+}
+
+#background-image2 {
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    bottom: calc(100vh - 382px);
+    transform: rotate(-90deg);
+    filter: opacity(50%);
+    right: 0;
+}
+
+#ellipse-1 {
+    position: absolute;
+    width: 1784.5px;
+    height: 1231.25px;
+    left: 2517.46px;
+    top: 59.63px;
+    
+    background: #90A680;
+    transform: rotate(135deg);
+}
+
+#img-1 {
+    position: absolute;
+    left: 59.91%;
+    right: -0.38%;
+    top: 0%;
+    bottom: 84.75%;
+}
+
+/* HOME */
+
+.title{
+    font-family: Abril;
+    line-height: 97.9%;
+    font-weight: 400;
+}
+
+.title.main{
+    color: #497856;
+    text-align: left;
+}
+
+.second.title{
+    font-size: 32px;
+    text-align: center;   
+}
+
+.quote.main.title{
+    margin: 40px 0;
+    width: 100%;
+    height: 156px;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 78px;
+}
+
+.collect.main.title{
+    font-size: 64px;
+    color: #5F6C37;
+}
+
+/* APRESENTATION */
+.apresentation{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 600px;
+    justify-content: space-between;
+}
+
+.green-background{
+    background-color: #497856;
+    font-family: Advent_Pro;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    margin: 0 0 10 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+
+
+#elipse{
+    position: absolute;
+    width: 1500px;
+    height: 900px;
+    left: 50%;
+    top: -200px;
+    border-radius: 70%;
+    
+    background: #90A680;
+    transform: rotate(160deg);
+    
+    z-index: -2;
+    
+}
+
+.button-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-frame{
+    position: inherit;
+    z-index: 1;
+}
+
+#home-main-button:hover{
+    background-color: #497856;
+}
+
+#home-main-button{
+    width: 200px;
+    height: 50px;
+}
+
+.paragraph{
+    margin: 20px 0 60px 0;
+    font-size: 20px;
+    font-family: Advent_Pro;
+    text-align: justify;
+}
+
+#home-img{
+    width: 500px;
+    position: absolute;
+    right: -0.38%;
+    top: -7px;
+    bottom: 84.75%;
+    border-radius: 0 0 0 0;
+    z-index: -1;
+}
+
+.home-main-text{
+    margin-left: 10%;
+    width: 390px;
+}
+
+/* TYPE SELECT */
+.select-type{
+    background-color: #497856;
+    height: 464px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+.type-card:hover{
+    background-color: #21452B;
+    color: white;
+}
+
+.type-card{
+    width: 280px;
+    height: 280px;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 0 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: #5F6C37;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.type-img{
+    height: 200px;
+    width: 100%;
+	object-fit: cover;
+}
+
+/* COLLECTION */
+
+.collection{
+    background-color: #FFFFFF;
+    height: 700px;
+    display: flex;
+}
+
+.home.image{
+    height: 100%;
+    width: 600px;
+	object-fit: cover;
+    opacity: 80%;
+}
+
+.collection-text{
+    padding: 100px 0 0 100px;
+    width: 560px;
+}
+
+.button-outline:hover{
+    background-color: #5F6C37;
+    color: white;
+}
+.button-outline{
+    width: 200px;
+    height: 40px;
+    font-family: Advent_Pro;
+    background-color: transparent;
+    border: 2px solid #5F6C37;
+    color: #5F6C37;
+}
+
+
+/* BESTSELLERS */
+
+.best-sellers{
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 700px;
+    justify-content: center;
+}
+
+.best-text{
+    width: 30%;
+    height: 386px;
+    /* background-color: #90A680; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.best-card{
+    width: 30%;
+    height: 100%;
+    /* background-color: #5F6C37; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    padding: 0 20px;
+}
+
+.best-image{
+    width: 100%;
+    height: 400px;
+	object-fit: cover;
+    border-radius: 0px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.add.button-full{
+    position: absolute;
+    width: 328px;
+    height: 40px;
+}
+
+.shop.button-outline{
+    width: 230px;
+    margin: 0 0 0 10%;
+    z-index: 100;
+
+}
+
+.best.title{
+    text-align: left;
+    width: 100%;
+    margin: 20px 0 0 50px;
+    font-size: 24px;
+    color: #5F6C37;
+    z-index: 100;
+}
+
+.best.main.title{
+    font-size: 50px;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.price{
+    color: #5F6C37;
+    align-self: flex-end;
+    margin: 0 20px 0 0;
+    font-size: 26px;
+    font-family: Abril;
+}
+
+
+.mini.paragraph{
+    margin-bottom: 10px;
+    text-align: justify;
+    min-height: 100px;
+}
+
+#background-img{
+    position: absolute;
+    width: auto;
+    height: 600px;
+    left: -95px;
+    top: 2000px;
+    transform: rotate(10deg);
+    z-index: 0;
+    opacity: 20%;
+
+}
+
+/* ORNAMENTS */
+
+.ornaments{
+    background-color: #90A680;
+    height: 515px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ornaments.home.image{
+    align-self: flex-end;
+}
+
+.ornaments-text{
+    padding: 88px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ornament.main.title{
+    font-size: 64px;
+    color: #21452B;
+}
+
+.ornament-button:hover{ 
+    background-color: #21452B;
+}
+.ornament-button{
+    color: #21452B;
+    border-color: #21452B;
+}
+
+

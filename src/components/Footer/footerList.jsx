@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 import '../../styles/footer.css'
 
-export const FooterList = ({title, className, links}) => {
+export const FooterList = ({title, links}) => {
     const items = Object.entries(links);
     return (
-        <div className={className}>
+        <div className='footer-list-wrap'>
             {title && (<h6>{title}</h6>)}
             <ul className="footer-list-wrap-ul">
                 {items.map(([text, link], i) => (

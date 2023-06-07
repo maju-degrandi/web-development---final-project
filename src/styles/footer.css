@@ -71,7 +71,7 @@
 #footer {
     position: relative;
     left: 0;
-    bottom: 0;
+    bottom: 0;padding-bottom: 20px;
     width: 100vw;
     height: 383px;
     background-color: rgba(144, 166, 128, 0.63);

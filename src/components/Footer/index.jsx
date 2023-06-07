@@ -3,7 +3,7 @@ import '../../styles/footer.css'
 
 import logoImg from '../../assets/logo.png'
 import { FooterList } from './footerList';
-import NavLink from '../ListLink';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
@@ -18,7 +18,6 @@ export const Footer = () => {
                 <nav id='footer-list'>
                     <FooterList 
                         title='Customer Support'
-                        className="footer-list-wrap"
                         links={{
                             'Shipping': '/',
                             'Free Returns': '/',
@@ -30,7 +29,6 @@ export const Footer = () => {
                     
                     <FooterList 
                         title='Customer Services'
-                        className="footer-list-wrap"
                         links={{
                             'Shipping': '/',
                             'Free Returns': '/',
@@ -42,7 +40,6 @@ export const Footer = () => {
                     
                     <FooterList 
                         title='About Us'
-                        className="footer-list-wrap"
                         links={{
                             'Shipping': '/',
                             'Free Returns': '/',
@@ -55,11 +52,11 @@ export const Footer = () => {
                 </nav>
                 
                 <ul className="footer-bar">
-                    <NavLink href='/' aClassName='fa fa-telegram' text=''/>
-                    <NavLink href='/' aClassName='fa fa-instagram' text=''/>
-                    <NavLink href='/' aClassName='fa fa-twitter' text=''/>
-                    <NavLink href='/' aClassName='fa fa-facebook' text=''/>
-                    <NavLink href='/' aClassName='fa fa-pinterest' text=''/>
+                    <Link to={'/'} className='fa fa-telegram'></Link>
+                    <Link to={'/'} className='fa fa-instagram'></Link>
+                    <Link to={'/'} className='fa fa-twitter'></Link>
+                    <Link to={'/'} className='fa fa-facebook'></Link>
+                    <Link to={'/'} className='fa fa-pinterest'></Link>
                 </ul>
             </div>
         </div>

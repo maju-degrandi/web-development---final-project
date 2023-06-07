@@ -9,6 +9,10 @@
     display: flex;
 }
 
+.item p{
+    margin: 10px auto;
+}
+
 .item-page {
     display: flex;
     flex-direction: column;

@@ -6,14 +6,14 @@ import { Input } from '../components/Input';
 
 export const PageRegister = () => {
     function handleRegister(){
-
+        console.log('');
     }
 
     return (
          <div className="basic-form" action={handleRegister}>
                 <h1 className="title">Register</h1>
                 <img id="background-image1" src={backimage}/>
-                <form class="basic-form-form" >
+                <form className="basic-form-form" >
                     <Input label="E-mail*: " input="email" type="email" require={true}/>
                     <div className='person-form'>
                         <label>Person: </label>

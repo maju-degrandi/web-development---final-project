@@ -40,7 +40,9 @@
     position: absolute;
     width: 250px;
     height: 400px;
+    
     right: 0;
+    
     filter: opacity(50%);
     z-index: -1;
 }

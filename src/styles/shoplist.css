@@ -5,12 +5,17 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
+.button-add{
+    text-align: center;
+}
+
 .add{
     width: 180px;
     height: 60px;
 	font-family: 'Advent Pro';
     font-size: 30px;
-
+    
     background: #497856;
     color: white;
 }

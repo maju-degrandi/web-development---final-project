@@ -13,11 +13,11 @@ export const Input = ({ label, input, className, type, name, require}) => {
                         name={name} 
                         required={require}
                         />
-                        <label className={'label-' + type} for={label}>{label}</label><br />
+                        <label className={'label-' + type} htmlFor={label}>{label}</label><br />
                     </>
                 :
                     <>
-                        <label className={'label-' + type} for={label}>{label} </label><br />
+                        <label className={'label-' + type} htmlFor={label}>{label} </label><br />
                         <input 
                         className={type} 
                         type={type} 

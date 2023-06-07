@@ -26,6 +26,7 @@
     width: 100vw;
     height: 138px;
     letter-spacing: 0.01em;
+    margin: 0 0 10px 0;
 }
 
 .sidebar{
@@ -60,10 +61,18 @@
     .sidebar, .hidden{
         display: none;
     }
+    
 }
 
 @media screen and (max-width: 600px) {
     .list-inline{
         display: none;
+    }
+    .head-logo{
+        width: 90px;
+        height: 90px;
+    }
+    #header{
+        height: 90px;
     }
   }

@@ -14,7 +14,7 @@ export const PageLogin = () => {
                 <form className="basic-form-form">
                     <Input label="Email: " input="email" type="email"/>
                     <Input label="Senha: " input="senha" type="password"/>
-                    <Button text="LOGIN" className="basic-button" type="submit" />
+                    <Button text="LOGIN" className="filled-button basic-button" type="submit" />
                 </form>
                 <div className="links-loginscreen">
                     <Link to={'/register'}>Don't have an account yet?</Link><br/>

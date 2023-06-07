@@ -4,8 +4,10 @@ import { Outlet } from "react-router-dom";
 
 export const Card = (props) => {
     return (
-        <div className="basic-card">
-            {props.children}
+        <div className="back-card">
+            <div className="basic-card">
+                {props.children}
+            </div>
         </div>
     );
 };

@@ -17,7 +17,7 @@ export const Item = ( {id} ) => {
     useEffect(() =>{
         setTimeout(() => {
             setPlant(plants['Plants'].find(plant => plant.id == id));
-        }, 50000);
+        }, 1000);
     }, [id]);
     
     useEffect(() => {

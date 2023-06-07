@@ -19,18 +19,21 @@
 }
 
 .filled-button:hover{
-    border: 3px solid #515d30;
+    /* border: 3px solid #515d30; */
+    background-color: rgb(53, 84, 61);
+    border: 2px solid rgb(53, 84, 61);
 }
-
+    
 button {
     background-color: rgb(73, 120, 86);
     border: 2px solid rgb(73, 120, 86);
     font-family: 'Advent Pro';
     font-size: x-large;
     color: white;
-    width: 100px;
-    height: 55px;
+    width: 110px;
+    height: 65px;
     overflow: auto;
     border-radius: 10px;
     cursor: pointer;
+    padding: 5px;
 }

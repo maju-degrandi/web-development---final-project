@@ -553,4 +553,28 @@ button {
     border-color: #21452B;
 }
 
+/*ABOUT US*/
+.about-us {
+    display: flex;
+    flex-direction: row;
+    padding: 3vw;
+}
+
+.about-us-text{
+    display: flex;
+    flex-direction: column;
+}
+
+#about-us-image{
+    width: 50vw;
+    height: 50vw;
+}
+
+@media (max-width: 800px) {
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        padding: 3vw;
+    }
+  }
 

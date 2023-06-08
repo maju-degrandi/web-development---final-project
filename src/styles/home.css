@@ -32,21 +32,21 @@
 }
 
 .second.title{
-    font-size: 32px;
+    font-size: 3vw;
     text-align: center;   
 }
 
 .quote.main.title{
-    margin: 40px 0;
+    margin: 3.5vw 0;
     width: 100%;
-    height: 156px;
+    height: 14vw;
     font-weight: 400;
-    font-size: 90px;
-    line-height: 78px;
+    font-size: 6vw;
+    line-height: 7vw;
 }
 
 .collect.main.title{
-    font-size: 64px;
+    font-size: 4vw;
     color: #5F6C37;
 }
 
@@ -55,29 +55,29 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 600px;
+    height: 45vw;
     justify-content: space-between;
 }
 
 .green-background{
     background-color: #497856;
     font-family: Advent_Pro;
-    width: 100px;
-    height: 40px;
-    padding: 10px;
+    width: 9vw;
+    height: 3.5vw;
+    padding: 0.8vw;
     margin: 0 0 10 0;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 2vw;
     color: white;
 }
 
 
 #elipse{
     position: absolute;
-    width: 1500px;
-    height: 900px;
+    width: 135vw;
+    height: 80vw;
     left: 50%;
-    top: -200px;
+    top: -17vw;
     border-radius: 70%;
     
     background: #90A680;
@@ -104,22 +104,22 @@
 }
 
 #home-main-button{
-    width: 200px;
-    height: 50px;
+    width: 18vw;
+    height: 4.5vw;
 }
 
 .paragraph{
     margin: 20px 0 60px 0;
-    font-size: 20px;
+    font-size:  1.75vw;
     font-family: Advent_Pro;
     text-align: justify;
 }
 
 #home-img{
-    width: 500px;
+    width: 40.7vw;
     position: absolute;
     right: -0.38%;
-    top: -7px;
+    top: -1.26vw;
     bottom: 84.75%;
     border-radius: 0 0 0 0;
     z-index: -1;
@@ -127,13 +127,13 @@
 
 .home-main-text{
     margin-left: 10%;
-    width: 390px;
+    width: 34.8vw;
 }
 
 /* TYPE SELECT */
 .select-type{
     background-color: #497856;
-    height: 464px;
+    height: 35vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,12 +148,12 @@
 }
 
 .type-card{
-    width: 280px;
-    height: 280px;
-    padding: 10px;
+    width: 23vw;
+    height: 23vw;
+    padding: 0.8vw;
     background-color: white;
-    margin: 10px;
-    border-radius: 0 10px;
+    margin: 0.8vw;
+    border-radius: 0 0.8vw;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: #5F6C37;
     justify-content: center;
@@ -163,7 +163,7 @@
 }
 
 .type-img{
-    height: 200px;
+    height: 17.5vw;
     width: 100%;
 	object-fit: cover;
 }
@@ -172,20 +172,20 @@
 
 .collection{
     background-color: #FFFFFF;
-    height: 700px;
+    height: 55vw;
     display: flex;
 }
 
 .home.image{
     height: 100%;
-    width: 600px;
+    width: 50vw;
 	object-fit: cover;
     opacity: 80%;
 }
 
 .collection-text{
-    padding: 100px 0 0 100px;
-    width: 560px;
+    padding: 5vw 0 0 5vw;
+    width: 50vw;
 }
 
 .button-outline:hover{
@@ -193,8 +193,8 @@
     color: white;
 }
 .button-outline{
-    width: 200px;
-    height: 40px;
+    width: 17.8vw;
+    height: 3.6vw;
     font-family: Advent_Pro;
     background-color: transparent;
     border: 2px solid #5F6C37;
@@ -208,13 +208,13 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    height: 700px;
+    height: 55vw;
     justify-content: center;
 }
 
 .best-text{
     width: 30%;
-    height: 386px;
+    height: 30vw;
     /* background-color: #90A680; */
     display: flex;
     align-items: center;
@@ -223,8 +223,8 @@
 }
 
 .best-card{
-    width: 30%;
-    height: 100%;
+    width: 25vw;
+    height: 35vw;
     /* background-color: #5F6C37; */
     display: flex;
     justify-content: center;
@@ -236,7 +236,7 @@
 
 .best-image{
     width: 100%;
-    height: 400px;
+    height: 35.65vw;
 	object-fit: cover;
     border-radius: 0px 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -244,12 +244,12 @@
 
 .add.button-full{
     position: absolute;
-    width: 328px;
-    height: 40px;
+    width: 25vw;
+    height: 3.6vw;
 }
 
 .shop.button-outline{
-    width: 230px;
+    width: 20.5vw;
     margin: 0 0 0 10%;
     z-index: 100;
 
@@ -259,13 +259,13 @@
     text-align: left;
     width: 100%;
     margin: 20px 0 0 50px;
-    font-size: 24px;
+    font-size: 3vw;
     color: #5F6C37;
     z-index: 100;
 }
 
 .best.main.title{
-    font-size: 50px;
+    font-size: 4.5vw;
     margin-bottom: 20px; 
     text-align: center;
 }
@@ -274,7 +274,7 @@
     color: #5F6C37;
     align-self: flex-end;
     margin: 0 20px 0 0;
-    font-size: 26px;
+    font-size: 3vw;
     font-family: Abril;
 }
 
@@ -288,9 +288,9 @@
 #background-img{
     position: absolute;
     width: auto;
-    height: 600px;
-    left: -95px;
-    top: 2000px;
+    height: 53.5vw;
+    left: -8.5vw;
+    top: 178.3vw;
     transform: rotate(10deg);
     z-index: 0;
     opacity: 20%;
@@ -301,7 +301,7 @@
 
 .ornaments{
     background-color: #90A680;
-    height: 515px;
+    height: 46vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -312,7 +312,7 @@
 }
 
 .ornaments-text{
-    padding: 88px;
+    padding: 7.8vw;
     width: 100%;
     display: flex;
     align-items: center;
@@ -321,7 +321,7 @@
 }
 
 .ornament.main.title{
-    font-size: 64px;
+    font-size: 4vw;
     color: #21452B;
 }
 

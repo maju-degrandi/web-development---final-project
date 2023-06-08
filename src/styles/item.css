@@ -31,12 +31,11 @@
 }
 
 #item-image {
-    margin: 0px 25px 25px 80px;
-    width: 482px;
-    height: 569px;
+    margin: 0 3vw 3vw 1.5vw;
+    width: 30vw;
+    height: 40vw;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 0 25px 0 25px;
     object-fit: cover;
 }
 
@@ -59,14 +58,15 @@
     font-family: 'Advent Pro', 'sans-serif';
     font-weight: 700;
     color:rgba(95, 108, 55, 1);
-    font-size: larger;
+    font-size: 3vw;
 }  
 
 #qtt {
-    width: 75px;
-    height: 50px;
+    width: 9vw;
+    height: 5vw;
     color:rgba(95, 108, 55, 1);
     align-content: center;
+    font-size: 2.5vw;
 }
 
 #background-image2 {
@@ -99,7 +99,7 @@
     }
 
     #item-image{ 
-        height: 300px;
+        height: 60vw;
         width: 80%;
         margin: 30px 0;
     }

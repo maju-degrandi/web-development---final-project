@@ -1,6 +1,6 @@
 .head-logo { 
     position: absolute;
-    width: 138px; height: 138px;
+    width: 8.8vw; height: 8.8vw;
 } 
 
 .header-bar {
@@ -11,7 +11,7 @@
 }
 
 .list-inline { 
-    padding: 30px;
+    padding: 3vw;
     display: flex;
     justify-content: flex-end;
     list-style: none;
@@ -24,7 +24,7 @@
 #header {
     position: inherit;
     width: 100vw;
-    height: 138px;
+    height: 8.8vw;
     letter-spacing: 0.01em;
     margin: 0 0 10px 0;
 }

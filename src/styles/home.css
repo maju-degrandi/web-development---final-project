@@ -1,51 +1,4 @@
-* {margin: 0; padding: 0;}
-
-body{ 
-    min-height: 100vh; 
-    margin: 0; 
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-
-#wrapper{
-    position: relative;
-    overflow-x: hidden;   
-}
-
 /*GENERAL, IMAGES AND FORMS*/
-button {
-    background-color: rgb(73, 120, 86);
-    border: 2px solid rgb(73, 120, 86);
-    font-family: Advent_Pro;
-    font-size: large;
-    color: white;
-    width: 100px;
-    height: 55px;
-    overflow: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    margin : 5px;
-}
-
-#background-image1 {
-    position: absolute;
-    width: 250px;
-    height: 400px;
-    right: 0;
-    bottom: 382;
-    filter: opacity(50%);
-}
-
-#background-image2 {
-    position: absolute;
-    width: 250px;
-    height: 400px;
-    bottom: calc(100vh - 382px);
-    transform: rotate(-90deg);
-    filter: opacity(50%);
-    right: 0;
-}
-
 #ellipse-1 {
     position: absolute;
     width: 1784.5px;
@@ -250,7 +203,6 @@ button {
 
 
 /* BESTSELLERS */
-
 .best-sellers{
     background-color: #F1F1F1;
     display: flex;

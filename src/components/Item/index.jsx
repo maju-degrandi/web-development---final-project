@@ -41,13 +41,17 @@ export const Item = ( {id} ) => {
     }
 
     return (
-        <>
+        <>           
             <div className="item" id="wrapper">
-                    <img id="background-image2" src={BackgroundImage}/>
+                <figure>
+                    <img id="background-image2" src={BackgroundImage} alt='Imagem de uma planta.'/>
+                </figure>
                     
                 {plant ? (
                     <>
-                    <img id="item-image" src={src}/>
+                    <div className='imageItem'>
+                        <img id="item-image" src={src} alt={title}/>
+                    </div>
                     <div className="item-page">
                         <div id="item-desc">
                             <h1 id="item-header">{title}</h1>

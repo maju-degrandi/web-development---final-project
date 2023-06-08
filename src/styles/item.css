@@ -1,3 +1,9 @@
+#wrapper{
+    position: relative;
+    overflow-x: hidden;  
+    width: 100%; 
+}
+
 #buy-button {
     font-size: x-large;
     width: 150px;
@@ -13,7 +19,11 @@
     margin: 10px auto;
 }
 
+.imageItem{
+    width: 40%;
+}
 .item-page {
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -63,11 +73,14 @@
     position: absolute;
     width: 250px;
     height: 400px;
-    /* bottom: calc(100vh - 382px); */
+    bottom: 0;
+    right: 0;
+    
     transform: rotate(-90deg);
     filter: opacity(50%);
-    right: 0;
     object-fit: contain;
+    
+    z-index: 1;
 }
 
 @media screen and (max-width: 1000px) {

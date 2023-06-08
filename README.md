@@ -76,7 +76,7 @@ Os diagramas para usuário cliente e usuário administrador podem ser conferidos
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [x] Milestone 1
-- [ ] Milestone 2
+- [x] Milestone 2
 - [ ] Milestone 3
 
 ### 💻 Pré-requisitos

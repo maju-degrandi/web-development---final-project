@@ -1,18 +1,18 @@
 /* HEADER */
 .head-logo { 
     position: absolute;
-    width: 138px; height: 138px;
+    width: 8.8vw; height: 8.8vw;
 } 
 
 .header-bar {
-    margin: 0px 7px 0px 7px;
+    margin: 0 0.8vw 0 0.8vw;
     font-family: 'Quicksand', sans-serif;
-    font-size: 12px;
+    font-size: 1.5vw;
     font-weight: 500;
 }
 
 .list-inline { 
-    padding: 30px;
+    padding: 3.5vw;
     display: flex;
     justify-content: flex-end;
     list-style: none;
@@ -25,7 +25,7 @@
 header {
     position: absolute;
     width: 100vw;
-    height: 138px;
+    height: 8.8vw;
     letter-spacing: 0.01em;
 }
 
@@ -33,22 +33,23 @@ header {
 /* FOOTER */
 .footer-logo { 
     position: absolute;
-    width: 200px; height: 200px;
+    width: 20vw; height: 20vw;
 } 
 
 .fa { 
-    font-size: 30px;
-    width: 30px; height: 30px;
+    display: inline-block;
+    font-size: 2.6vw;
+    width: 3.5vw; height: 3.5vw;
     text-decoration: none;
     color: rgb(95, 108, 55);
 }
 
 .footer-bar {
     position: absolute;
-    bottom: 20px;
-    width: 100vw; height: 20px;
+    bottom: 7.5vw;
+    width: 100vw; height: 2.4vw;
     background-color: #FFFDF5;
-    padding: 10px;
+    padding: 0.8vw;
     display: flex;
     justify-content: center;
     list-style: none;
@@ -57,19 +58,17 @@ header {
 .footer-info {
     position: absolute;
     font-family: 'Quicksand', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
 
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 312px;
+    height: 30vw;
 }
 
 #footer-img{
     display: flex ;
     width: 33%;
-    max-height: 700px;
+    max-height: 83vw;
     
     align-items: center;
     justify-content: space-evenly;
@@ -78,8 +77,8 @@ header {
 #footer-list{
     display: flex;
 
-    margin: 50px;
-    padding: 10px;
+    margin: 6vw;
+    padding: 1vw;
     width: 60%;
 
     float: right;
@@ -88,7 +87,7 @@ header {
 
 .footer-list-wrap{
     float: left;
-    margin: 5px;
+    margin: 0.5vw;
     width: 33%;
     max-width: 33%;
     
@@ -96,14 +95,14 @@ header {
 }
 
 .footer-list-wrap h6{
-    font-size: 200%;
-    margin: 0px 0px 10px 0px;
+    font-size: 3vw;
+    margin: 0 0 1vw 0;
     color: #424B25;
 }
 
 .footer-list-wrap li{
-    font-size: 17px;
-    margin: 0px 0px 8px 0px;
+    font-size: 1.5vw;
+    margin: 0 0 0.9vw 0;
     color: #32391C;
 }
 
@@ -113,8 +112,8 @@ header {
 
 footer {
     position: absolute;
-    width: 100vw;
-    height: 383px;
+    width: 100%;
+    height: 38vw;
     background-color: rgba(144, 166, 128, 0.63);
     box-sizing: border-box;
 }

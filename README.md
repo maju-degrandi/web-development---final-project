@@ -60,19 +60,19 @@ Os diagramas para usuário cliente e usuário administrador podem ser conferidos
 #### Comentários sobre o código
 Nesta seção, forneceremos alguns comentários e observações sobre o código do projeto.
 
-*Estrutura do Projeto: O projeto segue uma estrutura organizada, com os componentes localizados no diretório src/components, os estilos no diretório src/assets/styles, e os arquivos de configuração no diretório raiz. Isso facilita a localização dos arquivos e a manutenção do código.
+* Estrutura do Projeto: O projeto segue uma estrutura organizada, com os componentes localizados no diretório src/components, os estilos no diretório src/assets/styles, e os arquivos de configuração no diretório raiz. Isso facilita a localização dos arquivos e a manutenção do código.
 
-*Consistência na Nomenclatura: A nomenclatura dos arquivos e dos componentes é consistente e segue um padrão. Isso contribui para a legibilidade e compreensão do código por parte dos desenvolvedores.
+* Consistência na Nomenclatura: A nomenclatura dos arquivos e dos componentes é consistente e segue um padrão. Isso contribui para a legibilidade e compreensão do código por parte dos desenvolvedores.
 
-*Separação de Responsabilidades: Os componentes estão bem definidos e seguem o princípio da separação de responsabilidades. Cada componente possui uma única função e é reutilizável em diferentes partes do projeto.
+* Separação de Responsabilidades: Os componentes estão bem definidos e seguem o princípio da separação de responsabilidades. Cada componente possui uma única função e é reutilizável em diferentes partes do projeto.
 
-*Lógica de Negócio: É evidente que a lógica de negócio está sendo tratada principalmente nos componentes relacionados ao carrinho de compras, formulário de checkout e autenticação. Esses componentes lidam com a manipulação de dados, validação de entrada e processamento de ações específicas.
+* Lógica de Negócio: É evidente que a lógica de negócio está sendo tratada principalmente nos componentes relacionados ao carrinho de compras, formulário de checkout e autenticação. Esses componentes lidam com a manipulação de dados, validação de entrada e processamento de ações específicas.
 
-*Reatividade: O uso de bibliotecas como Vue.js e Vuex é notável para a criação de uma aplicação reativa. Os componentes respondem corretamente às alterações de estado e as atualizações são refletidas na interface do usuário de forma eficiente.
+* Reatividade: O uso de bibliotecas como Vue.js e Vuex é notável para a criação de uma aplicação reativa. Os componentes respondem corretamente às alterações de estado e as atualizações são refletidas na interface do usuário de forma eficiente.
 
-*Padronização de Estilos: Foi adotado um estilo de codificação consistente em todo o projeto, com identação adequada, uso adequado de espaços em branco e separação lógica das instruções. Isso melhora a legibilidade do código e facilita a colaboração entre os membros da equipe.
+* Padronização de Estilos: Foi adotado um estilo de codificação consistente em todo o projeto, com identação adequada, uso adequado de espaços em branco e separação lógica das instruções. Isso melhora a legibilidade do código e facilita a colaboração entre os membros da equipe.
 
-*Gerenciamento de Estado: O uso do Vuex para o gerenciamento de estado é uma abordagem recomendada. O armazenamento centralizado ajuda a manter a consistência dos dados em todo o aplicativo e simplifica a lógica de comunicação entre componentes.
+* Gerenciamento de Estado: O uso do Vuex para o gerenciamento de estado é uma abordagem recomendada. O armazenamento centralizado ajuda a manter a consistência dos dados em todo o aplicativo e simplifica a lógica de comunicação entre componentes.
 ## Plano de teste 
 
 ### Teste 1: Renderização dos Componentes
@@ -83,9 +83,9 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Passos:**
 
-*Abrir as páginas que contém os Componentes.
-*Observar se os Componentes são exibidos corretamente na tela.
-*Verificar se os elementos internos dos Componentes estão presentes e corretos.
+* Abrir as páginas que contém os Componentes.
+* Observar se os Componentes são exibidos corretamente na tela.
+* Verificar se os elementos internos dos Componentes estão presentes e corretos.
 
 **Resultado:** Os Componentes são renderizados corretamente, exibindo todos os elementos esperados.
 
@@ -97,10 +97,10 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Passos:**
 
-*Abrir as páginas que contém os Componentes.
-*Realizar a ação específica, como clicar em um botão ou preencher um formulário.
-*Observar o comportamento dos Componentes em resposta à ação realizada.
-*Verificar se os Componentes se comportam conforme o esperado, como exibir uma mensagem de sucesso ou atualizar o estado corretamente.
+* Abrir as páginas que contém os Componentes.
+* Realizar a ação específica, como clicar em um botão ou preencher um formulário.
+* Observar o comportamento dos Componentes em resposta à ação realizada.
+* Verificar se os Componentes se comportam conforme o esperado, como exibir uma mensagem de sucesso ou atualizar o estado corretamente.
 
 **Resultado:** Os Componentes interagem corretamente, exibindo o comportamento esperado em resposta à ação realizada.
 
@@ -112,9 +112,9 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Passos:**
 
-*Configurar um cenário específico para testar a lógica de negócios dos Components.
-*Executar as funções ou métodos relacionados à lógica de negócios.
-*Verificar se os resultados retornados são os esperados.
+* Configurar um cenário específico para testar a lógica de negócios dos Components.
+* Executar as funções ou métodos relacionados à lógica de negócios.
+* Verificar se os resultados retornados são os esperados.
 
 **Resultado:** A lógica de negócios dos Componentes funcionam corretamente, retornando os resultados esperados de acordo com o cenário de teste.
 
@@ -124,10 +124,10 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Passos:**
 
-*Acessar uma página específica.
-*Clicar em um link ou botão que leva a outra página.
-*Verificar se a transição entre as páginas ocorre corretamente.
-*Observar se a página destino é carregada e exibida corretamente.
+* Acessar uma página específica.
+* Clicar em um link ou botão que leva a outra página.
+* Verificar se a transição entre as páginas ocorre corretamente.
+* Observar se a página destino é carregada e exibida corretamente.
 
 **Resultado:** A navegação entre as páginas ocorre corretamente, com a transição suave entre as páginas e a exibição correta do conteúdo da página destino.
 
@@ -137,10 +137,10 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Passos:**
 
-*Executar uma ação que aciona uma requisição de API.
-*Verificar se a requisição é enviada corretamente.
-*Observar se a resposta da API é recebida corretamente.
-*Verificar se os dados retornados pela API são os esperados.
+* Executar uma ação que aciona uma requisição de API.
+* Verificar se a requisição é enviada corretamente.
+* Observar se a resposta da API é recebida corretamente.
+* Verificar se os dados retornados pela API são os esperados.
 
 **Resultado:** As requisições de API são enviadas e recebidas corretamente, com os dados retornados pela API sendo consistentes com o esperado. A manipulação de erros durante a requisição é tratada adequadamente, exibindo mensagens de erro ou tomando as ações apropriadas.
 
@@ -152,10 +152,10 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Passos:**
 
-*Analisar os estados e props esperados dos Componentes.
-*Realizar ações ou simular eventos que afetem esses estados e props.
-*Verificar se os Componentes atualizam seus estados e props de acordo.
-*Observar se os Componentes exibem corretamente as alterações em sua renderização com base nos estados e props.
+* Analisar os estados e props esperados dos Componentes.
+* Realizar ações ou simular eventos que afetem esses estados e props.
+* Verificar se os Componentes atualizam seus estados e props de acordo.
+* Observar se os Componentes exibem corretamente as alterações em sua renderização com base nos estados e props.
 
 **Resultado:** Os Componentes gerenciam seus estados e props corretamente, atualizando-os conforme as ações e exibindo a renderização esperada com base nesses estados e props.
 

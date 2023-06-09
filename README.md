@@ -58,19 +58,113 @@ Os diagramas para usuário cliente e usuário administrador podem ser conferidos
 ![USER](https://user-images.githubusercontent.com/82612544/236633966-ba5cd309-04d6-4b73-b9c5-831fb1b5bc94.png)
 
 #### Comentários sobre o código
+Nesta seção, forneceremos alguns comentários e observações sobre o código do projeto.
 
-#### Plano de teste
+*Estrutura do Projeto: O projeto segue uma estrutura organizada, com os componentes localizados no diretório src/components, os estilos no diretório src/assets/styles, e os arquivos de configuração no diretório raiz. Isso facilita a localização dos arquivos e a manutenção do código.
 
-#### Resultados dos testes
+*Consistência na Nomenclatura: A nomenclatura dos arquivos e dos componentes é consistente e segue um padrão. Isso contribui para a legibilidade e compreensão do código por parte dos desenvolvedores.
 
-#### Procedimentos de construção
+*Separação de Responsabilidades: Os componentes estão bem definidos e seguem o princípio da separação de responsabilidades. Cada componente possui uma única função e é reutilizável em diferentes partes do projeto.
 
-#### Problemas
+*Lógica de Negócio: É evidente que a lógica de negócio está sendo tratada principalmente nos componentes relacionados ao carrinho de compras, formulário de checkout e autenticação. Esses componentes lidam com a manipulação de dados, validação de entrada e processamento de ações específicas.
 
-#### Comentários adicionais
+*Reatividade: O uso de bibliotecas como Vue.js e Vuex é notável para a criação de uma aplicação reativa. Os componentes respondem corretamente às alterações de estado e as atualizações são refletidas na interface do usuário de forma eficiente.
 
+*Padronização de Estilos: Foi adotado um estilo de codificação consistente em todo o projeto, com identação adequada, uso adequado de espaços em branco e separação lógica das instruções. Isso melhora a legibilidade do código e facilita a colaboração entre os membros da equipe.
 
-## Sobre:
+*Gerenciamento de Estado: O uso do Vuex para o gerenciamento de estado é uma abordagem recomendada. O armazenamento centralizado ajuda a manter a consistência dos dados em todo o aplicativo e simplifica a lógica de comunicação entre componentes.
+## Plano de teste 
+
+### Teste 1: Renderização dos Componentes
+
+**Componentes testados:** NavBar, ProductCard, Cart, CheckoutForm.
+
+**Descrição:** Verificar se os Componentes são renderizados corretamente.
+
+**Passos:**
+
+*Abrir as páginas que contém os Componentes.
+*Observar se os Componentes são exibidos corretamente na tela.
+*Verificar se os elementos internos dos Componentes estão presentes e corretos.
+
+**Resultado:** Os Componentes são renderizados corretamente, exibindo todos os elementos esperados.
+
+### Teste 2: Interatividade dos Componentes
+
+**Componentes testados:** ProductCard, Cart, CheckoutForm, AuthenticationForm.
+
+**Descrição:** Testar a interatividade dos Componentes ao realizar uma ação específica.
+
+**Passos:**
+
+*Abrir as páginas que contém os Componentes.
+*Realizar a ação específica, como clicar em um botão ou preencher um formulário.
+*Observar o comportamento dos Componentes em resposta à ação realizada.
+*Verificar se os Componentes se comportam conforme o esperado, como exibir uma mensagem de sucesso ou atualizar o estado corretamente.
+
+**Resultado:** Os Componentes interagem corretamente, exibindo o comportamento esperado em resposta à ação realizada.
+
+### Teste 3: Teste de Lógica de Negócios dos Componentes
+
+**Componentes testados:** CheckoutForm, ProductCard, Cart, AuthenticationForm.
+
+**Descrição:** Verificar se a lógica de negócios dos Componentes funcionam corretamente.
+
+**Passos:**
+
+*Configurar um cenário específico para testar a lógica de negócios dos Components.
+*Executar as funções ou métodos relacionados à lógica de negócios.
+*Verificar se os resultados retornados são os esperados.
+
+**Resultado:** A lógica de negócios dos Componentes funcionam corretamente, retornando os resultados esperados de acordo com o cenário de teste.
+
+### Teste 4: Navegação entre Páginas
+
+**Descrição:** Testar a navegação entre as páginas do projeto.
+
+**Passos:**
+
+*Acessar uma página específica.
+*Clicar em um link ou botão que leva a outra página.
+*Verificar se a transição entre as páginas ocorre corretamente.
+*Observar se a página destino é carregada e exibida corretamente.
+
+**Resultado:** A navegação entre as páginas ocorre corretamente, com a transição suave entre as páginas e a exibição correta do conteúdo da página destino.
+
+### Teste 5: Teste de Requisição de API
+
+**Descrição:** Testar as requisições de API realizadas pelo projeto.
+
+**Passos:**
+
+*Executar uma ação que aciona uma requisição de API.
+*Verificar se a requisição é enviada corretamente.
+*Observar se a resposta da API é recebida corretamente.
+*Verificar se os dados retornados pela API são os esperados.
+
+**Resultado:** As requisições de API são enviadas e recebidas corretamente, com os dados retornados pela API sendo consistentes com o esperado. A manipulação de erros durante a requisição é tratada adequadamente, exibindo mensagens de erro ou tomando as ações apropriadas.
+
+### Teste 6: Teste de Estado e Props dos Componentes
+
+**Componentes testados:** ProductCard, Cart, CheckoutForm, AuthenticationForm.
+
+**Descrição:** Verificar se o gerenciamento de estados e props dos Componentes está correto.
+
+**Passos:**
+
+*Analisar os estados e props esperados dos Componentes.
+*Realizar ações ou simular eventos que afetem esses estados e props.
+*Verificar se os Componentes atualizam seus estados e props de acordo.
+*Observar se os Componentes exibem corretamente as alterações em sua renderização com base nos estados e props.
+
+**Resultado:** Os Componentes gerenciam seus estados e props corretamente, atualizando-os conforme as ações e exibindo a renderização esperada com base nesses estados e props.
+
+## Resultados dos testes
+Os testes realizados forneceram uma cobertura adequada das funcionalidades do projeto, verificando a renderização correta dos componentes, a interatividade, a lógica de negócios, a navegação entre páginas, as requisições de API e o gerenciamento de estados e props. Essa bateria de testes foi fundamental para a correção do código e a percepção de erros passados despercebidos durante a implementação.
+
+É importante lembrar que os testes foram realizados manualmente. 
+
+## Procedimentos de construção
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
@@ -84,6 +178,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 <!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
 * Você instalou a versão mais recente de `node.js`
+* Você tem `npm` em sua máquina
 * Você tem uma máquina `Windows`, `Linux` ou `Mac`.
 
 ### 🚀 Instalando Beleaf
@@ -91,17 +186,34 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 Para instalar o Beleaf, siga estas etapas:
 
 Linux, Windows e macOS:
+*Clone este repositório em sua máquina local:
 ```
-<comando_de_instalação>
+git clone https://github.com/maju-degrandi/web-development---final-project.git
+
+```
+*Acesse o diretório do projeto:
+```
+cd web-development---final-project
+
+```
+*Instale as dependências do projeto usando o npm:
+```
+npm install
+
 ```
 
 ### ☕ Usando Beleaf
 
 Para usar Beleaf, siga estas etapas:
 
+*Após a conclusão da instalação e configuração, você pode executar o projeto usando o seguinte comando:
 ```
-<exemplo_de_uso>
+npm run dev
 ```
+
+## Problemas
+
+## Comentários Adicionais
 
 ## 🤝 Colaboradores
 

@@ -195,7 +195,7 @@ Para usar Beleaf, siga estas etapas:
 
 * Após a conclusão da instalação e configuração, você pode executar o projeto usando o seguinte comando:
 ```
-npm run dev
+npm run start
 ```
 
 ## Problemas

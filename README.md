@@ -131,20 +131,7 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Resultado:** A navegação entre as páginas ocorre corretamente, com a transição suave entre as páginas e a exibição correta do conteúdo da página destino.
 
-### Teste 5: Teste de Requisição de API
-
-**Descrição:** Testar as requisições de API realizadas pelo projeto.
-
-**Passos:**
-
-* Executar uma ação que aciona uma requisição de API.
-* Verificar se a requisição é enviada corretamente.
-* Observar se a resposta da API é recebida corretamente.
-* Verificar se os dados retornados pela API são os esperados.
-
-**Resultado:** As requisições de API são enviadas e recebidas corretamente, com os dados retornados pela API sendo consistentes com o esperado. A manipulação de erros durante a requisição é tratada adequadamente, exibindo mensagens de erro ou tomando as ações apropriadas.
-
-### Teste 6: Teste de Estado e Props dos Componentes
+### Teste 5: Teste de Estado e Props dos Componentes
 
 **Componentes testados:** ProductCard, Cart, CheckoutForm, AuthenticationForm.
 

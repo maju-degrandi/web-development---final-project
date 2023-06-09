@@ -9,6 +9,7 @@ import { PageLogin } from "./pages/Login.jsx";
 import { PageRegister } from "./pages/Register.jsx";
 import { PageProfile } from "./pages/Profile.jsx";
 import { PageCart } from "./pages/Cart.jsx";
+import { Checkout }  from "./pages/Checkout.jsx";
 
 export function routes({cart, setCart}) {
     return (
@@ -21,6 +22,7 @@ export function routes({cart, setCart}) {
             <Route element={<PageRegister />} path="/register" />
             <Route element={<PageProfile />} path="/profile" />
             <Route element={<PageCart cart={cart} setCart={setCart} />} path="/cart" />
+            <Route element={<Checkout cart={cart} setCart={setCart} />} path="/checkout" />
         </Routes>
     )
 }

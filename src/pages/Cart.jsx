@@ -1,7 +1,8 @@
 import * as React from 'react';
 import '../styles/cart.css';
 import { Card } from "../components/Card";
-import { CartItem } from '../components/Cart';
+import { CartItem } from '../components/Cart/CartItem';
+import { CartList } from '../components/Cart/CartList';
 
 export const PageCart = ({cart, setCart}) => {
 
@@ -9,22 +10,9 @@ export const PageCart = ({cart, setCart}) => {
         <>
             {/* <h1 className='title'>Cart</h1> */}
             <Card>
-                {   
-                    cart ? cart.length > 0 ? cart.map((item) => (
-
-                        <ul className='cart-list' key={item.id}>
-                            <CartItem item={item} cart={cart} setCart={setCart}/>
-                        </ul>
-                    ))
-                    :
-                    <p>Your Cart is empty. Go ahead and shop!</p>
-
-                    : 
-
-                    <p>Loading ... </p>
-
-                }
+                <CartList cart={cart} setCart={setCart}/>
             </Card>
+            
             {/* <div className=''>
                 Subtotal:
             </div> */}

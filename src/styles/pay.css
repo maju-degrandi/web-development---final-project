@@ -1,0 +1,27 @@
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    border: 2px solid #ccc;
+    border-radius: 30%; 
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+  
+input[type="radio"]:checked {
+    background-color: #9eaf93;
+}
+  
+
+.form-pay div {
+    margin-bottom: 10px;
+} 
+
+.form-pay label {
+    display: flex;
+}
+  

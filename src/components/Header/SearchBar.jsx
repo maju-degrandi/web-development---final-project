@@ -23,7 +23,7 @@ export const SearchBar = ( {liClassName} ) => {
           <input
             type="text"
             
-            className='expanded'
+            className='expanded input-search-bar'
             placeholder="Digite sua pesquisa..."
           />
         )}

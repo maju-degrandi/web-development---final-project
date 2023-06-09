@@ -1,0 +1,53 @@
+.checkout {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkout h2 {
+    margin: 0 0 10px 0;
+}
+
+#checkout-title {
+    width: 15%;
+    margin: 0 0 0 30px;
+}
+
+#checkout-main {
+    width: 65%;
+}
+
+#checkout-resume {
+    width: 20%;
+    margin: 0 50px 0 15px;
+}
+
+#checkout-main .form-size-float{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.full-line{
+    margin-right: 40%;
+}
+
+.size-3{
+    width: 30%;
+}
+.size-5{
+    width: 50%;   
+}
+.size-6{
+    width: 65%;
+}
+.size-10{
+    width: 100%;
+}
+
+#checkout-main > * {
+    background-color: #F5F5F5;
+    margin: 0 0 20px 0;
+    padding: 10px;
+}

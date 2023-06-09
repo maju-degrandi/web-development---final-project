@@ -57,7 +57,7 @@ Os diagramas para usuário cliente e usuário administrador podem ser conferidos
 ![CLIENT](https://user-images.githubusercontent.com/82612544/236633960-7aec3cb3-2ad6-4a60-b1cb-dba3cb814b8a.png)
 ![USER](https://user-images.githubusercontent.com/82612544/236633966-ba5cd309-04d6-4b73-b9c5-831fb1b5bc94.png)
 
-#### Comentários sobre o código
+### Comentários sobre o código
 Nesta seção, forneceremos alguns comentários e observações sobre o código do projeto.
 
 * *Estrutura do Projeto:* O projeto segue uma estrutura organizada, com os componentes localizados no diretório src/components, os estilos no diretório src/assets/styles, e os arquivos de configuração no diretório raiz. Isso facilita a localização dos arquivos e a manutenção do código.

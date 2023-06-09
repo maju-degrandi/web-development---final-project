@@ -7,3 +7,16 @@ main {
     flex-grow: 1;
     position: relative;
 }
+
+.form-size-float .size-3{
+    width: 30%;
+}
+.form-size-float .size-5{
+    width: 50%;   
+}
+.form-size-float .size-6{
+    width: 65%;
+}
+.form-size-float .size-10{
+    width: 100%;
+}

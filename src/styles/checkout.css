@@ -16,11 +16,6 @@
     width: 65%;
 }
 
-#checkout-resume {
-    width: 20%;
-    margin: 0 50px 0 15px;
-}
-
 #checkout-main .form-size-float{
     width: 100%;
     display: flex;
@@ -33,21 +28,45 @@
     margin-right: 40%;
 }
 
-.size-3{
-    width: 30%;
-}
-.size-5{
-    width: 50%;   
-}
-.size-6{
-    width: 65%;
-}
-.size-10{
-    width: 100%;
-}
-
 #checkout-main > * {
     background-color: #F5F5F5;
     margin: 0 0 20px 0;
     padding: 10px;
+    
+    width: 800px;
+}
+
+#checkout-resume {
+    width: 15%;
+    height: 300px;
+    margin: 0 40px 0 0;
+    
+    position: fixed;
+    right: 0;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-resume .flex{
+    display: flex;
+    margin: 0 0 15px 0;
+}
+
+#checkout-resume .flex .price{
+    text-align: right;
+}
+
+#checkout-resume p{
+    color: #5F6C37;
+    align-self: flex-end;
+    margin: 0 0 0 0;
+    font-size: 15px;
+    font-family: Abril;
+    width: 70%;
+}
+
+#checkout-resume .order-total p{
+    font-size: 20px;
+    color: #38411f;
 }

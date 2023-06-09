@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/checkout.css'
 import { PlaceholderInput } from '../components/Input/FloatInput';
 import PaymentScreen from '../components/Checkout/Pay';
@@ -15,6 +15,19 @@ export const Checkout = ({cart, setCart, updateCart}) => {
     const [number, setNumber] = useState([]);
     const [moreInfo, setMoreInfo] = useState([]);
     
+    const [qttItems, setQttItens] = useState([]);
+    useEffect(()=>{
+        let qtt = 0;
+        cart.map((item) => {
+            qtt += item.qtt;
+        })
+        
+        setQttItens(qtt);
+    }, [cart]);
+    
+    const [discount, setDiscount] = useState(0);
+    const [shipping, setShipping] = useState(0);
+    
     return (
         <div id='wrapper' className='checkout'>
             <div id='checkout-title'>
@@ -25,7 +38,6 @@ export const Checkout = ({cart, setCart, updateCart}) => {
                 <div className='checkout-items'>
                     <h2>Items</h2>
                     <CartList updateCart={updateCart} cart={cart} setCart={setCart} blocked={true}/>
-                    
                 </div>
                 
                 <div id='checkout-ship-to'>
@@ -52,10 +64,47 @@ export const Checkout = ({cart, setCart, updateCart}) => {
             </div>
             
             <div id='checkout-resume'>
-                <h2>Subtotal: {cart[0].subtotal}</h2>
-                <Link to='/'>
-                    <Button text="Confirm" className="filled-button"/>
-                </Link>
+                <div className='flex'>
+                    <p className='type'>Items({qttItems})</p>
+                    <p className='price'>R$
+                        {
+                            Number.parseFloat(cart[0].subtotal).toFixed(2)
+                        }
+                    </p>
+                </div>
+                <div className='flex'>
+                    <p className='type'>Shipping</p>
+                    <p className='price'>R$
+                        {
+                            Number.parseFloat(shipping).toFixed(2)
+                        }
+                    </p>
+                </div>
+                <div className='flex'>
+                    <p className='type'>Discount</p>
+                    <p className='price'>R$
+                        {
+                            Number.parseFloat(discount).toFixed(2)
+                        }
+                    </p>
+                </div>
+                
+                <hr />
+                
+                <div className='flex order-total'>
+                    <p className='type'>Order Total</p>
+                    <p className='price'>R$
+                        {
+                            Number.parseFloat(cart[0].subtotal+shipping-discount).toFixed(2)
+                        }
+                    </p>
+                </div>
+                
+                <div className='flex full-line'>
+                    <Link to='/'>
+                        <Button text="Confirm and Pay" className="filled-button"/>
+                    </Link>
+                </div>
             </div>
         </div>
     );

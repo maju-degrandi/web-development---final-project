@@ -60,19 +60,19 @@ Os diagramas para usuário cliente e usuário administrador podem ser conferidos
 #### Comentários sobre o código
 Nesta seção, forneceremos alguns comentários e observações sobre o código do projeto.
 
-* Estrutura do Projeto: O projeto segue uma estrutura organizada, com os componentes localizados no diretório src/components, os estilos no diretório src/assets/styles, e os arquivos de configuração no diretório raiz. Isso facilita a localização dos arquivos e a manutenção do código.
+* *Estrutura do Projeto:* O projeto segue uma estrutura organizada, com os componentes localizados no diretório src/components, os estilos no diretório src/assets/styles, e os arquivos de configuração no diretório raiz. Isso facilita a localização dos arquivos e a manutenção do código.
 
-* Consistência na Nomenclatura: A nomenclatura dos arquivos e dos componentes é consistente e segue um padrão. Isso contribui para a legibilidade e compreensão do código por parte dos desenvolvedores.
+* *Consistência na Nomenclatura:* A nomenclatura dos arquivos e dos componentes é consistente e segue um padrão. Isso contribui para a legibilidade e compreensão do código por parte dos desenvolvedores.
 
-* Separação de Responsabilidades: Os componentes estão bem definidos e seguem o princípio da separação de responsabilidades. Cada componente possui uma única função e é reutilizável em diferentes partes do projeto.
+* *Separação de Responsabilidades:* Os componentes estão bem definidos e seguem o princípio da separação de responsabilidades. Cada componente possui uma única função e é reutilizável em diferentes partes do projeto.
 
-* Lógica de Negócio: É evidente que a lógica de negócio está sendo tratada principalmente nos componentes relacionados ao carrinho de compras, formulário de checkout e autenticação. Esses componentes lidam com a manipulação de dados, validação de entrada e processamento de ações específicas.
+* *Lógica de Negócio:* É evidente que a lógica de negócio está sendo tratada principalmente nos componentes relacionados ao carrinho de compras, formulário de checkout e autenticação. Esses componentes lidam com a manipulação de dados, validação de entrada e processamento de ações específicas.
 
-* Reatividade: O uso de bibliotecas como Vue.js e Vuex é notável para a criação de uma aplicação reativa. Os componentes respondem corretamente às alterações de estado e as atualizações são refletidas na interface do usuário de forma eficiente.
+* *Reatividade:* O uso de bibliotecas como Vue.js e Vuex é notável para a criação de uma aplicação reativa. Os componentes respondem corretamente às alterações de estado e as atualizações são refletidas na interface do usuário de forma eficiente.
 
-* Padronização de Estilos: Foi adotado um estilo de codificação consistente em todo o projeto, com identação adequada, uso adequado de espaços em branco e separação lógica das instruções. Isso melhora a legibilidade do código e facilita a colaboração entre os membros da equipe.
+* *Padronização de Estilos:* Foi adotado um estilo de codificação consistente em todo o projeto, com identação adequada, uso adequado de espaços em branco e separação lógica das instruções. Isso melhora a legibilidade do código e facilita a colaboração entre os membros da equipe.
 
-* Gerenciamento de Estado: O uso do Vuex para o gerenciamento de estado é uma abordagem recomendada. O armazenamento centralizado ajuda a manter a consistência dos dados em todo o aplicativo e simplifica a lógica de comunicação entre componentes.
+* *Gerenciamento de Estado:* O uso do Vuex para o gerenciamento de estado é uma abordagem recomendada. O armazenamento centralizado ajuda a manter a consistência dos dados em todo o aplicativo e simplifica a lógica de comunicação entre componentes.
 ## Plano de teste 
 
 ### Teste 1: Renderização dos Componentes

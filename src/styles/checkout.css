@@ -9,11 +9,14 @@
 
 #checkout-title {
     width: 15%;
-    margin: 0 0 0 30px;
+    margin: 0 0 20px 30px;
 }
 
 #checkout-main {
-    width: 65%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #checkout-main .form-size-float{
@@ -33,13 +36,13 @@
     margin: 0 0 20px 0;
     padding: 10px;
     
-    width: 800px;
+    width: 100%;
 }
 
 #checkout-resume {
     width: 15%;
     height: 300px;
-    margin: 0 40px 0 0;
+    margin: 0 30px 0 0;
     
     position: fixed;
     right: 0;
@@ -69,4 +72,64 @@
 #checkout-resume .order-total p{
     font-size: 20px;
     color: #38411f;
+}
+
+#checkout-resume hr{
+    margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 900px) {
+    #checkout-title{
+        font-size: small;
+    }
+    
+    #checkout-resume p{
+        font-size: 12px;
+    }
+    
+    #checkout-resume .order-total p{
+        font-size: 15px;
+        color: #38411f;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .checkout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .checkout h2 {
+        margin: 0 0 10px 0;
+    }
+    
+    #checkout-title {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    #checkout-main {
+        width: 100%;
+    }
+    
+    #checkout-resume {
+        width: 80%;
+        height: 300px;
+        margin: 0 30px 0 0;
+        
+        position:inherit;
+    }
+    
+    #checkout-resume p{
+        font-size: 15px;
+    }
+    
+    #checkout-resume .order-total p{
+        font-size: 20px;
+        color: #38411f;
+    }
+    
+    .full-line {
+        justify-content: center;
+    }
 }

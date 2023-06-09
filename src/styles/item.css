@@ -67,6 +67,7 @@
     width: 75px;
     height: 50px;
     color:rgba(95, 108, 55, 1);
+    margin: 0 0 0 10px;
     align-content: center;
 }
 
@@ -103,4 +104,15 @@
     #item-desc{
         width: 100%;
     }
+}
+
+@media screen and (max-width: 900px) {
+    #qtt {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
 }

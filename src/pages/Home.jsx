@@ -16,7 +16,7 @@ import hydrangea from '../assets/hydrangea.jpg';
 
 export const PageHome = () => {
     return (
-        <>
+        <div className="wrapper">
             <div class="apresentation">
                 <div class="home-main-text">
                     <spam class="green-background">GREEN IS THE NEW BLACK</spam> 
@@ -142,6 +142,6 @@ export const PageHome = () => {
                     <span class="price">$ 15</span>
                 </div>
             </div>
-        </>
+        </div>
     );
 };

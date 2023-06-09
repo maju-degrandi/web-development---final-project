@@ -30,6 +30,12 @@
     font-weight: 700;
 }
 
+.basic-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .basic-button {
     margin: 30px 10px;
     align-self: center;

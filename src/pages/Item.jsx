@@ -3,12 +3,11 @@ import { useParams } from 'react-router-dom';
 
 import { Item } from '../components/Item';
 
-export const PageItem = () => {
+export const PageItem = ({cart, setCart}) => {
     const { itemId } = useParams();
-    console.log(itemId);
     return (
         <>
-            <Item id={itemId}/>
+            <Item id={itemId} cart={cart} setCart={setCart}/>
         </>
     );
 };

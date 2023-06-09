@@ -4,9 +4,10 @@
     width: 100%; 
 }
 
-#buy-button {
+.buy-button {
     font-size: x-large;
     width: 150px;
+    margin: 10px 0;
     /* height: 75px; */
     overflow: auto;
 }
@@ -31,11 +32,12 @@
 }
 
 #item-image {
-    margin: 0 3vw 3vw 1.5vw;
-    width: 30vw;
-    height: 40vw;
+    margin: 0px 25px 25px 80px;
+    width: 482px;
+    height: 569px;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 0 25px 0 25px;
     object-fit: cover;
 }
 
@@ -58,15 +60,14 @@
     font-family: 'Advent Pro', 'sans-serif';
     font-weight: 700;
     color:rgba(95, 108, 55, 1);
-    font-size: 3vw;
+    font-size: larger;
 }  
 
 #qtt {
-    width: 9vw;
-    height: 5vw;
+    width: 75px;
+    height: 50px;
     color:rgba(95, 108, 55, 1);
     align-content: center;
-    font-size: 2.5vw;
 }
 
 #background-image2 {
@@ -84,22 +85,15 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .item{  
+    .item, #item-desc, .plant-info, #shop, .item-page, .imageItem{  
         flex-direction: column;
+        display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%; 
     }
-    .item-page{
-        display: flex;
-        justify-content: left;
-    }
-
-    #shop{
-        align-self: flex-start;
-    }
-
     #item-image{ 
-        height: 60vw;
+        height: 300px;
         width: 80%;
         margin: 30px 0;
     }

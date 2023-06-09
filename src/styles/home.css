@@ -1,3 +1,5 @@
+
+
 /*GENERAL, IMAGES AND FORMS*/
 #ellipse-1 {
     position: absolute;
@@ -32,21 +34,21 @@
 }
 
 .second.title{
-    font-size: 3vw;
+    font-size: 32px;
     text-align: center;   
 }
 
 .quote.main.title{
-    margin: 3.5vw 0;
+    margin: 40px 0;
     width: 100%;
-    height: 14vw;
+    height: 156px;
     font-weight: 400;
-    font-size: 6vw;
-    line-height: 7vw;
+    font-size: 90px;
+    line-height: 78px;
 }
 
 .collect.main.title{
-    font-size: 4vw;
+    font-size: 64px;
     color: #5F6C37;
 }
 
@@ -55,29 +57,29 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 45vw;
+    height: 600px;
     justify-content: space-between;
 }
 
 .green-background{
     background-color: #497856;
     font-family: Advent_Pro;
-    width: 9vw;
-    height: 3.5vw;
-    padding: 0.8vw;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
     margin: 0 0 10 0;
     font-weight: 400;
-    font-size: 2vw;
+    font-size: 20px;
     color: white;
 }
 
 
 #elipse{
     position: absolute;
-    width: 135vw;
-    height: 80vw;
+    width: 1500px;
+    height: 900px;
     left: 50%;
-    top: -17vw;
+    top: -200px;
     border-radius: 70%;
     
     background: #90A680;
@@ -104,22 +106,22 @@
 }
 
 #home-main-button{
-    width: 18vw;
-    height: 4.5vw;
+    width: 200px;
+    height: 50px;
 }
 
 .paragraph{
     margin: 20px 0 60px 0;
-    font-size:  1.75vw;
+    font-size: 20px;
     font-family: Advent_Pro;
     text-align: justify;
 }
 
 #home-img{
-    width: 40.7vw;
+    width: 500px;
     position: absolute;
     right: -0.38%;
-    top: -1.26vw;
+    top: -7px;
     bottom: 84.75%;
     border-radius: 0 0 0 0;
     z-index: -1;
@@ -127,13 +129,13 @@
 
 .home-main-text{
     margin-left: 10%;
-    width: 34.8vw;
+    width: 390px;
 }
 
 /* TYPE SELECT */
 .select-type{
     background-color: #497856;
-    height: 35vw;
+    height: 464px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,12 +150,12 @@
 }
 
 .type-card{
-    width: 23vw;
-    height: 23vw;
-    padding: 0.8vw;
+    width: 280px;
+    height: 280px;
+    padding: 10px;
     background-color: white;
-    margin: 0.8vw;
-    border-radius: 0 0.8vw;
+    margin: 10px;
+    border-radius: 0 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: #5F6C37;
     justify-content: center;
@@ -163,7 +165,7 @@
 }
 
 .type-img{
-    height: 17.5vw;
+    height: 200px;
     width: 100%;
 	object-fit: cover;
 }
@@ -172,20 +174,20 @@
 
 .collection{
     background-color: #FFFFFF;
-    height: 55vw;
+    height: 700px;
     display: flex;
 }
 
 .home.image{
     height: 100%;
-    width: 50vw;
+    width: 600px;
 	object-fit: cover;
     opacity: 80%;
 }
 
 .collection-text{
-    padding: 5vw 0 0 5vw;
-    width: 50vw;
+    padding: 100px 0 0 100px;
+    width: 560px;
 }
 
 .button-outline:hover{
@@ -193,8 +195,8 @@
     color: white;
 }
 .button-outline{
-    width: 17.8vw;
-    height: 3.6vw;
+    width: 200px;
+    height: 40px;
     font-family: Advent_Pro;
     background-color: transparent;
     border: 2px solid #5F6C37;
@@ -208,13 +210,13 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    height: 55vw;
+    height: 700px;
     justify-content: center;
 }
 
 .best-text{
     width: 30%;
-    height: 30vw;
+    height: 386px;
     /* background-color: #90A680; */
     display: flex;
     align-items: center;
@@ -223,8 +225,8 @@
 }
 
 .best-card{
-    width: 25vw;
-    height: 35vw;
+    width: 30%;
+    height: 100%;
     /* background-color: #5F6C37; */
     display: flex;
     justify-content: center;
@@ -236,7 +238,7 @@
 
 .best-image{
     width: 100%;
-    height: 35.65vw;
+    height: 400px;
 	object-fit: cover;
     border-radius: 0px 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -244,12 +246,12 @@
 
 .add.button-full{
     position: absolute;
-    width: 25vw;
-    height: 3.6vw;
+    width: 328px;
+    height: 40px;
 }
 
 .shop.button-outline{
-    width: 20.5vw;
+    width: 230px;
     margin: 0 0 0 10%;
     z-index: 100;
 
@@ -259,13 +261,13 @@
     text-align: left;
     width: 100%;
     margin: 20px 0 0 50px;
-    font-size: 3vw;
+    font-size: 24px;
     color: #5F6C37;
     z-index: 100;
 }
 
 .best.main.title{
-    font-size: 4.5vw;
+    font-size: 50px;
     margin-bottom: 20px; 
     text-align: center;
 }
@@ -274,7 +276,7 @@
     color: #5F6C37;
     align-self: flex-end;
     margin: 0 20px 0 0;
-    font-size: 3vw;
+    font-size: 26px;
     font-family: Abril;
 }
 
@@ -288,9 +290,9 @@
 #background-img{
     position: absolute;
     width: auto;
-    height: 53.5vw;
-    left: -8.5vw;
-    top: 178.3vw;
+    height: 600px;
+    left: -95px;
+    top: 2000px;
     transform: rotate(10deg);
     z-index: 0;
     opacity: 20%;
@@ -301,7 +303,7 @@
 
 .ornaments{
     background-color: #90A680;
-    height: 46vw;
+    height: 515px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -312,7 +314,7 @@
 }
 
 .ornaments-text{
-    padding: 7.8vw;
+    padding: 88px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -321,7 +323,7 @@
 }
 
 .ornament.main.title{
-    font-size: 4vw;
+    font-size: 64px;
     color: #21452B;
 }
 
@@ -332,5 +334,3 @@
     color: #21452B;
     border-color: #21452B;
 }
-
-

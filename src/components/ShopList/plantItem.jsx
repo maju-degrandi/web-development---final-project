@@ -8,7 +8,7 @@ const PlantItem = ({ id, cover, name, water, light, price }) => {
             <img className='plant-item-cover' src={cover} alt={`${name} cover`}/>
             <span className="plant-name">{name}<br/>$ {price.toFixed(2)}</span>
         </li>
-    )
+    );
 }
 
-export default PlantItem
+export default PlantItem;

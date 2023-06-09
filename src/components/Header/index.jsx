@@ -31,7 +31,7 @@ export const Header = () => {
                 {/* <Search /> */}
                 <SearchBar liClassName='header-bar'/>
                 <li className='header-bar'><Link to='/login' className='fa fa-user-o black'></Link></li> 
-                <li className='header-bar'><Link to='/' className='fa fa-shopping-cart black'></Link></li> 
+                <li className='header-bar'><Link to='/cart' className='fa fa-shopping-cart black'></Link></li> 
                 </ul>
 
                 <ul className={isOpen ? 'sidebar' : 'hidden' }>
@@ -46,7 +46,7 @@ export const Header = () => {
 
                     {/* <Search /> */}
                     <li className='header-side-bar'  onClick={toggle}><Link to='/login' className='fa fa-user-o white'></Link></li> 
-                    <li className='header-side-bar'  onClick={toggle}><Link to='/' className='fa fa-shopping-cart white'></Link></li> 
+                    <li className='header-side-bar'  onClick={toggle}><Link to='/cart' className='fa fa-shopping-cart white'></Link></li> 
                 </>
                 :
                     <li className='header-side-bar' onClick={toggle}><i className='fa fa-solid fa-bars'></i></li> 

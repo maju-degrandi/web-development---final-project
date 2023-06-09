@@ -5,18 +5,20 @@ import CareScale from "./carescale";
 
 import '../../styles/item.css'
 import BackgroundImage from "../../assets/flor-fundo2.png";
+import { Link } from 'react-router-dom';
 
-export const Item = ( {id} ) => {
+export const Item = ( {id, cart, setCart} ) => {
     const [src, setSrc] = useState([]);
     const [title, setTitle] = useState([]);
     const [desc, setDesc] = useState([]);
     const [price, setPrice] = useState([]);
     const [plant, setPlant] = useState(null);
     const [stock, setStock] = useState([]);
+    const [qtt, setQtt] = useState(1);
     
     useEffect(() =>{
         setTimeout(() => {
-            setPlant(plants['Plants'].find(plant => plant.id == id));
+            setPlant(plants['Plants'].find(plant => Number(plant.id) === Number(id)));
         }, 1000);
     }, [id]);
     
@@ -38,6 +40,21 @@ export const Item = ( {id} ) => {
         string_alert += ' amount of ' + type;
     
         alert(string_alert);
+    }
+
+    const handleAddToCart = () => {
+        let item = cart.findIndex(i => i.id == id);
+
+        if(item > -1){
+                cart[item].qtt += qtt;
+                setCart([...cart]);
+        }else{
+            setCart([...cart, { ...plant, qtt: qtt }]);
+        }
+    }
+
+    const handleChangeQuantity = (e) => {
+        setQtt(Number(e.target.value));
     }
 
     return (
@@ -74,8 +91,10 @@ export const Item = ( {id} ) => {
                         
                         <div id="shop">
                             <label htmlFor="quant">QUANTITY:</label>
-                            <input name="quant" type="number" min="1" id="qtt" placeholder="1" />
-                            <Button id="buy-button" className="filled-button" text="ADD TO CART"/>
+                            <input name="quant" type="number" min="1" id="qtt" placeholder="1" onChange={handleChangeQuantity}/>
+                            <Link to='/cart'>
+                                <Button className="filled-button buy-button" onClick={handleAddToCart} text="ADD TO CART"/>
+                            </Link>
                         </div>
                     </div>
                     </>

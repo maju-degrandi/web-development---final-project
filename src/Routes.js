@@ -11,18 +11,18 @@ import { PageProfile } from "./pages/Profile.jsx";
 import { PageCart } from "./pages/Cart.jsx";
 import { Checkout }  from "./pages/Checkout.jsx";
 
-export function routes({cart, setCart}) {
+export function routes({cart, setCart, updateCart}) {
     return (
         <Routes>
             <Route element={<PageHome />} path="/" exact />
-            <Route element={<PageItem cart={cart} setCart={setCart}/>} path="/item/:itemId" />
+            <Route element={<PageItem updateCart={updateCart} cart={cart} setCart={setCart}/>} path="/item/:itemId" />
             <Route element={<About />} path="/about" />
             <Route element={<PageShopList />} path="/shoplist" />
             <Route element={<PageLogin />} path="/login" />
             <Route element={<PageRegister />} path="/register" />
             <Route element={<PageProfile />} path="/profile" />
-            <Route element={<PageCart cart={cart} setCart={setCart} />} path="/cart" />
-            <Route element={<Checkout cart={cart} setCart={setCart} />} path="/checkout" />
+            <Route element={<PageCart updateCart={updateCart} cart={cart} setCart={setCart} />} path="/cart" />
+            <Route element={<Checkout updateCart={updateCart} cart={cart} setCart={setCart} />} path="/checkout" />
         </Routes>
     )
 }

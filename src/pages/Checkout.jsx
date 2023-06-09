@@ -4,8 +4,9 @@ import { PlaceholderInput } from '../components/Input/FloatInput';
 import PaymentScreen from '../components/Checkout/Pay';
 import { CartList } from '../components/Cart/CartList';
 import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
 
-export const Checkout = ({cart, setCart}) => {
+export const Checkout = ({cart, setCart, updateCart}) => {
     const [country, setCountry] = useState([]);
     const [cep, setCep] = useState([]);
     const [state, setState] = useState([]);
@@ -23,7 +24,7 @@ export const Checkout = ({cart, setCart}) => {
             <div id='checkout-main'>
                 <div className='checkout-items'>
                     <h2>Items</h2>
-                    <CartList cart={cart} setCart={setCart}/>
+                    <CartList updateCart={updateCart} cart={cart} setCart={setCart} blocked={true}/>
                     
                 </div>
                 
@@ -51,7 +52,10 @@ export const Checkout = ({cart, setCart}) => {
             </div>
             
             <div id='checkout-resume'>
-                <h2>abcaaaaaaaaaaa</h2>
+                <h2>Subtotal: {cart[0].subtotal}</h2>
+                <Link to='/'>
+                    <Button text="Confirm" className="filled-button"/>
+                </Link>
             </div>
         </div>
     );

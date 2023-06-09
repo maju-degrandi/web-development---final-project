@@ -7,7 +7,7 @@ import '../../styles/item.css'
 import BackgroundImage from "../../assets/flor-fundo2.png";
 import { Link } from 'react-router-dom';
 
-export const Item = ( {id, cart, setCart} ) => {
+export const Item = ( {updateCart, id, cart, setCart} ) => {
     const [src, setSrc] = useState([]);
     const [title, setTitle] = useState([]);
     const [desc, setDesc] = useState([]);
@@ -47,9 +47,10 @@ export const Item = ( {id, cart, setCart} ) => {
 
         if(item > -1){
                 cart[item].qtt += qtt;
-                setCart([...cart]);
-        }else{
-            setCart([...cart, { ...plant, qtt: qtt }]);
+                updateCart(cart);
+            }else{
+                cart[0].subtotal += Number(plant.price) * qtt; 
+                setCart([...cart, { ...plant, qtt: qtt }]);
         }
     }
 

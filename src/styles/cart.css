@@ -39,3 +39,8 @@
     color: black;
     font-size: larger;  
 }  
+
+.cart{
+    display: flex;
+    flex-direction: row;
+}

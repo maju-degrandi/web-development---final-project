@@ -3,15 +3,15 @@ import '../../styles/cart.css';
 import { Card } from "../Card";
 import { CartItem } from '../Cart/CartItem';
 
-export const CartList = ({cart, setCart}) => {
+export const CartList = ({ updateCart, cart, setCart, blocked}) => {
 
     return (
         <>
                 {   
-                    cart ? cart.length > 0 ? cart.map((item) => (
-
+                    cart ? cart.length > 1 ? cart.map((item) => (
+                        item.id &&
                         <ul className='cart-list' key={item.id}>
-                            <CartItem item={item} cart={cart} setCart={setCart}/>
+                            <CartItem updateCart={updateCart} item={item} cart={cart} setCart={setCart} blocked={blocked}/>
                         </ul>
                     ))
                     :

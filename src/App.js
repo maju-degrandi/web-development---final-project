@@ -7,19 +7,30 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [cart, setCart] = useState(
-    localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
+    localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [{subtotal: 0, total: 0, shipping: 0}]
   );
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart])
 
+  function updateCart(cart) {
+    console.log(cart);
+    cart[0].subtotal = 0;
+    cart.forEach((item) => {
+        if(item.id){
+            cart[0].subtotal += item.price * item.qtt;
+            console.log(item.qtt);
+        }
+    })
+    setCart([...cart]);
+}
   return (
     <Router>
       <div className='wrapper'>
         <Header />
         <main>
-          <Routes cart={cart} setCart={setCart}/>
+          <Routes updateCart={updateCart} cart={cart} setCart={setCart}/>
         </main>
         <Footer/>
       </div>

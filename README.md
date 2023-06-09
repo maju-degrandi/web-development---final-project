@@ -235,4 +235,4 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-[⬆ Voltar ao topo](#BELEAF)<br>
+[⬆ Voltar ao topo](#BELEAF : together we grow)<br>

@@ -173,17 +173,17 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 Para instalar o Beleaf, siga estas etapas:
 
 Linux, Windows e macOS:
-*Clone este repositório em sua máquina local:
+* Clone este repositório em sua máquina local:
 ```
 git clone https://github.com/maju-degrandi/web-development---final-project.git
 
 ```
-*Acesse o diretório do projeto:
+* Acesse o diretório do projeto:
 ```
 cd web-development---final-project
 
 ```
-*Instale as dependências do projeto usando o npm:
+* Instale as dependências do projeto usando o npm:
 ```
 npm install
 
@@ -193,7 +193,7 @@ npm install
 
 Para usar Beleaf, siga estas etapas:
 
-*Após a conclusão da instalação e configuração, você pode executar o projeto usando o seguinte comando:
+* Após a conclusão da instalação e configuração, você pode executar o projeto usando o seguinte comando:
 ```
 npm run dev
 ```

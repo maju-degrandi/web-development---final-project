@@ -57,7 +57,7 @@ Os diagramas para usuário cliente e usuário administrador podem ser conferidos
 ![CLIENT](https://user-images.githubusercontent.com/82612544/236633960-7aec3cb3-2ad6-4a60-b1cb-dba3cb814b8a.png)
 ![USER](https://user-images.githubusercontent.com/82612544/236633966-ba5cd309-04d6-4b73-b9c5-831fb1b5bc94.png)
 
-#### Comentários sobre o código
+### Comentários sobre o código
 Nesta seção, forneceremos alguns comentários e observações sobre o código do projeto.
 
 * *Estrutura do Projeto:* O projeto segue uma estrutura organizada, com os componentes localizados no diretório src/components, os estilos no diretório src/assets/styles, e os arquivos de configuração no diretório raiz. Isso facilita a localização dos arquivos e a manutenção do código.
@@ -131,20 +131,7 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Resultado:** A navegação entre as páginas ocorre corretamente, com a transição suave entre as páginas e a exibição correta do conteúdo da página destino.
 
-### Teste 5: Teste de Requisição de API
-
-**Descrição:** Testar as requisições de API realizadas pelo projeto.
-
-**Passos:**
-
-* Executar uma ação que aciona uma requisição de API.
-* Verificar se a requisição é enviada corretamente.
-* Observar se a resposta da API é recebida corretamente.
-* Verificar se os dados retornados pela API são os esperados.
-
-**Resultado:** As requisições de API são enviadas e recebidas corretamente, com os dados retornados pela API sendo consistentes com o esperado. A manipulação de erros durante a requisição é tratada adequadamente, exibindo mensagens de erro ou tomando as ações apropriadas.
-
-### Teste 6: Teste de Estado e Props dos Componentes
+### Teste 5: Teste de Estado e Props dos Componentes
 
 **Componentes testados:** ProductCard, Cart, CheckoutForm, AuthenticationForm.
 
@@ -186,17 +173,17 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 Para instalar o Beleaf, siga estas etapas:
 
 Linux, Windows e macOS:
-*Clone este repositório em sua máquina local:
+* Clone este repositório em sua máquina local:
 ```
 git clone https://github.com/maju-degrandi/web-development---final-project.git
 
 ```
-*Acesse o diretório do projeto:
+* Acesse o diretório do projeto:
 ```
 cd web-development---final-project
 
 ```
-*Instale as dependências do projeto usando o npm:
+* Instale as dependências do projeto usando o npm:
 ```
 npm install
 
@@ -206,14 +193,18 @@ npm install
 
 Para usar Beleaf, siga estas etapas:
 
-*Após a conclusão da instalação e configuração, você pode executar o projeto usando o seguinte comando:
+* Após a conclusão da instalação e configuração, você pode executar o projeto usando o seguinte comando:
 ```
-npm run dev
+npm run start
 ```
 
 ## Problemas
+Sem problemas detectados até então.
 
 ## Comentários Adicionais
+* Tecnologias Utilizadas: O projeto faz uso das seguintes tecnologias: (JavaScript, React, HTML, Node.js, CSS). 
+
+* Desafios Enfrentados: O grupo superou diversos desafios ao longo da execução desse projeto, tais como aprendizado de ferramentas e linguagens aprofundado, integração entre o time e os estilos de programação, corresponder as expectativas do time docente em relação ao tempo e à qualidade do material produzido, entre outros.
 
 ## 🤝 Colaboradores
 
@@ -248,4 +239,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
+<a href="#Requerimentos">🔝 Voltar ao topo</a>
+
+

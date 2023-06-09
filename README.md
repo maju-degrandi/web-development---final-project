@@ -199,8 +199,12 @@ npm run dev
 ```
 
 ## Problemas
+Sem problemas detectados até então.
 
 ## Comentários Adicionais
+* Tecnologias Utilizadas: O projeto faz uso das seguintes tecnologias: (JavaScript, React, HTML, Node.js, CSS). 
+
+* Desafios Enfrentados: O grupo superou diversos desafios ao longo da execução desse projeto, tais como aprendizado de ferramentas e linguagens aprofundado, integração entre o time e os estilos de programação, corresponder as expectativas do time docente em relação ao tempo e à qualidade do material produzido, entre outros.
 
 ## 🤝 Colaboradores
 

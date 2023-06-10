@@ -6,7 +6,7 @@
 
 .unfilled-button{
     width: 200px;
-    height: 40px;
+    height: fit-content;
     background-color: transparent;
     border: 2px solid #5F6C37;
     color: #5F6C37;

@@ -1,8 +1,8 @@
 /*LOGIN*/
 .basic-form {
-    margin: 30px 0;
     justify-self: center;
     display: flex;
+    margin: 30px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -41,15 +41,19 @@
     align-self: center;
 }
 
-#background-image1 {
-    position: absolute;
+#background-image1 { 
     width: 250px;
     height: 400px;
     
-    right: 0;
-    bottom: 0;
     
     filter: opacity(50%);
+}
+
+.background-login {
+    position: absolute;
+    bottom: -34px;
+    right: 0;
+    overflow: visible;
     z-index: -1;
 }
 

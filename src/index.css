@@ -46,6 +46,7 @@ code {
 
 .wrapper{
   overflow-x: hidden;
+  min-width: 100%;
 }
 
 main{

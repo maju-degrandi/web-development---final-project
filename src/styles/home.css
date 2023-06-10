@@ -23,7 +23,7 @@
 /* HOME */
 
 .title{
-    font-family: Abril;
+    font-family: 'Abril Fatface';
     line-height: 97.9%;
     font-weight: 400;
 }
@@ -197,7 +197,7 @@
 .button-outline{
     width: 200px;
     height: 40px;
-    font-family: Advent_Pro;
+    font-family: 'Advent Pro';
     background-color: transparent;
     border: 2px solid #5F6C37;
     color: #5F6C37;

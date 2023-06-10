@@ -41,3 +41,9 @@ button {
 .full {
     width: 100%;
 }
+
+@media screen and (max-width: 900px) {
+    .filled-button{
+        font-size: small;
+    }
+}

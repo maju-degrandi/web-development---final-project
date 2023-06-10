@@ -20,8 +20,8 @@ export const CartItem = ({ updateCart, item, cart, blocked }) => {
 
     return(
         <li key={item.id} className='cart-item'>
-            <div className="item-cover">
-                <img className='cart-item-cover' src={item.cover} alt={`${item.name} cover`}/>  
+            <div className="card-item-cover">
+                <img className='item-cover' src={item.cover} alt={`${item.name} cover`}/>  
             </div>
             <span className="cart-item-name">{item.name}<br/>$ {item.price}</span>
             <div className="cart-shop">

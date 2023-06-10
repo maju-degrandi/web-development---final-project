@@ -20,6 +20,11 @@
     
 }
 
+.empty{
+    font-size: larger; 
+    font-family: 'Quicksand', 'sans-serif';
+}
+
 .item-cover{
     width: 120px;
     height: 120px;

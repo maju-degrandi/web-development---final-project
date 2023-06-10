@@ -15,7 +15,7 @@ export const CartList = ({ updateCart, cart, setCart, blocked}) => {
                         </ul>
                     ))
                     :
-                    <p>Your Cart is empty. Go ahead and shop!</p>
+                    <p className='empty'>Your Cart is empty. Go ahead and shop!</p>
 
                     : 
 

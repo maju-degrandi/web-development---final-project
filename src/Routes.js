@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { PageItem } from './pages/Item.jsx';
 import { PageHome } from './pages/Home.jsx';
 import { PageShopList } from "./pages/ShopList.jsx";
-import { About } from "./components/About/index.jsx";
+import { PageAbout } from "./pages/About.jsx";
 import { PageLogin } from "./pages/Login.jsx";
 import { PageRegister } from "./pages/Register.jsx";
 import { PageProfile } from "./pages/Profile.jsx";
@@ -16,7 +16,7 @@ export function routes({cart, setCart, updateCart}) {
         <Routes>
             <Route element={<PageHome />} path="/" exact />
             <Route element={<PageItem updateCart={updateCart} cart={cart} setCart={setCart}/>} path="/item/:itemId" />
-            <Route element={<About />} path="/about" />
+            <Route element={<PageAbout />} path="/about" />
             <Route element={<PageShopList />} path="/shoplist" />
             <Route element={<PageLogin />} path="/login" />
             <Route element={<PageRegister />} path="/register" />

@@ -31,6 +31,10 @@
     margin-right: 40%;
 }
 
+.checkout-items{
+    min-height: 200px;
+}
+
 #checkout-main > * {
     background-color: #F5F5F5;
     margin: 0 0 20px 0;

@@ -118,6 +118,8 @@ Nesta seção, forneceremos alguns comentários e observações sobre o código 
 
 **Resultado:** A lógica de negócios dos Componentes funcionam corretamente, retornando os resultados esperados de acordo com o cenário de teste.
 
+**obs** A lógica de negócios dos componentes pode envolver operações como cálculos, manipulação de dados, chamadas a serviços externos, validações de entrada, tomada de decisões com base em regras de negócio, entre outros. 
+
 ### Teste 4: Navegação entre Páginas
 
 **Descrição:** Testar a navegação entre as páginas do projeto.

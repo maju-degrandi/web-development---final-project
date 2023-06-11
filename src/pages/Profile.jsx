@@ -19,15 +19,6 @@ export const PageProfile = ({user, setUser}) => {
           console.log(foundUser);
           setUser(foundUser);
         }
-        // setUser({
-        //     name: "Rebeca Carvalho",
-        //     email: "rebeca.vcarvalho@usp.br",
-        //     address: {
-        //         cep: "13560450",
-        //         street: "Rua Dr. Orlando Damiano"
-        //     }
-        // });
-        // setUser(UserService.getUser());
     }, []);
 
     const handleLogout = () => {

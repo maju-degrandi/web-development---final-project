@@ -10,7 +10,8 @@ import { PageRegister } from "./pages/Register.jsx";
 import { PageProfile } from "./pages/Profile.jsx";
 import { PageCart } from "./pages/Cart.jsx";
 import { Checkout }  from "./pages/Checkout.jsx";
-import { UpdatePlants } from "./pages/UpdatePlants.jsx"
+import { UpdatePlants } from "./pages/UpdatePlants.jsx";
+import { PageOrders } from "./pages/Orders.jsx";
 
 export function routes({user, setUser, cart, setCart, updateCart, plant, setPlant}) {
     return (
@@ -19,6 +20,7 @@ export function routes({user, setUser, cart, setCart, updateCart, plant, setPlan
             <Route element={<PageItem plants={plant} updateCart={updateCart} cart={cart} setCart={setCart}/>} path="/item/:itemId" />
             <Route element={<PageAbout />} path="/about" />
             <Route element={<PageShopList plants={plant}/>} path="/shoplist" />
+            <Route element={<PageOrders user={user} setUser={setUser} plants={plant}/>} path="/myorders" />
             <Route element={<PageLogin setUser={setUser} />} path="/login" />
             <Route element={<PageRegister />} path="/register" />
             <Route element={<PageProfile user={user} setUser={setUser} />} path="/profile" />

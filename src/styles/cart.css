@@ -12,7 +12,36 @@
     justify-content: center;
 }
 
-.cart-list{
+.order-shop{
+    text-align: end;
+    width: 50%;
+}
+
+.order-info{
+    width: 100%;
+    padding: 10px;
+    font-size: small; 
+    font-family: 'Quicksand', 'sans-serif';
+    text-align: left;
+}
+
+.order-total{
+    width: 90%;
+    padding: 20px 0;
+    font-size: large; 
+    font-family: 'Quicksand', 'sans-serif';
+    text-align: end;
+}
+
+.order-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 60px 0;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.cart-list, .order-list{
     width: 100%;
     display: flex;
     align-items: center;
@@ -47,7 +76,7 @@
     /* background-color: aqua; */
 }
 
-.cart-shop {
+.cart-shop, .order-shop{
     /* align-self: flex-end; */
     font-family: 'Advent Pro', 'sans-serif';
     font-weight: 700;

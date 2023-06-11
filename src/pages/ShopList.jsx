@@ -15,23 +15,21 @@ export const PageShopList = ({plants}) => {
             setPlants(opa);
             return;
         }
-        setPlants(plants['Plants']);
+        if(plants) setPlants(plants['Plants']);
     }
     
     
     useEffect(() => {
         setTimeout(() => {
             handleSetPlant();
-            console.log(plant);
         }, 100);
-    }, [search])
+    }, [search, plants])
     
     return (    
         <div>
             <ul className="plant-list">
                 { plant ? 
                         plant.length != 0 ? 
-                        
                         (plant.map(({ id, cover, name, water, light, price }) => (
                             <div className="plant" key={id}>
                                 <PlantItem 

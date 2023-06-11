@@ -1,7 +1,7 @@
 import * as React from 'react';
 import '../../styles/input.css';
 
-export const Input = ({ label, input, className, type, name, require}) => {
+export const Input = ({ label, input, className, type, name, require, value, onChange}) => {
     return (
         <div className={'card'}>
             {
@@ -12,6 +12,8 @@ export const Input = ({ label, input, className, type, name, require}) => {
                         type={type} 
                         name={name} 
                         required={require}
+                        value={value}
+                        onChange={onChange}
                         />
                         <label className={'label-' + type} htmlFor={label}>{label}</label><br />
                     </>
@@ -23,6 +25,8 @@ export const Input = ({ label, input, className, type, name, require}) => {
                         type={type} 
                         name={name} 
                         required={require}
+                        value={value}
+                        onChange={onChange}
                         />
                     </>
 

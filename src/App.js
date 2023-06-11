@@ -24,13 +24,16 @@ function App() {
         }
     })
     setCart([...cart]);
-}
+  }
+
+  const [user, setUser] = useState({});
+
   return (
     <Router>
       <div className='wrapper'>
-        <Header />
+        <Header user={user} setUser={setUser}/>
         <main>
-          <Routes updateCart={updateCart} cart={cart} setCart={setCart}/>
+          <Routes user={user} setUser={setUser} updateCart={updateCart} cart={cart} setCart={setCart}/>
         </main>
         <Footer/>
       </div>

@@ -1,13 +1,14 @@
 import * as React from 'react';
 import '../styles/cart.css';
-import { Card } from "../components/Card";
 import { CartList } from '../components/Cart/CartList';
 import { Button } from '../components/Button';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export const PageCart = ({updateCart, cart, setCart}) => {
-    const [qttItems, setQttItens] = useState([]);
+export const PageCart = ({user, updateCart, cart, setCart}) => {
+    const [qttItems, setQttItens] = useState([]);    
+    const navigate = useNavigate();
+
 
     useEffect(()=>{
         let qtt = 0;
@@ -17,6 +18,14 @@ export const PageCart = ({updateCart, cart, setCart}) => {
         
         setQttItens(qtt);
     }, [cart]);
+
+    function handleCheckout(){
+        if(JSON.stringify(user) != '{}'){
+            navigate("/checkout");
+        }else{
+            navigate("/login");
+        }
+    }
 
     return (
         
@@ -41,9 +50,9 @@ export const PageCart = ({updateCart, cart, setCart}) => {
                 </div>
                 
                 <div className='flex full-line'>
-                    <Link to='/checkout'>
-                        <Button text="Checkout"/>
-                    </Link>
+                    {/* <Link to='/checkout'> */}
+                        <Button text="Checkout" onClick={handleCheckout}/>
+                    {/* </Link> */}
                 </div>
             </div>
         </div>

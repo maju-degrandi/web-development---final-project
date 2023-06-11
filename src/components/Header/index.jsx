@@ -6,7 +6,7 @@ import '../../styles/header.css';
 import logo from '../../assets/logo.png';
 import { useState } from 'react';
 
-export const Header = () => {
+export const Header = ({user}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     function toggle() {
@@ -30,8 +30,8 @@ export const Header = () => {
 
                 {/* <Search /> */}
                 <SearchBar liClassName='header-bar'/>
-                <li className='header-bar'><Link to='/login' className='fa fa-user-o black'></Link></li> 
-                <li className='header-bar'><Link to='/cart' className='fa fa-shopping-cart black'></Link></li> 
+                    <li className='header-bar'><Link to={JSON.stringify(user) != '{}' ? '/profile' : '/login'} className='fa fa-user-o black'></Link></li> 
+                    <li className='header-bar'><Link to='/cart' className='fa fa-shopping-cart black'></Link></li> 
                 </ul>
 
                 <ul className={isOpen ? 'sidebar' : 'hidden' }>
@@ -45,7 +45,7 @@ export const Header = () => {
                     <li className='header-side-bar'  onClick={toggle}><Link to='/shoplist'>SHOP</Link></li>
 
                     {/* <Search /> */}
-                    <li className='header-side-bar'  onClick={toggle}><Link to='/login' className='fa fa-user-o white'></Link></li> 
+                    <li className='header-side-bar'  onClick={toggle}><Link to={JSON.stringify(user) != '{}' ? '/profile' : '/login'} className='fa fa-user-o white'></Link></li> 
                     <li className='header-side-bar'  onClick={toggle}><Link to='/cart' className='fa fa-shopping-cart white'></Link></li> 
                 </>
                 :

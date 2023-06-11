@@ -1,25 +1,14 @@
-import {plants} from "../datas/plants";
 import PlantItem from "../components/ShopList/plantItem";
 import "../styles/shoplist.css";
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from "react";
 
-export const PageShopList = () => {
-    const [plant, setPlants] = useState(null);
-    
-    
-    useEffect(() => {
-        setTimeout(() => {
-            setPlants(plants);
-        }, 100);
-    }, [])
-    
+export const PageShopList = ({plants}) => {
     return (    
         <div>
             <ul className="jh-plant-list">
-                {plant ?
+                {plants ?
                     (
-                        plant['Plants'].map(({ id, cover, name, water, light, price }) => (
+                        plants['Plants'].map(({ id, cover, name, water, light, price }) => (
                         <div className="plant" key={id}>
                             <PlantItem 
                                 id={id}
@@ -37,7 +26,7 @@ export const PageShopList = () => {
                         
                         </div>))) : 
                     (
-                        <p>Carregando...</p>
+                        <p>Não há itens a venda no momento...</p>
                     )
                 }
             </ul>

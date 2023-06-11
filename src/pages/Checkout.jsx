@@ -53,7 +53,7 @@ export const Checkout = ({cart, setCart, updateCart}) => {
                         <PlaceholderInput title="Number" type="text" size='3' value={number} setValue={setNumber}/>
                         <PlaceholderInput title="More informations" type="text" size='10' value={moreInfo} setValue={setMoreInfo}/>
                         
-                        <Button type={'submit'} text={'Done'}/>
+                        <Button type={'submit'} text={'Done'} className={'filled-button checkout-button done'}/>
                         
                     </div>
                 </div>
@@ -102,7 +102,7 @@ export const Checkout = ({cart, setCart, updateCart}) => {
                 
                 <div className='flex full-line'>
                     <Link to='/'>
-                        <Button text="Confirm and Pay" className="filled-button full"/>
+                        <Button text="Confirm and Pay" className="filled-button full checkout-button"/>
                     </Link>
                 </div>
             </div>

@@ -88,6 +88,7 @@ export const UpdatePlants = ({plants, setPlants}) => {
         };
       
         setPlants(updatedPlants);
+        navigate('/shoplist');
     };
       
     const handleCreateItem = (e) => {
@@ -155,7 +156,7 @@ export const UpdatePlants = ({plants, setPlants}) => {
                 <div className='div-button'>    
                     { isTimeoutComplete && plant ?
                         <>
-                            <Link to={'/home'}>  
+                            <Link to={'/shoplist'}>  
                                 <Button text={'Edit'} onClick={handleEditItem} className={'filled-button'}/>
                             </Link>
                         

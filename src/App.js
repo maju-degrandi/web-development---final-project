@@ -43,7 +43,9 @@ function App() {
   }, []);
   
   useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(user));
+    console.log(user);
+    if(user && JSON.stringify(user).length > 2)
+      localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
   
   const [plant, setPlant] = useState(null); 

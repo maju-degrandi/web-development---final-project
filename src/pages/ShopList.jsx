@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-export const PageShopList = ({plants}) => {
+export const PageShopList = ({user, plants}) => {
     const [plant, setPlants] = useState(null);
     const [ search, setSearchParams] = useSearchParams();
 
@@ -23,7 +23,7 @@ export const PageShopList = ({plants}) => {
         setTimeout(() => {
             handleSetPlant();
         }, 100);
-    }, [search, plants])
+    }, [search, plants]);
     
     return (    
         <div>
@@ -40,11 +40,19 @@ export const PageShopList = ({plants}) => {
                                     light={light}
                                     price={price}
                                 />
-                                <Link to={'/item/' + id}>
-                                    <div className="button-add">
-                                            <button className="add"> Shop Now </button>
-                                    </div>
-                                </Link>
+                                {   user.admin ?
+                                        <Link to={'/admin/add-item/' + id}>
+                                            <div className="button-add">
+                                                    <button className="add"> Edit </button>
+                                            </div>
+                                        </Link>
+                                    :
+                                        <Link to={'/item/' + id}>
+                                            <div className="button-add">
+                                                    <button className="add"> Shop Now </button>
+                                            </div>
+                                        </Link>
+                                }
                         
                             </div>))) 
                         
@@ -61,6 +69,18 @@ export const PageShopList = ({plants}) => {
                     )
                 } 
             </ul>
+            {
+                user.admin &&
+                <>
+                    <Link to={'/admin/add-item/'}>
+                        <div className="button-add">
+                                <button className="add"> Add Item </button>
+                        </div>
+                    </Link>
+                    <br/>
+                    <br/>
+                </>
+            }
         </div>
     );
 }

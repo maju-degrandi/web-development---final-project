@@ -20,7 +20,7 @@ export function routes({user, setUser, cart, setCart, updateCart, plant, setPlan
             <Route element={<PageHome />} path="/" exact />
             <Route element={<PageItem plants={plant} updateCart={updateCart} cart={cart} setCart={setCart}/>} path="/item/:itemId" />
             <Route element={<PageAbout />} path="/about" />
-            <Route element={<PageShopList plants={plant}/>} path="/shoplist" />
+            <Route element={<PageShopList user={user} plants={plant}/>} path="/shoplist" />
             <Route element={<PageOrders user={user} setUser={setUser} plants={plant}/>} path="/myorders" />
             <Route element={<PageLogin setUser={setUser} />} path="/login" />
             <Route element={<PageRegister />} path="/register" />

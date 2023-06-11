@@ -1,9 +1,11 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
+import {plants} from "./datas/plants";
 import Routes from "./Routes";
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { useEffect, useState } from 'react';
+
+import './App.css';
 
 function App() {
   const [cart, setCart] = useState(
@@ -28,12 +30,34 @@ function App() {
 
   const [user, setUser] = useState({});
 
+  
+  const [plant, setPlant] = useState(null); 
+    
+  useEffect(() => {
+    // setPlant(plants);
+    if(!localStorage.getItem('stock'))
+      setTimeout(() => {
+          setPlant(plants);
+      }, 100);
+    else
+      setPlant(JSON.parse(localStorage.getItem('stock')))
+  }, []);
+    
+  useEffect(() => {
+    if (plant){
+      localStorage.setItem("stock", JSON.stringify(plant));
+    }
+  }, [plant]);  
+  
   return (
     <Router>
       <div className='wrapper'>
         <Header user={user} setUser={setUser}/>
-        <main>
-          <Routes user={user} setUser={setUser} updateCart={updateCart} cart={cart} setCart={setCart}/>
+        <main><Routes 
+            cart={cart} updateCart={updateCart} setCart={setCart} 
+            plant={plant} setPlant={setPlant}
+            user={user} setUser={setUser}
+          />
         </main>
         <Footer/>
       </div>

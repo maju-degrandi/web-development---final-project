@@ -521,8 +521,9 @@ button {
         display: flex;
     }
     .button-outline {
-        width: 20vw;
-        height: 5vw;
+        width: 40vw;
+        height: 7vw;
+        font-size: 4vw;
         font-family: Advent_Pro;
         background-color: transparent;
         border: 2px solid #5F6C37;
@@ -631,7 +632,7 @@ button {
 }
 
 @media (max-width: 800px) {
-
+    
 }
 
 /* ORNAMENTS */
@@ -671,7 +672,20 @@ button {
 }
 
 @media (max-width: 800px) {
-
+    .ornament-button{
+        width: 40vw;
+        height: 7vw;
+        font-size: 4vw;
+        color: #21452B;
+        border-color: #21452B;
+    }
+    .ornaments{
+        background-color: #90A680;
+        height: 70vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 /*ABOUT US*/

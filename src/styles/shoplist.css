@@ -1,13 +1,25 @@
-.jh-plant-list {
+.plant-list {
 	list-style-type: none;
     justify-content: center;
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-add{
     text-align: center;
+}
+
+.link{
+    color:rgba(95, 108, 55, 1);
+}
+
+.link:hover{
+    color:rgb(160, 172, 120);
 }
 
 .add{

@@ -3,43 +3,66 @@ import PlantItem from "../components/ShopList/plantItem";
 import "../styles/shoplist.css";
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 export const PageShopList = () => {
     const [plant, setPlants] = useState(null);
+    const [ search, setSearchParams] = useSearchParams();
+
+    const handleSetPlant = () => {
+        if(search.size != 0 && search.get('search') != ''){
+            console.log(search.get('search'));
+            let opa = plants['Plants'].filter((plant) => plant.name.toUpperCase().includes(search.get('search').toUpperCase()));
+            setPlants(opa);
+            return;
+        }
+        setPlants(plants['Plants']);
+    }
     
     
     useEffect(() => {
         setTimeout(() => {
-            setPlants(plants);
+            handleSetPlant();
+            console.log(plant);
         }, 100);
-    }, [])
+    }, [search])
     
     return (    
         <div>
-            <ul className="jh-plant-list">
-                {plant ?
-                    (
-                        plant['Plants'].map(({ id, cover, name, water, light, price }) => (
-                        <div className="plant" key={id}>
-                            <PlantItem 
-                                id={id}
-                                cover={cover}
-                                name={name}
-                                water={water}
-                                light={light}
-                                price={price}
-                            />
-                            <Link to={'/item/' + id}>
-                                <div className="button-add">
-                                        <button className="add"> Shop Now </button>
-                                </div>
-                            </Link>
+            <ul className="plant-list">
+                { plant ? 
+                        plant.length != 0 ? 
                         
-                        </div>))) : 
+                        (plant.map(({ id, cover, name, water, light, price }) => (
+                            <div className="plant" key={id}>
+                                <PlantItem 
+                                    id={id}
+                                    cover={cover}
+                                    name={name}
+                                    water={water}
+                                    light={light}
+                                    price={price}
+                                />
+                                <Link to={'/item/' + id}>
+                                    <div className="button-add">
+                                            <button className="add"> Shop Now </button>
+                                    </div>
+                                </Link>
+                        
+                            </div>))) 
+                        
+                        :
+                            <div className="empty">
+                                <p>Não foi possível encontrar a planta buscada.</p> 
+            
+                                <p>Tente novamente, ou clique 
+                                <Link to='/shoplist' className="link"> aqui </Link> para ver todos os produtos.</p>
+                            </div>
+                        :
                     (
-                        <p>Carregando...</p>
+                        <p className="empty">Carregando...</p>
                     )
-                }
+                } 
             </ul>
         </div>
     );

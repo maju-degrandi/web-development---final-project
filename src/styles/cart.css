@@ -23,6 +23,7 @@
 .empty{
     font-size: larger; 
     font-family: 'Quicksand', 'sans-serif';
+    text-align: center;
 }
 
 .item-cover{

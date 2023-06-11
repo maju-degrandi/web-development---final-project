@@ -17,6 +17,10 @@
     list-style: none;
 }
 
+.fa{
+    cursor: pointer;
+}
+
 .black {
     color: black;
 }

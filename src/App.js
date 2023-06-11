@@ -14,7 +14,7 @@ function App() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart])
 
-  function updateCart(cart) {
+  const updateCart = (cart) => {
     console.log(cart);
     cart[0].subtotal = 0;
     cart.forEach((item) => {

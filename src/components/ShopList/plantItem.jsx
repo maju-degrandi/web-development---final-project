@@ -1,5 +1,5 @@
 
-import "../../styles/plantitem.css"
+import "../../styles/plantitem.css";
 
 const PlantItem = ({ id, cover, name, water, light, price }) => {
 

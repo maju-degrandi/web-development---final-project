@@ -38,7 +38,7 @@
 }
 
 .second.title{
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;   
 }
 
@@ -138,10 +138,11 @@
 
 @media (max-width: 800px) {
     .apresentation{
+        margin: 20% 0 0 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
-        height: 60vw;
+        height: 120vw;
         justify-content: space-between;
     }
     .quote.main.title {
@@ -159,8 +160,8 @@
     }
     .paragraph {
         margin: 1.8vw 0 5.4vw 0;
-        font-size: 3vw;
-        font-family: Advent_Pro;
+        /* font-size: large; */
+        font-family: 'Advent Pro';
         text-align: justify;
     }
     .home-main-text {
@@ -180,22 +181,25 @@
     }
     #elipse {
         position: absolute;
-        width: 135vw;
-        height: 90vw;
+        width: 160vw;
+        height: 120vw;
         left: 58%;
         top: -2%;
         border-radius: 70%;
         background: #90A680;
-        transform: rotate(160deg);
+        transform: rotate(130deg);
         z-index: -2;
     }
     #home-img {
-        width: 50vw;
+        /* display:none; */
+        width: 70vw;
         position: absolute;
-        right: -5%;
+        transform: rotate(-20deg);
+        right: -20%;
         top: 0.2%;
         border-radius: 0 0 0 0;
     }
+    
 }
 
 /* TYPE SELECT */
@@ -229,7 +233,7 @@
 }
 
 .type-img{
-    height: 17.5vw;
+    height: 12vw;
     width: 100%;
 	object-fit: cover;
 }
@@ -237,7 +241,7 @@
 @media (max-width: 800px) {
     .select-type{
         background-color: #497856;
-        height: 70vw;
+        height: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -245,12 +249,16 @@
         flex-wrap: wrap;
     }
 
+    .second.title{
+        font-size: large;
+    }
+
     .type-card{
-        width: 30vw;
-        height: 30vw;
+        width: 40vw;
+        height: 40vw;
         padding: 0.8vw;
         background-color: white;
-        margin: 1vw;
+        /* margin: ; */
         border-radius: 0 0.8vw;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         color: #5F6C37;
@@ -289,8 +297,9 @@
 @media (max-width: 800px) {
     .collection {
         background-color: #FFFFFF;
-        height: 90vw;
+        height: 120vw;
         display: flex;
+        flex-direction: column;
     }
     .button-outline {
         width: 40vw;
@@ -303,7 +312,23 @@
     }
     .collection-text{
         padding: 5vw 2vw 0 5vw;
-        width: 50vw;
+        width: 100%;
+        font-size: small;
+    }
+    
+    .paragraph{
+        
+        font-size: large;
+    }
+
+    .collect.main.title{
+        font-size: x-large;
+        width: 100%;
+    }
+
+    .collection.home.image{
+        height: 60vw;
+        width: 100%;
     }
 }
 

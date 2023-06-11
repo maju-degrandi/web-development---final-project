@@ -42,7 +42,7 @@ export const PageHome = () => {
             </div>
 
 
-            <div className="select-type">
+             <div className="select-type">
                 <div className="type-card">
                     <picture>
                         <img className="type-img" src={fruit_type} alt="Fruit Trees" />
@@ -80,99 +80,6 @@ export const PageHome = () => {
                         <Button text={'Explore the collection'} className={'unfilled-button'}/>
                     </Link>
                </div>
-            </div>
-
-            <div className="best-sellers">
-                <img id="background-img" src={flor_fundo2} />
-                <div className="best-text">
-                    <h2 className="best main title">Bestsellers</h2>
-                    <div className='button-center'>
-                        <Link to={'/shoplist'}>
-                            <Button text={'Shop All'} className={'shop unfilled-button'}/>
-                        </Link>
-                    </div>
-                </div>
-                <div className="best-card">
-                    <img className="best-image" src={echeveria} alt="Echeveria" />
-                    <div className="button-full">
-                        <Link to={'/'}>
-                            <Button text={'ADD TO CART'} className="add button-full home-main-button" />
-                        </Link>
-                    </div>
-                   
-                    <h4 className="best title">ECHEVERIA PERLE VON NURNBERG</h4>
-                    <p className="mini paragraph">‘Perle von Nurnberg' is a beautiful evergreen
-                        gray succulent that turns pink and purple under
-                        full sun. It has pink flowers with yellow
-                        interiors that bloom in the summer.</p>
-                    <span className="price">$ 7</span>
-                </div>
-                <div className="best-card">
-                    <img className="best-image" src={hydrangea} alt="hydrangea" />
-                    <div className="button-full">
-                        <Link to={'/'}>
-                            <Button text={'ADD TO CART'} className="add button-full" />
-                        </Link>
-                    </div><h4 className="best title">HYDRANGEA</h4>
-                    <p className="mini paragraph">With beautiful flowers, these elegant plants are
-                        easy to cultivate, tolerate almost any type of soil,
-                        and produce abundant blooms. Has many colors
-                        and sometimes all blooming on the same plant!</p>
-                    <span className="price">$ 13</span>
-                </div>
-            </div>
-
-            <div className="ornaments">
-                <div className="ornaments-text">
-                    <h1 className="ornament main title">More than ornaments,
-                        plants are a lifestyle.</h1>
-                    <p className="paragraph">Discover the ideal foliage for the interior of your home,
-                        with exuberant colors and varied sizes. Or even for the
-                        external garden, showy and beautiful.</p>
-                        <Link to={'/shoplist'}>
-                            <Button text={'Shop All'} className={'home-main-button'}/>
-                        </Link>
-                </div>
-                <picture>
-                    <img className="ornaments home image" src={home_img3} alt="Flowers bush" />
-                </picture>
-            </div>
-
-            <div className="best-sellers">
-                <div className="best-text">
-                    <h2 className="best main title">Trends</h2>
-                    <div className='button-center'>
-                        <Link to={'/shoplist'}>
-                            <Button text={'Shop All'} className={'shop unfilled-button'}/>
-                        </Link>
-                    </div>
-                </div>
-                <div className="best-card">
-                    <img className="best-image" src={peace_lily} alt="Echeveria" />
-                    <div className="button-full">
-                        <Link to={'/'}>
-                            <Button text={'ADD TO CART'} className="add button-full" />
-                        </Link>
-                    </div><h4 className="best title">PEACE LILY</h4>
-                    <p className="mini paragraph">Known for its brilliant white flowers, glossy
-                        leaves and acceptance of dark places, Peace
-                        Lilies are easy-to-grow plants for every kind
-                        of plant parent.</p>
-                    <span className="price">$ 20</span>
-                </div>
-                <div className="best-card">
-                    <img className="best-image" src={snake_plant} alt="hydrangea" />
-                    <div className="button-full">
-                        <Link to={'/'}>
-                            <Button text={'ADD TO CART'} className="add button-full" />
-                        </Link>
-                    </div><h4 className="best title">SNAKE PLANT</h4>
-                    <p className="mini paragraph">Sansevieria is another easy houseplant which
-                        doesn't require a lot of water and has the added
-                        bonus of removing toxins from the atmosphere.
-                            </p>
-                    <span className="price">$ 15</span>
-                </div>
             </div>
         </div>
     );

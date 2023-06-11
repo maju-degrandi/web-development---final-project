@@ -9,7 +9,8 @@ export const Input = ({ label, type, name, require, max, min, value, setValue, o
     
     const handOnChange = (event) => {
         handleInputChange(event);
-        onChange(event);
+        if(onChange)
+            onChange(event);
     }
     
     return (
@@ -35,7 +36,7 @@ export const Input = ({ label, type, name, require, max, min, value, setValue, o
                         name={name} 
                         required={require}
                         
-                        defaultValue={value}
+                        value={value}
                         onChange={handleInputChange}
                     />
                     </>

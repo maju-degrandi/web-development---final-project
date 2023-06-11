@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -10,7 +10,8 @@ import '../styles/updatePlants.css';
 
 
 export const UpdatePlants = ({plants, setPlants}) => {
-    const { itemId } = useParams();
+    const params = useParams();
+    const navigate = useNavigate();
     
     const [name, setName] = useState('');
     const [category, setCategory] = useState('');
@@ -23,17 +24,23 @@ export const UpdatePlants = ({plants, setPlants}) => {
     const [isTimeoutComplete, setIsTimeoutComplete] = useState(false);
    
     const [plant, setPlant] = useState(null);
+    
     useEffect(() =>{
-        setTimeout(() => {
-            if(plants){
-                setPlant(plants['Plants'].find(plant => (plant.id).toString() === (itemId).toString()));
-                setIsTimeoutComplete(true);
-            }
-        }, 100);
-    }, [itemId, plants]);
+        if(params.itemId){
+            const itemId = params.itemId;  
+            
+            setTimeout(() => {
+                if(plants){
+                    setPlant(plants['Plants'].find(plant => (plant.id).toString() === itemId));
+                    setIsTimeoutComplete(true);
+                }
+            }, 100);
+        }
+    }, [params, plants]);
     
     useEffect(() => {
         if(isTimeoutComplete && plant){
+            console.log(plant.category + '1'+ category)
             // edit plant
             setName(plant.name);
             setCategory(plant.category);
@@ -103,6 +110,8 @@ export const UpdatePlants = ({plants, setPlants}) => {
             ...prevState,
             Plants: [...prevState.Plants, newPlant]
           }));
+          
+          navigate.call(`/admin/${newPlant.id}`)
     }
     
     return (
@@ -120,7 +129,11 @@ export const UpdatePlants = ({plants, setPlants}) => {
                 
                 <div className='div-input'>
                     <label className='label-text'>Category</label>
-                    <select defaultValue={category} className='select'>
+                    <select 
+                        value={category} 
+                        onChange={(e) => setCategory(e.target.value)}  
+                        className='select'
+                    >
                         <option value="classic">Classic</option>
                         <option value="exterior">Exterior</option>
                         <option value="succulent">Succulent</option>

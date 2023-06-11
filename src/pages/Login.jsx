@@ -52,7 +52,7 @@ export const PageLogin = ({setUser}) => {
             </form>
             <div className="links-loginscreen">
                 <Link to={'/register'}>Don't have an account yet?</Link><br/>
-                <Link to={'#'}>Forgot your password?</Link>
+                <Link to={'/recoverpassword'}>Forgot your password?</Link>
             </div>
          </div>
         </>

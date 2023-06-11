@@ -13,6 +13,7 @@ import { Checkout }  from "./pages/Checkout.jsx";
 import { UpdatePlants } from "./pages/UpdatePlants.jsx";
 import { PageOrders } from "./pages/Orders.jsx";
 import { UpdateUser } from "./pages/UpdateUser.jsx";
+import { PagePassword } from "./pages/Password.jsx";
 
 export function routes({user, setUser, cart, setCart, updateCart, plant, setPlant}) {
     return (
@@ -30,6 +31,7 @@ export function routes({user, setUser, cart, setCart, updateCart, plant, setPlan
             <Route element={<UpdatePlants plants={plant} setPlants={setPlant}/>} path="/admin/add-item"/>
             <Route element={<UpdatePlants plants={plant} setPlants={setPlant}/>} path="/admin/add-item/:itemId"/>
             <Route element={<UpdateUser user={user} setUser={setUser} />} path="/editinfo"/>
+            <Route element={<PagePassword />} path="/recoverpassword"/>
         </Routes>
     )
 }

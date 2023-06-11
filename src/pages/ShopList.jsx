@@ -1,11 +1,10 @@
-import {plants} from "../datas/plants";
 import PlantItem from "../components/ShopList/plantItem";
 import "../styles/shoplist.css";
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-export const PageShopList = () => {
+export const PageShopList = ({plants}) => {
     const [plant, setPlants] = useState(null);
     const [ search, setSearchParams] = useSearchParams();
 

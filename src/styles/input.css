@@ -2,7 +2,10 @@
 .email,
 .text,
 .password,
-.date {
+.date,
+.number,
+.select,
+.textarea {
     border: 2px solid rgba(95, 108, 55, 1);
     border-radius: 10px;
     overflow: auto;
@@ -12,7 +15,13 @@
     height: 30px;
 }
 
-.label-email{
+.textarea{
+    max-width: 300px;
+}
+
+.label-email, 
+.label-text, 
+.label-number {
     font-family: 'Abril Fatface', cursive;
     color:rgba(95, 108, 55, 1);
 }
@@ -31,8 +40,10 @@
     margin: 0;
 }
 
-.card{ 
+.div-input{ 
     margin: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 600px) {

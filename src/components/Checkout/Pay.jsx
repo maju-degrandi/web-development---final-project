@@ -80,7 +80,7 @@ const PaymentScreen = () => {
             Pagamento com Pix
           </label>
         </div>
-        <Button type={'submit'} text={'Done'}/>
+        <Button type={'submit'} text={'Done'} className={'filled-button checkout-button done'}/>
       </form>
     </div>
   );

@@ -8,8 +8,16 @@ import '../styles/updatePlants.css';
 
 
 export const UpdateUser = ({user, setUser}) => {
-    const params = useParams();
-    const navigate = useNavigate();
+    useEffect(() => {
+        const loggedInUser = localStorage.getItem("user");
+        console.log(loggedInUser);
+        
+        if (loggedInUser.length > 2) {
+            const foundUser = JSON.parse(loggedInUser);
+            console.log(foundUser);
+            setUser(foundUser);
+        }
+    }, []);
     
     const [name, setName] = useState(user.name);
     const [birth, setBirth] = useState(user.birth);
@@ -63,6 +71,9 @@ export const UpdateUser = ({user, setUser}) => {
                     <div className='div-button'>   
                         <Link to={'/profile'}>  
                             <Button text={'Edit'} onClick={handleEditItem} className={'filled-button'}/>
+                        </Link>
+                        <Link to={'/profile'}>  
+                            <Button text={'Voltar'} className={'unfilled-button'}/>
                         </Link>
                     </div>
                 </form>

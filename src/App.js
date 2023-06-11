@@ -31,13 +31,11 @@ function App() {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    console.log('rodei aq');
     const loggedUser = localStorage.getItem("user");
-    console.log(loggedUser);
-    if(loggedUser){
-      console.log(user);
+    
+    if(loggedUser && loggedUser.length > 2){
       setTimeout(() => {
-          setUser(JSON.parse(localStorage.getItem("user")));
+        setUser(JSON.parse(localStorage.getItem("user")));
       }, 100);
     }
   }, []);

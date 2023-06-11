@@ -40,6 +40,18 @@ export const Input = ({ label, type, name, require, max, min, value, setValue, o
                         onChange={handleInputChange}
                     />
                     </>
+            ) : type === 'date' ? (
+                <>
+                    <input 
+                        className={type} 
+                        type='date'
+                        name={name} 
+                        required={require}
+                        
+                        value={value}
+                        onChange={handleInputChange}
+                    />
+                    </>
             ) : (
                 <>
                     <input 

@@ -3,7 +3,7 @@ export const users = {
 		{
 			name: 'Rebeca',
             email: 'rebeca.vcarvalho78@gmail.com',
-            birth: '18/01/2003',
+            birth: '2003-01-18',
             address: 
             {
                 CEP: '13560450',

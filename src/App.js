@@ -30,6 +30,21 @@ function App() {
 
   const [user, setUser] = useState({});
 
+  useEffect(() => {
+    console.log('rodei aq');
+    const loggedUser = localStorage.getItem("user");
+    console.log(loggedUser);
+    if(loggedUser){
+      console.log(user);
+      setTimeout(() => {
+          setUser(JSON.parse(localStorage.getItem("user")));
+      }, 100);
+    }
+  }, []);
+  
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
   
   const [plant, setPlant] = useState(null); 
     

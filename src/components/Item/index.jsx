@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '../Button';
-import { plants } from "../../datas/plants";
 import CareScale from "./carescale";
 
 import '../../styles/item.css'
 import BackgroundImage from "../../assets/flor-fundo2.png";
 import { Link } from 'react-router-dom';
 
-export const Item = ( {updateCart, id, cart, setCart} ) => {
+export const Item = ( {updateCart, id, cart, setCart, plants} ) => {
     const [src, setSrc] = useState([]);
     const [title, setTitle] = useState([]);
     const [desc, setDesc] = useState([]);
@@ -18,9 +17,9 @@ export const Item = ( {updateCart, id, cart, setCart} ) => {
     
     useEffect(() =>{
         setTimeout(() => {
-            setPlant(plants['Plants'].find(plant => Number(plant.id) === Number(id)));
+            if(plants) setPlant(plants['Plants'].find(plant => plant.id.toString() === id.toString()));
         }, 1000);
-    }, [id]);
+    }, [id, plants]);
     
     useEffect(() => {
         if(plant){

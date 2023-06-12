@@ -1,5 +1,6 @@
 import "../../styles/cart.css";
 import { Button } from '../Button';
+import { Input } from "../Input";
 
 export const CartItem = ({ updateCart, item, cart, blocked }) => {
 
@@ -26,9 +27,10 @@ export const CartItem = ({ updateCart, item, cart, blocked }) => {
             <span className="cart-item-name">{item.name}<br/>$ {item.price}</span>
             <div className="cart-shop">
                 <label htmlFor="quant">QUANTITY:</label>
-                { !blocked ? <input name="quant" type="number" min="1" onChange={handleChangeQuantity} id="qtt" value={item.qtt} /> 
+                { !blocked ? 
+                    <Input type={'number'} name={'quant'} min={'1'} max={item.stock} value={item.qtt}  onChange={handleChangeQuantity}/>
                     :
-                    <input name="quant" type="number" min="1" onChange={handleChangeQuantity} id="qtt" className="disable" value={item.qtt} disabled="true"/> 
+                    <Input className='disable' type={'number'} name={'quant'} min={'1'} max={item.stock} value={item.qtt}  onChange={handleChangeQuantity}/>
                 }
             </div>
             {!blocked && <Button text="Delete" onClick={handleDeleteItem} className="filled-button" />}

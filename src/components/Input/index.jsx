@@ -1,7 +1,7 @@
 import * as React from 'react';
 import '../../styles/input.css';
 
-export const Input = ({ label, type, name, require, max, min, value, setValue, onChange}) => {
+export const Input = ({ label, type, name, require, max, min, value, setValue, onChange, className}) => {
     const handleInputChange = (event) => {
         if(setValue)
             setValue(event.target.value);
@@ -29,7 +29,7 @@ export const Input = ({ label, type, name, require, max, min, value, setValue, o
             ) : type === 'number' ? (
                 <>
                     <input 
-                        className={type} 
+                        className={`${type} ${className}`} 
                         type='number'
                         max={max}
                         min={min}

@@ -1,9 +1,12 @@
 import * as React from 'react';
-import '../styles/cart.css';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import { OrdersList } from '../components/Orders/OrdersList';
 import { orderData } from '../datas/orders';
+import { Button } from '../components/Button';
+
+import '../styles/cart.css';
+import { Link } from 'react-router-dom';
 
 export const PageOrders = ({user, setUser, plants}) => {
 
@@ -32,7 +35,7 @@ export const PageOrders = ({user, setUser, plants}) => {
 
 
     return (
-        
+        <>
         <div id='wrapper' className='checkout'>
             <div id='checkout-title'>
                 <h1>My Orders</h1>
@@ -42,6 +45,13 @@ export const PageOrders = ({user, setUser, plants}) => {
                     <OrdersList orders={orders} plants={plants}/>
                 </div>
             </div>
+            
         </div>
+        <div className='profile-button'>
+            <Link to={'/profile'}>
+                <Button text={'Voltar'} className={'unfilled-button'}></Button>
+            </Link>
+        </div>
+        </>
     );
 };  

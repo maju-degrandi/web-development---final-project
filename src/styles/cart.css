@@ -107,6 +107,13 @@
   text-align: center;
 }
 
+.profile-button {
+    margin: 20px 0;
+    
+    width: 77%;
+    display: flex;
+    justify-content: end;
+}
 
 @media screen and (max-width: 900px) {
     .cart-shop label, 
@@ -137,7 +144,16 @@
 @media screen and (max-width: 700px) {
     .cart-shop label, 
     .cart-item-name{
-        font-size: small; 
+        font-size: medium; 
         margin: 10px;
+    }
+    
+    .profile-button {
+        margin: 20px 0;
+        
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
     }
 }

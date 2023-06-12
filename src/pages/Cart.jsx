@@ -3,7 +3,7 @@ import '../styles/cart.css';
 import { CartList } from '../components/Cart/CartList';
 import { Button } from '../components/Button';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const PageCart = ({user, updateCart, cart, setCart}) => {
     const [qttItems, setQttItens] = useState([]);    
@@ -39,22 +39,33 @@ export const PageCart = ({user, updateCart, cart, setCart}) => {
                 </div>
             </div>
             
-            <div id='checkout-resume'>
-            <div className='flex'>
-                    <p className='type'>Items({qttItems})</p>
-                    <p className='price'>R$
-                        {
-                            Number.parseFloat(cart[0].subtotal).toFixed(2)
-                        }
-                    </p>
-                </div>
-                
-                <div className='flex full-line'>
-                    {/* <Link to='/checkout'> */}
+            { Number.parseFloat(cart[0].subtotal) > 0 ?
+                <>
+                <div id='checkout-resume'>
+                <div className='flex'>
+                        <p className='type'>Items({qttItems})</p>
+                        <p className='price'>R$
+                            {
+                                Number.parseFloat(cart[0].subtotal).toFixed(2)
+                            }
+                        </p>
+                    </div>
+                    <div className='flex full-line'>
                         <Button text="Checkout" onClick={handleCheckout}/>
-                    {/* </Link> */}
+                    </div>
                 </div>
-            </div>
+                </>
+                : 
+                <>
+                <div id='checkout-resume'>
+                    <div className='flex full-line'>
+                        <Link to={'/shoplist'}>
+                            <Button text="Go Shop" onClick={handleCheckout}/>
+                        </Link>
+                    </div>
+                </div>
+                </>
+            }
         </div>
     );
 };  

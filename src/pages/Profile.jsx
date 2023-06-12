@@ -35,7 +35,7 @@ export const PageProfile = ({user, setUser}) => {
                         <h2>{user.email}</h2>
                         <p>Address: {user.address && user.address.CEP} {user.address && user.address.street}</p>
                     </div>
-                    <div>
+                    <div className='div-buttons'>
                         <Link to="/myorders"><Button text="My Orders" className="filled-button basic-button"/></Link>
                         <Link to="/editinfo"><Button text="Edit Info" className="filled-button basic-button"/></Link>
                         <Button onClick={handleLogout} text="Logout" className="filled-button basic-button">logout</Button>

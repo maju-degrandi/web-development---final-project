@@ -43,7 +43,7 @@ export const Item = ( {updateCart, id, cart, setCart, plants} ) => {
     }
 
     const handleAddToCart = () => {
-        let item = cart.findIndex(i => i.id == id);
+        let item = cart.findIndex(i => i.id === id);
 
         if(item > -1){
                 cart[item].qtt += qtt;

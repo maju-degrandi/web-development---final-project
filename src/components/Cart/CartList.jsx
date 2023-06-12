@@ -1,6 +1,5 @@
 import * as React from 'react';
 import '../../styles/cart.css';
-import { Card } from "../Card";
 import { CartItem } from '../Cart/CartItem';
 
 export const CartList = ({ updateCart, cart, setCart, blocked}) => {

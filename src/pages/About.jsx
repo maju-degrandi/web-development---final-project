@@ -21,7 +21,7 @@ export const PageAbout = () => {
                     Don't forget to Beleaf in yourself!</p>
             </div>
             <figure className='background-about'>
-                <img id="about-us-image" src={about_us} />
+                <img id="about-us-image" src={about_us} alt={src} />
             </figure>
         </div>
     );

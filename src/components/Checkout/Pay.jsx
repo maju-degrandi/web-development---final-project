@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {PlaceholderInput} from '../Input/FloatInput'
 import '../../styles/pay.css'
 import { Button } from '../Button';

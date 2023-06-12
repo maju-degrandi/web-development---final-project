@@ -5,13 +5,13 @@ import { Input } from "../Input";
 export const CartItem = ({ updateCart, item, cart, blocked }) => {
 
     const handleDeleteItem = () => {
-        cart = cart.filter((plant) => plant.id != item.id);
+        cart = cart.filter((plant) => plant.id !== item.id);
         updateCart(cart);
     }
     
     const handleChangeQuantity = (e) => {
         if(Number(e.target.value) <= 0) e.target.value = 1;
-        let cartItem = cart.findIndex(i => i.id == item.id);
+        let cartItem = cart.findIndex(i => i.id === item.id);
 
         if(cartItem > -1){
             cart[cartItem].qtt = Number(e.target.value);

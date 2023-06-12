@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "../../styles/cart.css";
 
 export const OrdersItem = ({ items, plants }) => {

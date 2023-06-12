@@ -1,0 +1,65 @@
+.about-us {
+    display: flex;
+    flex-direction: row;
+    padding: 3vw;
+}
+
+.about-us-text{
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+    font-size: large;
+    width: 80%;
+}
+
+.item-header{
+    color:rgba(95, 108, 55, 1);
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-weight: 300;
+    font-size: xxx-large;
+}
+
+.paragraph-about{
+    font-family: 'Advent Pro';
+    font-style: normal;
+    font-size: x-large;
+    font-weight: 600;
+    z-index: 1;
+}
+
+#about-us-image{
+    width: 40%;
+    /* height: 60%; */
+    margin: 0 0 0 0;
+}
+
+@media (max-width: 800px) {
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 3vw;
+    }
+    
+    .background-about{
+        position: absolute;
+        z-index: 0;
+        
+        bottom: -1.5vw;
+    }
+    
+    #about-us-image{
+        width: 300px;
+        height: 400px;
+        opacity: 0.3;
+    }
+  }
+
+
+  @media (max-width: 400px){
+    .background-about{
+        bottom: -2.4vw;
+    }
+  }

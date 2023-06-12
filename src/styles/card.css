@@ -1,0 +1,41 @@
+.basic-card{
+    width: 50%;
+    min-width: 800px;
+    min-height: 400px;
+    max-height: 700px; 
+    padding: 30px 70px;
+    background-color: #bacbae;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
+    overflow: auto;
+}
+
+.back-card{
+    width: auto;
+    height: auto;
+    min-height: 600px;
+    padding: 30px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .basic-card{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 500px;
+        min-width: 0px;
+        min-height: 0px;
+        max-height: 700px;
+        padding: 0;
+    }
+}

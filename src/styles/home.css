@@ -1,177 +1,4 @@
-@font-face {
-    font-family: Abril;
-    src: url("./fontstyle/Abril_Fatface/AbrilFatface-Regular.ttf") format("opentype");
-}
-
-@font-face {
-    font-family: Advent_Pro;
-    src: url("./fontstyle/Advent_Pro/AdventPro-Regular.ttf") format("opentype");
-}
-
-* {margin: 0; padding: 0;}
-
-body{ 
-    min-height: 100vh; 
-    margin: 0; 
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-
-#wrapper{
-    position: relative;
-    overflow-x: hidden;   
-}
-
- /*IFRAMES*/
-iframe[name='frame-header'] {
-    width: 100%; height: 182px;
-    top: 0;
-}
-iframe[name='frame-footer'] {
-    width: 100%; height: 382px;
-    position: static;
-    bottom: 0;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-/*LOGIN*/
-#login {
-    margin: 30px;
-    background-color: white;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    top: 50%;
-}
-
-.login-form {
-    font-family: 'Abril Fatface', cursive;
-    color:rgba(95, 108, 55, 1);
-    font-size: x-large;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-input {
-    border: 2px solid rgba(95, 108, 55, 1);
-    border-radius: 10px;
-    width: 220px;
-    height: 55px;
-    overflow: auto;
-    justify-content: flex-start;
-    font-size: large;
-    padding: 5px;;
-}
-
-.links-loginscreen {
-    margin: 10px;
-    color:rgba(95, 108, 55, 1);
-    font-family: 'Advent Pro', sans-serif;
-    font-weight: 700;
-}
-
-#login-button {
-    align-self: center;
-}
-
-/*ITEM*/
-#item-image {
-    margin: 0px 25px 25px 80px;
-    width: 482px;
-    height: 569px;
-
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 0 25px 0 25px;
-}
-
-#item-header {
-    color:rgba(95, 108, 55, 1);
-    font-family: 'Abril Fatface', cursive;
-}
-
-#item-desc {
-    display: flex;
-    flex-direction: column;
-    color: black;
-    font-family: 'Advent Pro', sans-serif;
-    width: 700px;
-    text-align: justify;
-}
-
-#shop {
-    align-self: flex-end;
-    font-family: 'Advent Pro', sans-serif;
-    font-weight: 700;
-    color:rgba(95, 108, 55, 1);
-    font-size: larger;
-}
-
-#qtt {
-    width: 75px;
-    color:rgba(95, 108, 55, 1);
-    align-content: center;
-}
-
-#buy-button {
-    font-size: x-large;
-    width: 150px;
-    height: 75px;
-    overflow: auto;
-}
-
-.item {
-    display: flex;
-}
-
-.item-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 25px;
-}
-
 /*GENERAL, IMAGES AND FORMS*/
-button {
-    background-color: rgb(73, 120, 86);
-    border: 2px solid rgb(73, 120, 86);
-    font-family: Advent_Pro;
-    font-size: large;
-    color: white;
-    width: 100px;
-    height: 55px;
-    overflow: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    margin : 5px;
-}
-
-#background-image1 {
-    position: absolute;
-    width: 250px;
-    height: 400px;
-    right: 0;
-    bottom: 382;
-    filter: opacity(50%);
-}
-
-#background-image2 {
-    position: absolute;
-    width: 250px;
-    height: 400px;
-    bottom: calc(100vh - 382px);
-    transform: rotate(-90deg);
-    filter: opacity(50%);
-    right: 0;
-}
-
 #ellipse-1 {
     position: absolute;
     width: 1784.5px;
@@ -191,10 +18,16 @@ button {
     bottom: 84.75%;
 }
 
+.button-center {
+    text-align: center;
+    width: 100%;
+    margin-left: 50px;
+}
+
 /* HOME */
 
 .title{
-    font-family: Abril;
+    font-family: 'Abril Fatface';
     line-height: 97.9%;
     font-weight: 400;
 }
@@ -205,7 +38,7 @@ button {
 }
 
 .second.title{
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;   
 }
 
@@ -234,14 +67,17 @@ button {
 
 .green-background{
     background-color: #497856;
-    font-family: Advent_Pro;
-    width: 100px;
+    font-family: 'Advent Pro';
+    width: max-content;
     height: 40px;
     padding: 10px;
     margin: 0 0 10 0;
     font-weight: 400;
     font-size: 20px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -272,11 +108,11 @@ button {
     z-index: 1;
 }
 
-#home-main-button:hover{
-    background-color: #497856;
+.home-main-button:hover{
+    background-color: #3a6947;
 }
 
-#home-main-button{
+.home-main-button{
     width: 200px;
     height: 50px;
 }
@@ -295,11 +131,78 @@ button {
     top: -7px;
     bottom: 84.75%;
     border-radius: 0 0 0 0;
+    z-index: -1;
 }
 
 .home-main-text{
     margin-left: 10%;
     width: 390px;
+}
+
+@media (max-width: 800px) {
+    .apresentation{
+        margin: 20% 0 0 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 120vw;
+        justify-content: space-between;
+    }
+    .quote.main.title {
+        margin: 3.5vw 0;
+        width: 100%;
+        height: 20vw;
+        font-weight: 400;
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+    #home-main-button {
+        width: 25vw;
+        height: 10vw;
+        font-size: 5vw;
+    }
+    .paragraph {
+        margin: 1.8vw 0 5.4vw 0;
+        /* font-size: large; */
+        font-family: 'Advent Pro';
+        text-align: justify;
+    }
+    .home-main-text {
+        margin-left: 10%;
+        width: 50vw;
+    }
+    .green-background {
+        background-color: #497856;
+        font-family: Advent_Pro;
+        width: 9vw;
+        height: 3.5vw;
+        padding: 0.8vw;
+        margin: 0 0 10 0;
+        font-weight: 400;
+        font-size: 3vw;
+        color: white;
+    }
+    #elipse {
+        position: absolute;
+        width: 160vw;
+        height: 120vw;
+        left: 58%;
+        top: -2%;
+        border-radius: 70%;
+        background: #90A680;
+        transform: rotate(130deg);
+        z-index: -2;
+    }
+    #home-img {
+        /* display:none; */
+        width: 70vw;
+        position: absolute;
+        transform: rotate(-20deg);
+        right: -20%;
+        top: 0.2%;
+        border-radius: 0 0 0 0;
+    }
+    
 }
 
 /* TYPE SELECT */
@@ -311,8 +214,6 @@ button {
     justify-content: center;
     flex-direction: row;
 }
-
-
 
 .type-card:hover{
     background-color: #21452B;
@@ -335,9 +236,45 @@ button {
 }
 
 .type-img{
-    height: 200px;
+    height: 12vw;
     width: 100%;
 	object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    .select-type{
+        background-color: #497856;
+        height: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .second.title{
+        font-size: large;
+    }
+
+    .type-card{
+        width: 40vw;
+        height: 40vw;
+        padding: 0.8vw;
+        background-color: white;
+        /* margin: ; */
+        border-radius: 0 0.8vw;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        color: #5F6C37;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .type-img{
+        height: 25vw;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 /* COLLECTION */
@@ -356,26 +293,49 @@ button {
 }
 
 .collection-text{
-    padding: 100px 0 0 100px;
-    width: 560px;
+    padding: 50px 0 0 50px;
+    width: 700px;
 }
 
-.button-outline:hover{
-    background-color: #5F6C37;
-    color: white;
-}
-.button-outline{
-    width: 200px;
-    height: 40px;
-    font-family: Advent_Pro;
-    background-color: transparent;
-    border: 2px solid #5F6C37;
-    color: #5F6C37;
-}
+@media (max-width: 800px) {
+    .collection {
+        background-color: #FFFFFF;
+        height: 120vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .button-outline {
+        width: 40vw;
+        height: 7vw;
+        font-size: 4vw;
+        font-family: Advent_Pro;
+        background-color: transparent;
+        border: 2px solid #5F6C37;
+        color: #5F6C37;
+    }
+    .collection-text{
+        padding: 5vw 2vw 0 5vw;
+        width: 100%;
+        font-size: small;
+    }
+    
+    .paragraph{
+        
+        font-size: large;
+    }
 
+    .collect.main.title{
+        font-size: x-large;
+        width: 100%;
+    }
+
+    .collection.home.image{
+        height: 60vw;
+        width: 100%;
+    }
+}
 
 /* BESTSELLERS */
-
 .best-sellers{
     background-color: #F1F1F1;
     display: flex;
@@ -393,6 +353,10 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.best-text > :nth-child(2){
+    z-index: 1;
 }
 
 .best-card{
@@ -415,10 +379,10 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.add.button-full{
+.button-full{
     position: absolute;
-    width: 328px;
-    height: 40px;
+    width: 328px !important;
+    height: 45px !important;
 }
 
 .shop.button-outline{
@@ -454,8 +418,8 @@ button {
 
 .mini.paragraph{
     margin-bottom: 10px;
-    text-align: justify;
     min-height: 100px;
+    -webkit-line-clamp: 5;
 }
 
 #background-img{
@@ -485,7 +449,7 @@ button {
 }
 
 .ornaments-text{
-    padding: 88px;
+    padding: 55px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -506,4 +470,19 @@ button {
     border-color: #21452B;
 }
 
-
+@media (max-width: 800px) {
+    .ornament-button{
+        width: 40vw;
+        height: 7vw;
+        font-size: 4vw;
+        color: #21452B;
+        border-color: #21452B;
+    }
+    .ornaments{
+        background-color: #90A680;
+        height: 70vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

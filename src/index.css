@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.fa { 
+  font-size: inherit;
+  width: 30px; height: 30px;
+  text-decoration: none;
+  color: rgb(95, 108, 55);
+}
+
+body{ 
+  min-height: 100vh; 
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+input {
+  border: 2px solid rgba(95, 108, 55, 1);
+  border-radius: 10px;
+  width: 220px;
+  height: 55px;
+  overflow: auto;
+  justify-content: flex-start;
+  font-size: large;
+  padding: 5px;;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper{
+  overflow-x: hidden;
+  min-width: 100%;
+}
+
+main{
+  height: auto;
+  width: auto;
+}
+
+h1 {
+  color: rgba(95, 108, 55, 1);
+  font-family: 'Abril Fatface', cursive;
+}

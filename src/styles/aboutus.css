@@ -1,0 +1,25 @@
+.about-us {
+    display: flex;
+    flex-direction: row;
+    padding: 3vw;
+}
+
+.about-us-text{
+    display: flex;
+    flex-direction: column;
+}
+
+#about-us-image{
+    width: 50vw;
+    height: 50vw;
+}
+
+@media (max-width: 800px) {
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 3vw;
+    }
+  }

@@ -1,0 +1,34 @@
+.plant-item-cover {
+	height: 250px;
+	width: 220px;
+	object-fit: cover;
+	border-radius: 0 20px 0 20px;
+    border: 2px solid rgb(129, 129, 129);
+	margin: 0;
+}
+
+.plant-item {
+	/* margin: 10px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-transform: capitalize;
+}
+
+.plant-name{
+	padding: 10px;
+	width: 100%;
+	font-family: 'Abril Fatface';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+
+	letter-spacing: 0.01em;
+
+	color: #5F6C37;
+}
+
+.plant-info{
+	width: fit-content;
+}

@@ -5,6 +5,7 @@ import CareScale from "./carescale";
 import '../../styles/item.css'
 import BackgroundImage from "../../assets/flor-fundo2.png";
 import { Link } from 'react-router-dom';
+import { Input } from '../Input';
 
 export const Item = ( {updateCart, id, cart, setCart, plants} ) => {
     const [src, setSrc] = useState([]);
@@ -66,16 +67,16 @@ export const Item = ( {updateCart, id, cart, setCart, plants} ) => {
                     
                 {plant ? (
                     <>
-                    <div className='imageItem'>
+                    <figure className='imageItem'>
                         <img id="item-image" src={src} alt={title}/>
-                    </div>
+                    </figure>
                     <div className="item-page">
                         <div id="item-desc">
                             <h1 id="item-header">{title}</h1>
                             <h1 id="item-header"> ${price}</h1><br/>
                             {desc.map((linha, index) => (
                                 <h2 key={index}>{linha}</h2>
-                                ))}    
+                            ))}    
 
                             <div className="plant-info">
                                 <div className="plant-info"  onClick={() => handleClick("light", plant.light)}>
@@ -84,14 +85,17 @@ export const Item = ( {updateCart, id, cart, setCart, plants} ) => {
                                 <div className="plant-info"  onClick={() => handleClick("water", plant.water)}>
                                     <CareScale careType="water" scaleValue={plant.water} />
                                 </div>
+                            
                             </div>
-
                             <span className='plant-info'>{stock} in stock</span>
+
                         </div>
                         
                         <div id="shop">
-                            <label htmlFor="quant">QUANTITY:</label>
-                            <input name="quant" type="number" min="1" id="qtt" placeholder="1" onChange={handleChangeQuantity}/>
+                            <div className='shop-qtt'>
+                                <label htmlFor="quant">QUANTITY:</label>
+                                <Input type={'number'} name={'quant'} min={'1'} max={stock} value={qtt} setValue={setQtt} onChange={handleChangeQuantity}/>
+                            </div>
                             <Link to='/cart'>
                                 <Button className="filled-button buy-button" onClick={handleAddToCart} text="ADD TO CART"/>
                             </Link>

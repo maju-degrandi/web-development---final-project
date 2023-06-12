@@ -25,6 +25,7 @@
     font-style: normal;
     font-size: x-large;
     font-weight: 600;
+    z-index: 1;
 }
 
 #about-us-image{
@@ -41,5 +42,24 @@
         align-items: flex-end;
         padding: 3vw;
     }
+    
+    .background-about{
+        position: absolute;
+        z-index: 0;
+        
+        bottom: -1.5vw;
+    }
+    
+    #about-us-image{
+        width: 300px;
+        height: 400px;
+        opacity: 0.3;
+    }
   }
 
+
+  @media (max-width: 400px){
+    .background-about{
+        bottom: -2.4vw;
+    }
+  }

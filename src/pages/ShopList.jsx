@@ -26,10 +26,16 @@ export const PageShopList = ({user, plants}) => {
     }, [search, plants]);
     
     return (    
-        <div>
+        <div className="checkout shoplist">
+            <div id="checkout-title">
+                <h1>Shop List</h1>
+            </div>
+            
             <ul className="plant-list">
                 { plant ? 
                         plant.length != 0 ? 
+                        
+                        
                         (plant.map(({ id, cover, name, water, light, price }) => (
                             <div className="plant" key={id}>
                                 <PlantItem 
@@ -39,7 +45,7 @@ export const PageShopList = ({user, plants}) => {
                                     water={water}
                                     light={light}
                                     price={price}
-                                />
+                                    />
                                 {   user.admin ?
                                         <Link to={'/admin/add-item/' + id}>
                                             <div className="button-add">
@@ -47,7 +53,7 @@ export const PageShopList = ({user, plants}) => {
                                             </div>
                                         </Link>
                                     :
-                                        <Link to={'/item/' + id}>
+                                    <Link to={'/item/' + id}>
                                             <div className="button-add">
                                                     <button className="add"> Shop Now </button>
                                             </div>
@@ -64,10 +70,10 @@ export const PageShopList = ({user, plants}) => {
                                 <Link to='/shoplist' className="link"> aqui </Link> para ver todos os produtos.</p>
                             </div>
                         :
-                    (
-                        <p className="empty">Carregando...</p>
-                    )
-                } 
+                        (
+                            <p className="empty">Carregando...</p>
+                            )
+                        } 
             </ul>
             {
                 user.admin &&

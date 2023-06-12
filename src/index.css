@@ -53,3 +53,8 @@ main{
   height: auto;
   width: auto;
 }
+
+h1 {
+  color: rgba(95, 108, 55, 1);
+  font-family: 'Abril Fatface', cursive;
+}

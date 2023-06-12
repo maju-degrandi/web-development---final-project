@@ -1,13 +1,15 @@
 .plant-list {
 	list-style-type: none;
-    justify-content: center;
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
     min-height: 500px;
-    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.shoplist #checkout-main:nth-child(1) {
+    background-color: red !important;
 }
 
 .button-add{

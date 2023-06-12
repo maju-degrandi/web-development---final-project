@@ -53,3 +53,14 @@
         justify-content: center ;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .div-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .div-buttons button{
+        margin: 10px;
+    }
+}

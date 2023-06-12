@@ -102,7 +102,7 @@ export const Checkout = ({cart, setCart, updateCart}) => {
                 
                 <div className='flex full-line'>
                     <Link to='/'>
-                        <Button text="Confirm and Pay" className="filled-button full checkout-button"/>
+                        <Button text="Pay" className="filled-button full checkout-button"/>
                     </Link>
                 </div>
             </div>

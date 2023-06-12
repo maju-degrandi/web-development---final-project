@@ -126,11 +126,12 @@ export const UpdatePlants = ({plants, setPlants}) => {
             </div>
             
             <form action="" id='update-form' className='basic-form'>
-                <Input label={'Name'} type={'text'} value={name} setValue={setName}/>
+                <Input require={true} label={'Name'} type={'text'} value={name} setValue={setName}/>
                 
                 <div className='div-input'>
                     <label className='label-text'>Category</label>
                     <select 
+                        required
                         value={category} 
                         onChange={(e) => setCategory(e.target.value)}  
                         className='select'
@@ -141,17 +142,17 @@ export const UpdatePlants = ({plants, setPlants}) => {
                     </select> 
                 </div>
                 
-                <Input label={'Image'} type={'text'} value={image} setValue={setImage}/>
-                <Input label={'Price'} type={'text'} value={price} setValue={setPrice}/>
-                <Input label={'Stock'} type={'number'} value={stock} setValue={setStock}/>
+                <Input require={true} label={'Image'} type={'text'} value={image} setValue={setImage}/>
+                <Input require={true} label={'Price'} type={'text'} value={price} setValue={setPrice}/>
+                <Input require={true} label={'Stock'} type={'number'} value={stock} setValue={setStock}/>
                 
                 <div className='div-input'>                    
                     <label className='label-text'>Description</label>
                     <textarea defaultValue={description} className='textarea'></textarea>
                 </div>
                 
-                <Input label={'Amount of light needed'} type={'number'} max="5" min="1" value={light} setValue={setLight}/>
-                <Input label={'Amount of water needed'} type={'number'} max="5" min="1" value={water} setValue={setWater}/>
+                <Input require={true} label={'Amount of light needed'} type={'number'} max="5" min="1" value={light} setValue={setLight}/>
+                <Input require={true} label={'Amount of water needed'} type={'number'} max="5" min="1" value={water} setValue={setWater}/>
                 
                 <div className='div-button'>    
                     { isTimeoutComplete && plant ?

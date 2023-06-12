@@ -46,8 +46,8 @@ export const PageLogin = ({setUser}) => {
         <div className="basic-form">
             <h1 className="title">Login</h1>
             <form className="basic-form-form" onSubmit={handleSubmit} >
-                <Input label="Email: " value={email} input="email" type="email" onChange={({ target }) => setEmail(target.value)}/>
-                <Input label="Senha: " input="senha" value={password} type="password" onChange={({ target }) => setPassword(target.value)}/>
+                <Input label="Email: " require={true} value={email} input="email" type="email" onChange={({ target }) => setEmail(target.value)}/>
+                <Input label="Senha: "  require={true} input="senha" value={password} type="password" onChange={({ target }) => setPassword(target.value)}/>
                     <Button text="LOGIN" className="filled-button basic-button" type="submit" />
             </form>
             <div className="links-loginscreen">

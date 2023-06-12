@@ -25,14 +25,6 @@
     text-align: left;
 }
 
-.order-total{
-    width: 90%;
-    padding: 20px 0;
-    font-size: large; 
-    font-family: 'Quicksand', 'sans-serif';
-    text-align: end;
-}
-
 .order-list{
     display: flex;
     flex-direction: column;

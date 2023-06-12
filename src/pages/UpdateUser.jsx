@@ -8,6 +8,8 @@ import '../styles/updatePlants.css';
 
 
 export const UpdateUser = ({user, setUser}) => {
+    const navigate = useNavigate();
+    
     useEffect(() => {
         const loggedInUser = localStorage.getItem("user");
         console.log(loggedInUser);
@@ -64,7 +66,7 @@ export const UpdateUser = ({user, setUser}) => {
                         <Input label={'CEP'} type={'text'} require={true} value={cep} setValue={setCep}/>
                         <Input label={'Street'} type={'text'} require={true} value={street} setValue={setStreet}/>
                         <Input label={'Number'} type={'text'} require={true} value={number} setValue={setNumber}/>
-                        <Input label={'Observations'} type={'text'} require={true} value={obs} setValue={setObs}/>
+                        <Input label={'Observations'} type={'text'} value={obs} setValue={setObs}/>
                         
                     </div>
                     

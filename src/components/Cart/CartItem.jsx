@@ -32,7 +32,7 @@ export const CartItem = ({ updateCart, item, cart, blocked }) => {
             <div className="cart-shop">
                 <label htmlFor="quant">QUANTITY:</label>
                 { !blocked ? 
-                    <Input type={'number'} name={'quant'} min={'1'} max={item.stock} value={item.qtt}  onChange={handleChangeQuantity}/>
+                    <input type="number" className="number" name="quant" min={1} max={item.stock} value={item.qtt} onChange={handleChangeQuantity}></input>
                     :
                     <Input className='disable' type={'number'} name={'quant'} min={'1'} max={item.stock} value={item.qtt}  onChange={handleChangeQuantity}/>
                 }

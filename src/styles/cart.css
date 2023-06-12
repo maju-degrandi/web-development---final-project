@@ -115,6 +115,12 @@
     justify-content: end;
 }
 
+@media screen and (max-width: 1300px) {
+    .cart-item button{
+        font-size: medium;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .cart-shop label, 
     .cart-item-name{

@@ -171,17 +171,6 @@
         margin-left: 10%;
         width: 50vw;
     }
-    .green-background {
-        background-color: #497856;
-        font-family: Advent_Pro;
-        width: 9vw;
-        height: 3.5vw;
-        padding: 0.8vw;
-        margin: 0 0 10 0;
-        font-weight: 400;
-        font-size: 3vw;
-        color: white;
-    }
     #elipse {
         position: absolute;
         width: 160vw;

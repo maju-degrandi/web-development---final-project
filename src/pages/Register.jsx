@@ -12,7 +12,10 @@ export const PageRegister = () => {
     return (
          <div className="basic-form" action={handleRegister}>
                 <h1 className="title">Register</h1>
-                <img id="background-image1" src={backimage}/>
+
+                <figure className='background-login'>
+                    <img id="background-image1" src={backimage}/>
+                </figure>
                 <form className="basic-form-form" >
                     <Input label="E-mail*: " input="email" type="email" require={true}/>
                     <div className='person-form'>

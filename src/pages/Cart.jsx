@@ -33,14 +33,14 @@ export const PageCart = ({user, updateCart, cart, setCart}) => {
             <div id='checkout-title'>
                 <h1>Cart</h1>
             </div>
-            <div id='checkout-main'>
+            <div id='checkout-main' >
                 <div className='checkout-items'>
                     <CartList updateCart={updateCart} cart={cart} setCart={setCart} blocked={false}/>
                 </div>
             </div>
             
             <div id='checkout-resume'>
-            <div className='flex'>
+            <div className='flex' data-testid='page-cart-items'>
                     <p className='type'>Items({qttItems})</p>
                     <p className='price'>R$
                         {

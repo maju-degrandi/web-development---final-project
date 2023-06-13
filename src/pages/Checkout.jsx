@@ -19,7 +19,8 @@ export const Checkout = ({cart, setCart, updateCart}) => {
     useEffect(()=>{
         let qtt = 0;
         cart.map((item) => {
-            qtt += item.qtt;
+            if (item.qtt)
+                qtt += parseFloat(item.qtt);
         })
         
         setQttItens(qtt);
@@ -68,7 +69,7 @@ export const Checkout = ({cart, setCart, updateCart}) => {
                     <p className='type'>Items({qttItems})</p>
                     <p className='price'>R$
                         {
-                            Number.parseFloat(cart[0].subtotal).toFixed(2)
+                            parseFloat(cart[0].subtotal).toFixed(2)
                         }
                     </p>
                 </div>

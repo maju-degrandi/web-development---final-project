@@ -13,7 +13,7 @@ export const PageCart = ({user, updateCart, cart, setCart}) => {
     useEffect(()=>{
         let qtt = 0;
         cart.map((item) => {
-            if(item.qtt) qtt += item.qtt;
+            if(item.qtt) qtt += parseFloat(item.qtt);
         })
         
         setQttItens(qtt);

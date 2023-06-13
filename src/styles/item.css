@@ -139,6 +139,19 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
+    .number {
+        width: 40px !important;
+        height: 35px !important;
+        text-align: center;
+    }
     
+    .cart-shop {
+        margin: 0px;
+    }
+    
+    .cart-item {
+        padding: 5px;
+        margin: 0px;
+    }
 }

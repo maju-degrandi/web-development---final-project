@@ -286,7 +286,7 @@
     width: 700px;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .collection {
         background-color: #FFFFFF;
         height: 120vw;
@@ -304,13 +304,14 @@
     }
     .collection-text{
         padding: 5vw 2vw 0 5vw;
+        margin: 0 0 2vw 0;
         width: 100%;
         font-size: small;
     }
     
     .paragraph{
-        
         font-size: large;
+        
     }
 
     .collect.main.title{

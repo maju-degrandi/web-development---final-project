@@ -100,4 +100,10 @@
     .info-profile{
         font-size: large;
     }
+    
+    .person-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

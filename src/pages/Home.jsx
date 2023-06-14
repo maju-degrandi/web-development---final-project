@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Button } from '../components/Button'
 
@@ -9,14 +10,6 @@ import flowers_type from '../assets/flowers-type.png';
 import succulents_type from '../assets/succulents-type.png';
 import climbing_type from '../assets/climbing-type.png';
 import home_img2 from '../assets/home-img2.jpg';
-import home_img3 from '../assets/home-img3.jpg';
-import peace_lily from '../assets/peace-lily.jpg';
-import snake_plant from '../assets/snake-plant.jpg';
-import flor_fundo1 from '../assets/flor-fundo1.png';
-import flor_fundo2 from '../assets/flor-fundo2.png';
-import echeveria from '../assets/Echeveria Perle Von Nurnberg.jpg';
-import hydrangea from '../assets/hydrangea.jpg';
-import { Link } from 'react-router-dom';
 
 export const PageHome = () => {
     return (

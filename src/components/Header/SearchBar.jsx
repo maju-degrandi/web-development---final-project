@@ -1,48 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../../styles/searchBar.css';
 import { useNavigate } from 'react-router-dom';
 
-export const SearchBar = ( {liClassName} ) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isFocus, setFocus] = useState(false);
+export const SearchBar = ({ liClassName }) => {
+  const [isFocused, setIsFocused] = useState(false);
   const navigate = useNavigate();
   const [searchstr, setSearchStr] = useState('');
-  
-  const handleIconClick = () => {
-    setIsExpanded(!isExpanded);
-    console.log('FOCO:'+isFocus+setFocus());
-    console.log(isExpanded);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (isFocused && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isFocused]);
+
+  const handleInputFocus = () => {
+    setIsFocused(true);
   };
-  
+
   const handleInputBlur = () => {
-    setIsExpanded(false);
+    setIsFocused(false);
   };
 
   const handleSearch = (e) => {
     e.preventDefault();
     navigate({
-        pathname: '/shoplist',
-        search: '?search=' + searchstr,
+      pathname: '/shoplist',
+      search: '?search=' + searchstr,
     });
-  }
+  };
 
   const handleChange = (e) => {
     setSearchStr(e.target.value);
-  }
-  
+  };
+
+  const handleSpanClick = () => {
+    setIsFocused(true);
+  };
+
   return (
     <form onSubmit={handleSearch}>
-      <div className={liClassName} onBlur={handleInputBlur}>
-        <span className="fa fa-search" onClick={handleIconClick}></span>
-        {isExpanded && (
+      <div className={liClassName}>
+        <span
+          className={`fa fa-search ${isFocused ? 'focused' : ''}`}
+          onClick={handleSpanClick}
+        ></span>
+        {isFocused && (
           <input
-            type="text"
+            type='text'
             onChange={handleChange}
-            className='expanded input-search-bar'
-            placeholder="Digite sua pesquisa..."
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
+            className='input-search-bar'
+            placeholder='Digite sua pesquisa...'
+            ref={inputRef}
           />
         )}
       </div>
     </form>
   );
-}
+};

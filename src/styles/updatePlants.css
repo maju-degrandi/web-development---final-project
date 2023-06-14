@@ -34,7 +34,6 @@ form#update-form a button{
     height: 40px;
     
     min-width: 300px;
-    min-height: 40px;
 }
 
 #update-form .div-button{
@@ -57,4 +56,8 @@ form#update-form a button{
     #update-form {
         width: 100%;
     }    
+    
+    .div-input .number {
+        height: 40px !important;
+    }
 }

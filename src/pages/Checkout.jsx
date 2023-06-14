@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/checkout.css'
+import { useNavigate } from 'react-router-dom';
 import { PlaceholderInput } from '../components/Input/FloatInput';
 import PaymentScreen from '../components/Checkout/Pay';
 import { CartList } from '../components/Cart/CartList';
 import { Button } from '../components/Button';
-import { Link } from 'react-router-dom';
 
-export const Checkout = ({cart, setCart, updateCart}) => {
+import '../styles/checkout.css'
+
+export const Checkout = ({cart, setCart, updateCart, user}) => {
+    const navigate = useNavigate();
+    const [qttItems, setQttItens] = useState([]);
     const [country, setCountry] = useState([]);
     const [cep, setCep] = useState([]);
     const [state, setState] = useState([]);
@@ -15,18 +18,53 @@ export const Checkout = ({cart, setCart, updateCart}) => {
     const [number, setNumber] = useState([]);
     const [moreInfo, setMoreInfo] = useState([]);
     
-    const [qttItems, setQttItens] = useState([]);
-    useEffect(()=>{
-        let qtt = 0;
-        cart.map((item) => {
-            qtt += item.qtt;
-        })
-        
-        setQttItens(qtt);
-    }, [cart]);
-    
     const [discount, setDiscount] = useState(0);
     const [shipping, setShipping] = useState(0);
+    const [donePay, setDonePay] = useState(false);
+    const [doneShip, setDoneShip] = useState(false);
+    
+    function getAddressUser(user){
+        setCountry(user.address.country);
+        setCep(user.address.CEP);
+        setState(user.address.state);
+        setCity(user.address.city);
+        setStreet(user.address.street);
+        setNumber(user.address.number);
+        setMoreInfo(user.address.obs);
+    }
+    
+    useEffect(()=>{
+        if(user){
+            getAddressUser(user);
+        }
+    }, [user]);
+    
+    useEffect(()=>{
+        let qtt = 0;
+        if(cart){
+            cart.map((item) => {
+                if (item.qtt)
+                    qtt += parseFloat(item.qtt);
+            })
+            
+            setQttItens(qtt);
+        }
+    }, [cart]);
+    
+    function handleCheckoutShip(e){
+        e.preventDefault();
+        setDoneShip(true);
+    }
+    
+    function handleCheckout(e) {
+        if(doneShip && donePay){
+            setCart([{subtotal: 0, total: 0, shipping: 0}]);
+            
+            navigate('/thanks');
+        }else {
+            //error
+        }
+    }
     
     return (
         <div id='wrapper' className='checkout'>
@@ -53,13 +91,13 @@ export const Checkout = ({cart, setCart, updateCart}) => {
                         <PlaceholderInput title="Number" type="text" size='3' value={number} setValue={setNumber}/>
                         <PlaceholderInput title="More informations" type="text" size='10' value={moreInfo} setValue={setMoreInfo}/>
                         
-                        <Button type={'submit'} text={'Done'} className={'filled-button checkout-button done'}/>
+                        <Button type={'submit'} text={'Done'} className={'filled-button checkout-button done'} onClick={handleCheckoutShip}/>
                         
                     </div>
                 </div>
                 
                 <div className='checkout-pay'>
-                    <PaymentScreen/>
+                    <PaymentScreen setDonePay={setDonePay}/>
                 </div>
             </div>
             
@@ -68,7 +106,7 @@ export const Checkout = ({cart, setCart, updateCart}) => {
                     <p className='type'>Items({qttItems})</p>
                     <p className='price'>R$
                         {
-                            Number.parseFloat(cart[0].subtotal).toFixed(2)
+                            parseFloat(cart[0].subtotal).toFixed(2)
                         }
                     </p>
                 </div>
@@ -101,9 +139,7 @@ export const Checkout = ({cart, setCart, updateCart}) => {
                 </div>
                 
                 <div className='flex full-line'>
-                    <Link to='/'>
-                        <Button text="Pay" className="filled-button full checkout-button"/>
-                    </Link>
+                    <Button text="Pay" className="filled-button full checkout-button" onClick={handleCheckout}/>
                 </div>
             </div>
         </div>

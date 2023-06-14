@@ -44,7 +44,6 @@ export const Footer = () => {
                             'Shipping': '/',
                             'Free Returns': '/',
                             'Track Your Order': '/',
-                            'Git Cards': '/',
                             'About Us': '/',
                         }
                     }

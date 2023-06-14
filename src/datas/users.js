@@ -8,6 +8,9 @@ export const users = {
             {
                 CEP: '13560450',
                 street: 'Rua Dr. Orlando Damiano',
+                country: 'Brasil',
+                state: 'São Paulo',
+                city: 'São Carlos',
                 number: '1971',
                 obs: '',
             },
@@ -25,6 +28,9 @@ export const users = {
             {
                 CEP: '13560660',
                 street: 'Rua Dr. Otávio',
+                city: 'São Carlos',
+                state: 'São Paulo',
+                country: 'Brasil',
                 number: '1971',
                 obs: '',
             },

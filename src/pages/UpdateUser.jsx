@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
@@ -8,8 +8,6 @@ import '../styles/updatePlants.css';
 
 
 export const UpdateUser = ({user, setUser}) => {
-    const navigate = useNavigate();
-    
     useEffect(() => {
         const loggedInUser = localStorage.getItem("user");
         console.log(loggedInUser);
@@ -23,11 +21,12 @@ export const UpdateUser = ({user, setUser}) => {
     
     const [name, setName] = useState(user.name);
     const [birth, setBirth] = useState(user.birth);
-    console.log(user);
-    
     const [cep, setCep] = useState(user.address.CEP);
     const [street, setStreet] = useState(user.address.street);
     const [number, setNumber] = useState(user.address.number);
+    const [country, setCountry] = useState(user.address.country);
+    const [city, setCity] = useState(user.address.city);
+    const [state, setState] = useState(user.address.state);
     const [obs, setObs] = useState(user.address.obs);
 
     const handleEditItem = (e) => {
@@ -37,14 +36,16 @@ export const UpdateUser = ({user, setUser}) => {
             birth: birth,
             address: 
             {
+                country: country,
                 CEP: cep,
+                state: state,
+                city: city,
                 street: street,
                 number: number,
-                obs: obs,
+                obs: obs
             },
         };
       
-        console.log(updatedUser);
         setUser(updatedUser);
     };
     
@@ -63,7 +64,10 @@ export const UpdateUser = ({user, setUser}) => {
                     
                     <div>
                         <h2>Address</h2>
+                        <Input label={'Country'} type={'text'} require={true} value={country} setValue={setCountry}/>
                         <Input label={'CEP'} type={'text'} require={true} value={cep} setValue={setCep}/>
+                        <Input label={'State'} type={'text'} require={true} value={state} setValue={setState}/>
+                        <Input label={'City'} type={'text'} require={true} value={city} setValue={setCity}/>
                         <Input label={'Street'} type={'text'} require={true} value={street} setValue={setStreet}/>
                         <Input label={'Number'} type={'text'} require={true} value={number} setValue={setNumber}/>
                         <Input label={'Observations'} type={'text'} value={obs} setValue={setObs}/>

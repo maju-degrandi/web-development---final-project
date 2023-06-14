@@ -3,7 +3,7 @@ import {PlaceholderInput} from '../Input/FloatInput'
 import '../../styles/pay.css'
 import { Button } from '../Button';
 
-const PaymentScreen = () => {
+const PaymentScreen = ({setDonePay}) => {
   const [paymentMethod, setPaymentMethod] = useState('');
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
@@ -39,6 +39,12 @@ const PaymentScreen = () => {
       localStorage.setItem("card", JSON.stringify(paymentInfo));  
   };
 
+  function handleCheckoutPay(e){
+    e.preventDefault();
+    
+    setDonePay(true);
+  }
+  
   return (
     <div>
       <h2>Pay with</h2>
@@ -80,7 +86,7 @@ const PaymentScreen = () => {
             Pagamento com Pix
           </label>
         </div>
-        <Button type={'submit'} text={'Done'} className={'filled-button checkout-button done'}/>
+        <Button type={'submit'} text={'Done'} className={'filled-button checkout-button done'} onClick={handleCheckoutPay}/>
       </form>
     </div>
   );

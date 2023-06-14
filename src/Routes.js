@@ -14,24 +14,28 @@ import { UpdatePlants } from "./pages/UpdatePlants.jsx";
 import { PageOrders } from "./pages/Orders.jsx";
 import { UpdateUser } from "./pages/UpdateUser.jsx";
 import { PagePassword } from "./pages/Password.jsx";
+import { ThankYouPage } from "./pages/CheckoutFinish.jsx";
 
 export function routes({user, setUser, cart, setCart, updateCart, plant, setPlant}) {
     return (
         <Routes>
             <Route element={<PageHome />} path="/" exact />
-            <Route element={<PageItem plants={plant} updateCart={updateCart} cart={cart} setCart={setCart}/>} path="/item/:itemId" />
             <Route element={<PageAbout />} path="/about" />
-            <Route element={<PageShopList user={user} plants={plant}/>} path="/shoplist" />
-            <Route element={<PageOrders user={user} setUser={setUser} plants={plant}/>} path="/myorders" />
-            <Route element={<PageLogin setUser={setUser} />} path="/login" />
             <Route element={<PageRegister />} path="/register" />
+            <Route element={<PageLogin setUser={setUser} />} path="/login" />
             <Route element={<PageProfile user={user} setUser={setUser} />} path="/profile" />
-            <Route element={<PageCart user={user} updateCart={updateCart} cart={cart} setCart={setCart} />} path="/cart" />
-            <Route element={<Checkout updateCart={updateCart} cart={cart} setCart={setCart} />} path="/checkout" />
-            <Route element={<UpdatePlants plants={plant} setPlants={setPlant}/>} path="/admin/add-item"/>
-            <Route element={<UpdatePlants plants={plant} setPlants={setPlant}/>} path="/admin/add-item/:itemId"/>
             <Route element={<UpdateUser user={user} setUser={setUser} />} path="/editinfo"/>
             <Route element={<PagePassword />} path="/recoverpassword"/>
+            <Route element={<PageOrders user={user} setUser={setUser} plants={plant}/>} path="/myorders" />
+            
+            <Route element={<PageItem plants={plant} updateCart={updateCart} cart={cart} setCart={setCart}/>} path="/item/:itemId" />
+            <Route element={<PageShopList user={user} plants={plant}/>} path="/shoplist" />
+            <Route element={<PageCart user={user} updateCart={updateCart} cart={cart} setCart={setCart} />} path="/cart" />
+            <Route element={<Checkout updateCart={updateCart} cart={cart} setCart={setCart} user={user}/>} path="/checkout" />
+            <Route element={<ThankYouPage/>} path="/thanks" />
+            
+            <Route element={<UpdatePlants plants={plant} setPlants={setPlant}/>} path="/admin/add-item"/>
+            <Route element={<UpdatePlants plants={plant} setPlants={setPlant}/>} path="/admin/add-item/:itemId"/>
         </Routes>
     )
 }

@@ -137,6 +137,10 @@
     flex-direction: row;
 }
 
+p.order-total {
+    margin: 0 0 0 20px;
+}
+
 @media screen and (max-width: 700px) { 
     .cart-item {
         margin: 10px;    
@@ -181,6 +185,11 @@
     .cart-shop-button button {
         height: 50px;
         font-size: medium;
+    }
+    
+    .profile-button {
+        width: 100%;
+        padding: 0 40px 0 0;
     }
 }
 

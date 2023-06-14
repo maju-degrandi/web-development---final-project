@@ -41,7 +41,6 @@ function App() {
   }, []);
   
   useEffect(() => {
-    console.log(user);
     if(user && JSON.stringify(user).length > 2)
       localStorage.setItem("user", JSON.stringify(user));
   }, [user]);

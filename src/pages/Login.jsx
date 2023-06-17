@@ -1,12 +1,15 @@
 import * as React from 'react';
-import '../styles/forms.css';
+import { useNavigate } from "react-router-dom";
+
 import backimage from "../assets/flor-fundo1.png";
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import userService from '../services/user';
-import { useNavigate } from "react-router-dom";
+import { updateUserInLocalStorage } from '../services/localStorageUtils';
+
+import '../styles/forms.css';
 
 export const PageLogin = ({setUser}) => {
 

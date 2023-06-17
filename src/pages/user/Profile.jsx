@@ -13,9 +13,9 @@ export const PageProfile = ({user, setUser}) => {
     useEffect(() => {
         const loggedInUser = localStorage.getItem("user");
 
-        if (loggedInUser !== '{}') {
+        if (loggedInUser && loggedInUser !== '{}') {
             const foundUser = JSON.parse(loggedInUser);
-            console.log(foundUser);
+            
             setUser(foundUser);
         }
     }, []);

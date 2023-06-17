@@ -76,7 +76,7 @@ export const UpdateUser = ({user, setUser}) => {
                     
                     <div className='div-button'>   
                         <Link to={'/user'}>  
-                            <Button text={'Edit'} onClick={handleEditItem} className={'filled-button'}/>
+                            <Button type={"submit"} text={'Edit'} onClick={handleEditItem} className={'filled-button'}/>
                         </Link>
                         <Link to={'/user'}>  
                             <Button text={'Voltar'} className={'unfilled-button'}/>

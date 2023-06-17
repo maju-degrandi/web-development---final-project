@@ -69,7 +69,7 @@ export const PageHome = () => {
                 <div className="collection-text">
                     <h1 className="collect main title">Beleaf: To plant a garden is to believe<br /> in tomorrow.</h1>
                     <p className="paragraph">Beleaf is a boutique plant shop that provides a carefully curated selection of indoor and outdoor plants, ranging from classic favorites to rare and exotic species. Our knowledgeable staff can guide you through the process of selecting, caring for, and styling your plants. We are committed to sustainability and ethical sourcing, partnering with local growers and suppliers who share our values. At Beleaf, we believe that plants have the power to transform any space into a green oasis, providing a sense of calm, harmony, and well-being. Visit us and discover the joy of plant life!</p>
-                    <Link to={'#'}>
+                    <Link to={'/shoplist'}>
                         <Button text={'Explore the collection'} className={'unfilled-button'}/>
                     </Link>
                </div>

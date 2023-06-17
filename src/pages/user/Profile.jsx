@@ -1,13 +1,13 @@
 import * as React from 'react';
-import '../styles/forms.css';
-import { Button } from '../components/Button';
-import { Card } from "../components/Card";
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
+
+import { Button } from '../../components/Button';
+import { Card } from "../../components/Card";
+
+import '../../styles/forms.css';
 
 export const PageProfile = ({user, setUser}) => {
-    
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -36,8 +36,10 @@ export const PageProfile = ({user, setUser}) => {
                         <p>Address: {user.address && user.address.CEP} {user.address && user.address.street}</p>
                     </div>
                     <div className='div-buttons'>
-                        <Link to="/myorders"><Button text="My Orders" className="filled-button basic-button"/></Link>
-                        <Link to="/editinfo"><Button text="Edit Info" className="filled-button basic-button"/></Link>
+                        {!user.admin &&   
+                            <Link to="/user/myorders"><Button text="My Orders" className="filled-button basic-button"/></Link>
+                        }
+                        <Link to="/user/editinfo"><Button text="Edit Info" className="filled-button basic-button"/></Link>
                         <Button onClick={handleLogout} text="Logout" className="filled-button basic-button">logout</Button>
                     </div>
                 </>

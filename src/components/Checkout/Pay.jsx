@@ -58,7 +58,7 @@ const PaymentScreen = ({setDonePay}) => {
               onChange={handlePaymentMethodChange}
             />
             
-            <span>Pagamento com Cartão</span>
+            <span>Add card</span>
           </label>
         </div>
         
@@ -83,7 +83,7 @@ const PaymentScreen = ({setDonePay}) => {
               checked={paymentMethod === 'pix'}
               onChange={handlePaymentMethodChange}
             />
-            Pagamento com Pix
+            PIX
           </label>
         </div>
         <Button type={'submit'} text={'Done'} className={'filled-button checkout-button done'} onClick={handleCheckoutPay}/>

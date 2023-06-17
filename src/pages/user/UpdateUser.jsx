@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Input } from '../components/Input';
-import { Button } from '../components/Button';
+import { Link, useNavigate } from 'react-router-dom';
 
-import '../styles/updatePlants.css';
+import { Input } from '../../components/Input';
+import { Button } from '../../components/Button';
+
+import '../../styles/updatePlants.css';
 
 
 export const UpdateUser = ({user, setUser}) => {
@@ -75,10 +75,10 @@ export const UpdateUser = ({user, setUser}) => {
                     </div>
                     
                     <div className='div-button'>   
-                        <Link to={'/profile'}>  
+                        <Link to={'/user'}>  
                             <Button text={'Edit'} onClick={handleEditItem} className={'filled-button'}/>
                         </Link>
-                        <Link to={'/profile'}>  
+                        <Link to={'/user'}>  
                             <Button text={'Voltar'} className={'unfilled-button'}/>
                         </Link>
                     </div>

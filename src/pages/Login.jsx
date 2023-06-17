@@ -33,7 +33,7 @@ export const PageLogin = ({setUser}) => {
             // store the user in localStorage
             localStorage.setItem('user', JSON.stringify(response));
             
-            navigate("/profile");
+            navigate("/user");
         }
       };
 

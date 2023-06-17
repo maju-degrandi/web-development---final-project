@@ -45,23 +45,23 @@ function App() {
       localStorage.setItem("user", JSON.stringify(user));
   }, [user]);
   
-  const [plant, setPlant] = useState(null); 
+  const [plantsStock, setPlantsStock] = useState(null); 
     
   useEffect(() => {
-    // setPlant(plants);
+    // setPlantsStock(plants);
     if(!localStorage.getItem('stock'))
       setTimeout(() => {
-          setPlant(plants);
+          setPlantsStock(plants);
       }, 100);
     else
-      setPlant(JSON.parse(localStorage.getItem('stock')))
+      setPlantsStock(JSON.parse(localStorage.getItem('stock')))
   }, []);
     
   useEffect(() => {
-    if (plant){
-      localStorage.setItem("stock", JSON.stringify(plant));
+    if (plantsStock){
+      localStorage.setItem("stock", JSON.stringify(plantsStock));
     }
-  }, [plant]);  
+  }, [plantsStock]);  
   
   return (
     <Router>
@@ -69,7 +69,7 @@ function App() {
         <Header user={user} setUser={setUser}/>
         <main><Routes 
             cart={cart} updateCart={updateCart} setCart={setCart} 
-            plant={plant} setPlant={setPlant}
+            plant={plantsStock} setPlant={setPlantsStock}
             user={user} setUser={setUser}
           />
         </main>

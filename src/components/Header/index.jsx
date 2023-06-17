@@ -28,9 +28,11 @@ export const Header = ({user}) => {
                 <li className='header-bar'><Link to='/shoplist'>SHOP</Link></li>
             
                 <SearchBar liClassName='header-bar'/>
-                    <li className='header-bar'><Link to={JSON.stringify(user) !== '{}' ? '/profile' : '/login'} className='fa fa-user-o black'></Link></li> 
+                <li className='header-bar'><Link to={JSON.stringify(user) !== '{}' ? '/user' : '/login'} className='fa fa-user-o black'></Link></li> 
+                {!user.admin &&
                     <li className='header-bar'><Link to='/cart' className='fa fa-shopping-cart black'></Link></li> 
-                </ul>
+                }
+            </ul>
 
                 <ul className={isOpen ? 'sidebar' : 'hidden' }>
             {
@@ -42,8 +44,10 @@ export const Header = ({user}) => {
                     <li className='header-side-bar'  onClick={toggle}><Link to='/about'>ABOUT US</Link></li>
                     <li className='header-side-bar'  onClick={toggle}><Link to='/shoplist'>SHOP</Link></li>
 
-                    <li className='header-side-bar'  onClick={toggle}><Link to={JSON.stringify(user) !== '{}' ? '/profile' : '/login'} className='fa fa-user-o white'></Link></li> 
-                    <li className='header-side-bar'  onClick={toggle}><Link to='/cart' className='fa fa-shopping-cart white'></Link></li> 
+                    <li className='header-side-bar'  onClick={toggle}><Link to={JSON.stringify(user) !== '{}' ? '/user' : '/login'} className='fa fa-user-o white'></Link></li> 
+                    {!user.admin &&
+                        <li className='header-side-bar'  onClick={toggle}><Link to='/cart' className='fa fa-shopping-cart white'></Link></li> 
+                    }
                 </>
                 :
                     <li className='header-side-bar' onClick={toggle}><i className='fa fa-solid fa-bars'></i></li> 

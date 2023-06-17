@@ -1,12 +1,11 @@
-import * as React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
-import { Input } from '../components/Input';
-import { Button } from '../components/Button';
+import { Input } from '../../components/Input';
+import { Button } from '../../components/Button';
 
-import '../styles/updatePlants.css';
+import '../../styles/updatePlants.css';
 
 
 export const UpdatePlants = ({plants, setPlants}) => {

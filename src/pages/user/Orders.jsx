@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 
-import { OrdersList } from '../components/Orders/OrdersList';
-import { orderData } from '../datas/orders';
-import { Button } from '../components/Button';
+import { OrdersList } from '../../components/Orders/OrdersList';
+import { orderData } from '../../datas/orders';
+import { Button } from '../../components/Button';
 
-import '../styles/cart.css';
+import '../../styles/cart.css';
 import { Link } from 'react-router-dom';
 
 export const PageOrders = ({user, setUser, plants}) => {
@@ -48,7 +48,7 @@ export const PageOrders = ({user, setUser, plants}) => {
             
         </div>
         <div className='profile-button'>
-            <Link to={'/profile'}>
+            <Link to={'/user'}>
                 <Button text={'Voltar'} className={'unfilled-button'}></Button>
             </Link>
         </div>

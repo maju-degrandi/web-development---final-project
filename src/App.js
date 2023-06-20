@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import {plants} from "./datas/plants";
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { MyRoutes} from "./Routes";
-import * as serviceLS from './services/localStorageUtils'
+import {plants} from "./app/datas/plants.js";
+import { Header } from './app/components/Header/index.jsx';
+import { Footer } from './app/components/Footer/index.jsx';
+import { MyRoutes } from "./Routes.js";
+import * as serviceLS from './app/services/localStorageUtils.js'
 
 import './App.css';
 

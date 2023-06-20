@@ -1,24 +1,24 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { PageHome } from './pages/Home.jsx';
-import { PageAbout } from "./pages/About.jsx";
-import { PageRegister } from "./pages/Register.jsx";
-import { PageLogin } from "./pages/Login.jsx";
-import { PagePassword } from "./pages/RecoverPassword.jsx";
-import { ErrorPage } from "./pages/ErrorPage.jsx";
+import { PageHome } from './app/pages/Home.jsx';
+import { PageAbout } from "./app/pages/About.jsx";
+import { PageRegister } from "./app/pages/Register.jsx";
+import { PageLogin } from "./app/pages/Login.jsx";
+import { PagePassword } from "./app/pages/RecoverPassword.jsx";
+import { ErrorPage } from "./app/pages/ErrorPage.jsx";
 
-import { PageProfile } from "./pages/user/Profile.jsx";
-import { UpdateUser } from "./pages/user/UpdateUser.jsx";
-import { PageOrders } from "./pages/user/Orders.jsx";
+import { PageProfile } from "./app/pages/user/Profile.jsx";
+import { UpdateUser } from "./app/pages/user/UpdateUser.jsx";
+import { PageOrders } from "./app/pages/user/Orders.jsx";
 
-import { UpdatePlants } from "./pages/admin/UpdatePlants.jsx";
+import { UpdatePlants } from "./app/pages/admin/UpdatePlants.jsx";
 
-import { PageItem } from './pages/Item.jsx';
-import { PageShopList } from "./pages/ShopList.jsx";
-import { PageCart } from "./pages/Cart.jsx";
-import { Checkout }  from "./pages/Checkout.jsx";
-import { ThankYouPage } from "./pages/CheckoutFinish.jsx";
+import { PageItem } from './app/pages/Item.jsx';
+import { PageShopList } from "./app/pages/ShopList.jsx";
+import { PageCart } from "./app/pages/Cart.jsx";
+import { Checkout }  from "./app/pages/Checkout.jsx";
+import { ThankYouPage } from "./app/pages/CheckoutFinish.jsx";
 
 export function MyRoutes({ user, setUser, cart, setCart, updateCart, plant, setPlant }) {
   const isAdmin = user && user.admin; 

@@ -116,7 +116,7 @@
     
     width: 77%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .image-title {
@@ -224,7 +224,7 @@ p.order-total {
     .cart-shop-button{
         flex-direction: column;
         justify-content: flex-end;
-        align-items: end;
+        align-items: flex-end;
         
         width: 50%;
     }

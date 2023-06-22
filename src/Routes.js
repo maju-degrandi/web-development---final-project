@@ -41,7 +41,7 @@ export function MyRoutes({ user, setUser, cart, setCart, updateCart, plant, setP
       {/* Admin Routes */}
       {isAdmin && (
         <Route path="/admin">
-            <Route element={<UpdatePlants plants={plant} setPlants={setPlant} />} path="" />
+            <Route element={<UpdatePlants plants={plant} setPlants={setPlant} />} path="add-item/" />
             <Route element={<UpdatePlants plants={plant} setPlants={setPlant} />} path="add-item/:itemId" />
         </Route>
       )}

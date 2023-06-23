@@ -1,7 +1,7 @@
 import {isValidObjectId, mongoose} from "mongoose";
-import { PlantModel } from "../models/plant-model";
+import PlantModel from "../models/plant-model.js";
 
-module.exports.createPlant = async (req, res) => {
+const createPlant = async (req, res) => {
 
     const newPlant = new PlantModel({
         name: req.body.name,
@@ -18,7 +18,7 @@ module.exports.createPlant = async (req, res) => {
 }
 
 
-module.exports.deletePlant = async (req, res) => {
+const deletePlant = async (req, res) => {
     const id = req.params.id;
     if(!isValidObjectId(id))
         return res.status(404).send("Plant not found");
@@ -29,7 +29,7 @@ module.exports.deletePlant = async (req, res) => {
     return res.status(404).send("Plant not found");
 }
 
-module.exports.updatePlant = async (req, res) => {
+const updatePlant = async (req, res) => {
     const id = req.params.id;
     if(!isValidObjectId(id))
         return res.status(404).send("Plant not found");
@@ -47,7 +47,7 @@ module.exports.updatePlant = async (req, res) => {
     return res.status(200).json(updatedPlant);
 }
 
-module.exports.getAllPlants = async (req, res) => {
+const getAllPlants = async (req, res) => {
     const plantsFound = await PlantModel.find();
     
     if(plantsFound.length > 0)
@@ -55,3 +55,11 @@ module.exports.getAllPlants = async (req, res) => {
     
     return res.status(404).send("Plants not Found");
 }
+
+
+export default {
+    createPlant,
+    deletePlant,
+    updatePlant,
+    getAllPlants
+  };

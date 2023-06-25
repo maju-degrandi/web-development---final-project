@@ -13,8 +13,6 @@ export const plants = {
 		{
 			name: 'Monstera',
 			category: 'classic',
-			id: 1,
-			isBestSale: true,
 			light: 2,
 			water: 3,
 			cover: monstera,
@@ -25,8 +23,6 @@ export const plants = {
 		  {
 			name: 'Ficus lyrata',
 			category: 'classic',
-			id: 2,
-			isBestSale: false,
 			light: 3,
 			water: 1,
 			cover: ficus_lyrata,
@@ -37,8 +33,6 @@ export const plants = {
 		  {
 			name: 'Silver pothos',
 			category: 'classic',
-			id: 3,
-			isBestSale: true,
 			light: 1,
 			water: 2,
 			cover: silver_pothos,
@@ -49,8 +43,6 @@ export const plants = {
 		  {
 			name: 'Yucca',
 			category: 'classic',
-			id: 4,
-			isBestSale: true,
 			light: 3,
 			water: 1,
 			cover: yucca,
@@ -61,8 +53,6 @@ export const plants = {
 		  {
 			name: 'Olive tree',
 			category: 'exterior',
-			id: 5,
-			isBestSale: false,
 			light: 3,
 			water: 1,
 			cover: olive_tree,
@@ -73,8 +63,6 @@ export const plants = {
 		  {
 			name: 'Geranium',
 			category: 'exterior',
-			id: 6,
-			isBestSale: true,
 			light: 2,
 			water: 2,
 			cover: geranium,
@@ -85,8 +73,6 @@ export const plants = {
 		  {
 			name: 'Basil',
 			category: 'exterior',
-			id: 7,
-			isBestSale: false,
 			light: 2,
 			water: 3,
 			cover: basil,
@@ -97,8 +83,6 @@ export const plants = {
 		  {
 			name: 'Aloe',
 			category: 'succulent',
-			id: 8,
-			isBestSale: false,
 			light: 2,
 			water: 1,
 			cover: aloe,
@@ -109,8 +93,6 @@ export const plants = {
 		  {
 			name: 'Succulent',
 			category: 'succulent',
-			id: 9,
-			isBestSale: false,
 			light: 2,
 			water: 1,
 			cover: succulent,

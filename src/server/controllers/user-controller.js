@@ -32,15 +32,39 @@ const authController = {
     },
     
     signin: async (req, res) => {
-        const email = req.body.email;
-        const password = req.body.password;
-
-        const User = await authService.signin(email, password, res);
+        try {
+            const email = req.body.email;
+            const password = req.body.password;
+    
+            const User = await authService.signin(email, password, res);
+            
+            if(!User)
+                return res;
+                
+            return res.json(User);
+        } catch (error) {
+            console.error("Error updating 'adm' field", error);
+            return res.status(500).json({ message: "Error signin!", error: error });
+        }
+    }, 
+    
+    updateUserAdm: async (req, res) => {
+        const { id } = req.params;
         
-        if(!User)
-            return res;
+        try {
+            const user = await userModel.findById(id);
+            if (!user)
+                return res.status(404).json({ message: "User not found" });
+            
+            user.adm = !user.adm;
+            await user.save();
         
-        return res.json(User);
+            return res.status(200).json({ message: `Field 'adm' successfully updated to ${user.adm}` });
+        } catch (error) {
+            console.error("Error updating 'adm' field", error);
+            return res.status(500).json({ message: "Error updating 'adm' field", 
+                                          error: error.message });
+        }        
     }
 }
 

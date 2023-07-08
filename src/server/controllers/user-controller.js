@@ -2,6 +2,17 @@ import authService from '../services/auth-service.js'
 import userModel from '../models/user-model.js'
 
 const authController = {
+    logout: async (req, res) => {
+      req.session.destroy((err) => {
+        if(err){
+            res.status(500).json({ message: 'Session destroy error.'})   
+        }else {
+            res.clearCookie('user-session');
+            res.redirect('/login');
+        }
+        });  
+    },
+    
     signup: async (req, res) => {
         try {
             const newUser = new userModel({
@@ -35,13 +46,15 @@ const authController = {
         try {
             const email = req.body.email;
             const password = req.body.password;
-    
-            const User = await authService.signin(email, password, res);
+            const user = await authService.signin(email, password, res);
             
-            if(!User)
-                return res;
-                
-            return res.json(User);
+            if(!user) return res;
+            
+            req.session.email = user.email;
+            req.session.name = user.name;
+            req.session.isAdmin = user.adm;
+            
+            return res.json(user);
         } catch (error) {
             console.error("Error updating 'adm' field", error);
             return res.status(500).json({ message: "Error signin!", error: error });

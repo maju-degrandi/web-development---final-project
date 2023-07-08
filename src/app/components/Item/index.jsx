@@ -19,10 +19,8 @@ export const Item = ( {updateCart, id, cart, setCart} ) => {
 
     async function handlePlantById(){
         try{
-            console.log(id)
             const response = await axios.get(`http://localhost:8080/plant/${id}`);
             if(response.status === 200){
-                console.log(response.data);
                 setPlant(response.data[0]);
             }
         } catch(error){
@@ -58,8 +56,11 @@ export const Item = ( {updateCart, id, cart, setCart} ) => {
         let item = cart.findIndex(i => i._id === id);
 
         if(item > -1){
-                cart[0].subtotal += plant.price * qtt; 
-                cart[item].qtt += qtt;
+                cart[0].subtotal += plant.price * qtt;
+                console.log(cart[item].stock)
+                cart[item].qtt += Number(qtt);
+                if(cart[item].qtt > cart[item].stock) 
+                    cart[item].qtt = cart[item].stock;
                 updateCart(cart);
 
         }else{

@@ -6,6 +6,7 @@
     min-height: 500px;
     align-items: center;
     justify-content: center;
+    width: 70%;
 }
 
 .shoplist #checkout-main:nth-child(1) {
@@ -42,5 +43,4 @@
 .plant{
 	margin: 10px 10px;
 	border-radius: 20px;
-    /* border: 2px solid rgb(129, 129, 129); */
 }

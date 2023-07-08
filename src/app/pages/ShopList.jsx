@@ -13,8 +13,7 @@ export const PageShopList = ({user}) => {
     const [ search, setSearchParams] = useSearchParams();
 
     const handleSetPlant = () => {
-        if(search.size !== 0 && search.get('search') !== ''){
-            console.log(search.get('search'));
+        if(search.size !== 0 && search.get('search') !== '' && plants){
             let filteredPlants = plants.filter((plant) => plant.name.toUpperCase().includes(search.get('search').toUpperCase()));
             setPlant(filteredPlants);
             return;
@@ -38,10 +37,9 @@ export const PageShopList = ({user}) => {
     }, [])
     
     useEffect(() => {
-        console.log(plants);
         handleSetPlant();
-        console.log(plants)
-    }, [search, plants]);
+        console.log(plants);
+    }, [plants, search]);
     
     return (    
         <div className="checkout shoplist">

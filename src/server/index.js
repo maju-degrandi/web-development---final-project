@@ -16,7 +16,7 @@ app.use(cors());
 app.use(session({
     name: 'user-session',
     secret: 'AbEsfqsfgjrafasfxj',
-    resave: false,
+    resave: true,
     saveUninitialized: false,
 }));
 app.use(express.json());

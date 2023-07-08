@@ -24,9 +24,6 @@ const userService = {
             res.status(401).send("Invalid password.");
             return null;
         }
-        
-        if(user)
-            res.cookie('IsAdmin', true);
             
         return user;
     }

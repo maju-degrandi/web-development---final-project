@@ -1,5 +1,6 @@
 import authService from '../services/auth-service.js' 
 import userModel from '../models/user-model.js'
+import userService from '../services/user-service.js';
 
 const authController = {
     logout: async (req, res) => {
@@ -48,7 +49,8 @@ const authController = {
             const password = req.body.password;
             const user = await authService.signin(email, password, res);
             
-            if(!user) return res;
+            if(!user) 
+                return res.status(500).json({ message: "Error signin!", error: error });
             
             req.session.email = user.email;
             req.session.name = user.name;
@@ -61,16 +63,26 @@ const authController = {
         }
     }, 
     
+    updateUserInfo: async (req, res) => {
+        try {
+            const email = req.session.email;
+            
+            const updatedUser = await userService.updateUserInfo(email, req.body);
+            return res.status(200).json(updatedUser);
+        } catch (error) {
+            console.error(error);
+            return res.status(500).send("Error updating user information");
+        }
+    },
+    
     updateUserAdm: async (req, res) => {
         const { id } = req.params;
         
         try {
-            const user = await userModel.findById(id);
+            const user = userService.updateUserAdm(id);
+            
             if (!user)
                 return res.status(404).json({ message: "User not found" });
-            
-            user.adm = !user.adm;
-            await user.save();
         
             return res.status(200).json({ message: `Field 'adm' successfully updated to ${user.adm}` });
         } catch (error) {

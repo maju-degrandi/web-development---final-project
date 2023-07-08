@@ -1,30 +1,46 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import axios from "axios";
 
 import PlantItem from "../components/ShopList/plantItem";
 import { Button } from "../components/Button"
 import "../styles/shoplist.css";
 
-export const PageShopList = ({user, plants}) => {
-    const [plant, setPlants] = useState(null);
+export const PageShopList = ({user}) => {
+    const [plants, setPlants] = useState(null)
+    const [plant, setPlant] = useState(null);
     const [ search, setSearchParams] = useSearchParams();
 
     const handleSetPlant = () => {
         if(search.size !== 0 && search.get('search') !== ''){
             console.log(search.get('search'));
-            let opa = plants['Plants'].filter((plant) => plant.name.toUpperCase().includes(search.get('search').toUpperCase()));
-            setPlants(opa);
+            let filteredPlants = plants.filter((plant) => plant.name.toUpperCase().includes(search.get('search').toUpperCase()));
+            setPlant(filteredPlants);
             return;
         }
-        if(plants) setPlants(plants['Plants']);
+        if(plants) setPlant(plants);
+    }
+
+    async function handlePlantList(){
+        try{
+            const response = await axios.get(`http://localhost:8080/plant`)
+            if(response.status === 200){
+                setPlants(response.data);
+            }
+        } catch(error){
+            console.log(error)
+        }
     }
     
+    useEffect(() =>{
+        handlePlantList();
+    }, [])
     
     useEffect(() => {
-        setTimeout(() => {
-            handleSetPlant();
-        }, 100);
+        console.log(plants);
+        handleSetPlant();
+        console.log(plants)
     }, [search, plants]);
     
     return (    
@@ -37,11 +53,10 @@ export const PageShopList = ({user, plants}) => {
                 { plant ? 
                         plant.length != 0 ? 
                         
-                        
-                        (plant.map(({ id, cover, name, water, light, price }) => (
-                            <div className="plant" key={id}>
+                        (plant.map(({ _id, cover, name, water, light, price }) => (
+                            <div className="plant" key={_id}>
                                 <PlantItem 
-                                    id={id}
+                                    id={_id}
                                     cover={cover}
                                     name={name}
                                     water={water}
@@ -49,13 +64,13 @@ export const PageShopList = ({user, plants}) => {
                                     price={price}
                                     />
                                 {   user.admin ?
-                                        <Link to={'/admin/add-item/' + id}>
+                                        <Link to={'/admin/add-item/' + _id}>
                                             <div className="button-add">
                                                 <Button text={'Edit'} className={'add filled-button'}/>
                                             </div>
                                         </Link>
                                     :
-                                    <Link to={'/item/' + id}>
+                                    <Link to={'/item/' + _id}>
                                         <div className="button-add">
                                             <Button text={'Shop Now'} className={'add filled-button'}/>
                                         </div>

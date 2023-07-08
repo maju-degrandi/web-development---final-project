@@ -9,6 +9,9 @@ const PlantModel = mongoose.Schema({
         type: String,
         required: true,
     },
+    cover:{
+        type: String,
+    },
     price: {
         type: Number,
         required: true,

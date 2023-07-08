@@ -8,8 +8,8 @@ export const CartList = ({ updateCart, cart, setCart, blocked}) => {
         <>
                 {   
                     cart ? cart.length > 1 ? cart.map((item) => (
-                        item.id && item.stock > 0 &&
-                        <ul className='cart-list' key={item.id}>
+                        item._id && item.stock > 0 &&
+                        <ul className='cart-list' key={item._id}>
                             <CartItem updateCart={updateCart} item={item} cart={cart} setCart={setCart} blocked={blocked}/>
                         </ul>
                     ))

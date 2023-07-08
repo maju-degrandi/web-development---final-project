@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '../Button';
 import CareScale from "./carescale";
+import axios from "axios";
 
 import '../../styles/item.css'
 import BackgroundImage from "../../assets/flor-fundo2.png";
 import { Link } from 'react-router-dom';
 import { Input } from '../Input';
 
-export const Item = ( {updateCart, id, cart, setCart, plants} ) => {
+export const Item = ( {updateCart, id, cart, setCart} ) => {
     const [src, setSrc] = useState([]);
     const [title, setTitle] = useState([]);
     const [desc, setDesc] = useState([]);
@@ -15,12 +16,23 @@ export const Item = ( {updateCart, id, cart, setCart, plants} ) => {
     const [plant, setPlant] = useState(null);
     const [stock, setStock] = useState([]);
     const [qtt, setQtt] = useState(1);
-    
+
+    async function handlePlantById(){
+        try{
+            console.log(id)
+            const response = await axios.get(`http://localhost:8080/plant/${id}`);
+            if(response.status === 200){
+                console.log(response.data);
+                setPlant(response.data[0]);
+            }
+        } catch(error){
+            console.log(error)
+        }
+    }
+
     useEffect(() =>{
-        setTimeout(() => {
-            if(plants) setPlant(plants['Plants'].find(plant => plant.id.toString() === id.toString()));
-        }, 1000);
-    }, [id, plants]);
+        handlePlantById();
+    }, [id]);
     
     useEffect(() => {
         if(plant){
@@ -43,14 +55,16 @@ export const Item = ( {updateCart, id, cart, setCart, plants} ) => {
     }
 
     const handleAddToCart = () => {
-        let item = cart.findIndex(i => i.id === id);
+        let item = cart.findIndex(i => i._id === id);
 
         if(item > -1){
+                cart[0].subtotal += plant.price * qtt; 
                 cart[item].qtt += qtt;
                 updateCart(cart);
-            }else{
-                cart[0].subtotal += Number(plant.price) * qtt; 
-                setCart([...cart, { ...plant, qtt: qtt }]);
+
+        }else{
+            cart[0].subtotal += Number(plant.price) * qtt; 
+            setCart([...cart, { ...plant, qtt: qtt }]);
         }
     }
 

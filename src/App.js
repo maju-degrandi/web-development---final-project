@@ -41,7 +41,7 @@ function App() {
   const updateCart = (cart) => {
     cart[0].subtotal = 0;
     cart.forEach((item) => {
-      if (item.id)
+      if (item._id)
         cart[0].subtotal += item.price * item.qtt;
     });
     setCart([...cart]);

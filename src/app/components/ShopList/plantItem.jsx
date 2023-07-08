@@ -1,7 +1,7 @@
 
 import "../../styles/plantitem.css";
 
-const PlantItem = ({ id, cover, name, water, light, price }) => {
+const PlantItem = ({ id, cover, name, price }) => {
 
     return(
         <li key={id} className='plant-item'>

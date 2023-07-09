@@ -61,17 +61,20 @@ export const UpdatePlants = () => {
     const handleDeleteItem = async (e) => {
         e.preventDefault();
 
-        console.log(plant._id);
-
-        try{
-            const response = await axios.delete(`http://localhost:8080/plant/${plant._id}`)
-            if(response.status === 200){
-                alert('Planta Deletada com sucesso!');
-                navigate('/shoplist');    
+        let text;
+        if (confirm("Are you sure you want to delete the plant " + plant.name) === true) {
+            try{
+                const response = await axios.delete(`http://localhost:8080/plant/${plant._id}`)
+                if(response.status === 200){
+                    alert('Plant successfully Deleted!');
+                    navigate('/shoplist');    
+                }
+            } catch(error){
+                alert('Semething went wrong');
+                console.log(error)
             }
-        } catch(error){
-            console.log(error)
         }
+
     }
 
     const handleEditItem = async (e) => {
@@ -88,16 +91,15 @@ export const UpdatePlants = () => {
             "light": light,
             "water": water
         };
-
-        console.log(description);
-
+        
         try{
             const response = await axios.put(`http://localhost:8080/plant/${updatedPlant._id}`, updatedPlant)
             if(response.status === 200){
-                alert('Planta Editada com sucesso!');
+                alert('Plant successfuly Updated!');
                 navigate('/shoplist');       
             }
         } catch(error){
+            alert('Something went wrong, please be sure you filled the fields with a valid value.');
             console.log(error)
         }
 
@@ -117,15 +119,14 @@ export const UpdatePlants = () => {
             "stock": stock,
         }
 
-        console.log(newPlant)
-
         try{
             const response = await axios.post(`http://localhost:8080/plant/add`, newPlant)
             if(response.status === 200){
-                alert('Planta Adicionada com sucesso!');
+                alert('Plant successfuly Created!');
                 navigate('/shoplist');    
             }
         } catch(error){
+            alert('Something went wrong, please be sure you filled the fields with a valid value.');
             console.log(error)
         }
     }

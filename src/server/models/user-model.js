@@ -32,10 +32,13 @@ const userSchema = mongoose.Schema({
         required: true
     },
     address: {
+        country: String,
+        state: String,
+        city: String,
         cep: String,
         street: String,
         number: Number,
-        observation: String
+        obs: String
     }
 });
 

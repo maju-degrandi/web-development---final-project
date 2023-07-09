@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import { Button } from '../../components/Button';
 import { Card } from "../../components/Card";
@@ -20,10 +21,12 @@ export const PageProfile = ({user, setUser}) => {
         }
     }, []);
 
-    const handleLogout = () => {
+    async function handleLogout() {
         setUser({});
         localStorage.clear();
-        navigate("/");
+        console.log('passei por aq');
+        const reponse = await axios.get('http://localhost:8080/logout');
+        navigate("/login");
     };
 
     return (
@@ -37,10 +40,14 @@ export const PageProfile = ({user, setUser}) => {
                     </div>
                     <div className='div-buttons'>
                         {!user.admin &&   
-                            <Link to="/user/myorders"><Button text="My Orders" className="filled-button basic-button"/></Link>
+                            <Link to="/user/myorders">
+                                <Button text="My Orders" className="filled-button basic-button"/>
+                            </Link>
                         }
-                        <Link to="/user/editinfo"><Button text="Edit Info" className="filled-button basic-button"/></Link>
-                        <Button onClick={handleLogout} text="Logout" className="filled-button basic-button">logout</Button>
+                        <Link to="/user/editinfo">
+                            <Button text="Edit Info" className="filled-button basic-button"/>
+                        </Link>
+                        <Button onClick={handleLogout} text="Logout" className="filled-button basic-button"/>
                     </div>
                 </>
                 :

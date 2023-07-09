@@ -7,6 +7,7 @@ const router = express.Router();
 router.get('/logout', authController.logout);
 router.post('/signup', authController.signup);
 router.post('/signin', authController.signin);
+router.put('/updateInfoUser', authController.updateUserInfo);
 router.put('/:id/admin', adminMiddleware.checkAdmin, authController.updateUserAdm);
 
 export default router;

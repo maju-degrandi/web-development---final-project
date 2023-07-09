@@ -16,8 +16,11 @@ app.use(cors());
 app.use(session({
     name: 'user-session',
     secret: 'AbEsfqsfgjrafasfxj',
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+        sameSite: 'strict'
+    }
 }));
 app.use(express.json());
 app.use(cookieParser());

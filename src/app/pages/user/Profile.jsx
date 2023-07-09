@@ -24,7 +24,7 @@ export const PageProfile = ({user, setUser}) => {
     async function handleLogout() {
         setUser({});
         localStorage.clear();
-        console.log('passei por aq');
+        
         const reponse = await axios.get('http://localhost:8080/logout');
         navigate("/login");
     };

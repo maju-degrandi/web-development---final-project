@@ -1,19 +1,37 @@
 import "../../styles/cart.css";
+import { useEffect, useState } from 'react';
+import axios from "axios";
+import { OrderSingleItem } from "./OrderSingleItem.jsx";
 
-export const OrdersItem = ({ items, plants }) => {
+
+export const OrdersItem = ({ order_id }) => {
+
+    const [items, setItems] = useState(null);
+
+    async function handleGetItems(order_id){
+        try{
+            console.log(order_id);
+            const itemsResponse = await axios.get(`http://localhost:8080/item-order/${order_id}`);
+            
+            if(itemsResponse.status === 200){
+                setItems(itemsResponse.data);
+            }
+
+        }catch (e){
+            console.log(e);
+
+        }
+    }
+
+    useEffect(() => {
+        handleGetItems(order_id);
+    }, [order_id]);
+
     return(
-        items.map((itemObject) => {
-            let item = plants['Plants'].find((plant) => plant.id.toString() === itemObject.id.toString());
 
-            return (<li className='cart-item'>
-                <div className="card-item-cover">
-                    <img className='item-cover' src={item.cover} alt={`${item.name} cover`}/>  
-                </div>
-                <span className="cart-item-name">{item.name}<br/>$ {item.price}</span>
-                <div className="cart-shop">
-                    <label htmlFor="quantity">QUANTITY: {itemObject.qtt}</label>
-                </div>
-            </li>)
+        items && items.map((itemObject) => {
+            console.log(itemObject.qtt);
+            <OrderSingleItem item_id={itemObject._id} item_qtt={itemObject.qtt} />
         })
     );
 }

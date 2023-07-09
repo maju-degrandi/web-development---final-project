@@ -45,6 +45,19 @@ const itemOrderController = {
             return res.status(200).json(itemOrdersFound);
         
         return res.status(404).send("Item Order not Found");
+    },
+
+    getItemsFromOrder: async (req, res) =>{
+        const order = req.params.order;
+        if(!isValidObjectId(order))
+            return res.status(404).send("Order not found");
+
+        const itemOrderFound = await ItemOrderModel.find({order : order});
+        
+        if(itemOrderFound.length > 0)
+            return res.status(200).json(itemOrderFound);
+
+        return res.status(404).send("itemOrder not found");
     }
 }
 

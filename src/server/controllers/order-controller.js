@@ -56,6 +56,19 @@ const orderController = {
             return res.status(200).json(ordersFound);
         
         return res.status(404).send("Orders not Found");
+    },
+
+    getOrdersByUser: async (req, res) =>{
+        const user = req.params.user;
+        if(!isValidObjectId(user))
+            return res.status(404).send("Order not found");
+
+        const ordersFound = await OrderModel.find({user : user});
+        
+        if(ordersFound.length >= 0)
+            return res.status(200).json(ordersFound);
+
+        return res.status(404).send("Orders not found");
     }
 }
 

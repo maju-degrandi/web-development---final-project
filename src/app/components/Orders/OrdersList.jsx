@@ -1,20 +1,20 @@
-import * as React from 'react';
+import { useEffect, useState } from 'react';
 import '../../styles/cart.css';
 import { OrdersItem } from '../Orders/OrdersItem';
 import { Link } from 'react-router-dom';
 import { Button } from '../Button';
 
-export const OrdersList = ({ orders, plants }) => {
+export const OrdersList = ({ orders }) => {
     
     return (
         <>
                 {   
                     orders ? orders.length > 0 ? orders.map((order) => (
-                        <ul className='order-list'>
+                        <ul className='order-list' key={order._id}>
                             <div className='order-info'>
-                                <p>Id: {order.id} </p> <p> Date: {order.date}</p>
+                                <p>Id: {order._id} </p> <p> Date: {order.date.split('T')[0]}</p>
                             </div>
-                            <OrdersItem items={order.items} plants={plants}/>
+                            <OrdersItem order_id={order._id}/>
                             <p className='order-total'>Valor Total: {order.total}</p>
                         </ul>
                     ))

@@ -17,7 +17,10 @@ app.use(session({
     name: 'user-session',
     secret: 'AbEsfqsfgjrafasfxj',
     resave: true,
-    saveUninitialized: false,
+    saveUninitialized: true,
+    cookie: {
+        sameSite: 'strict'
+    }
 }));
 app.use(express.json());
 app.use(cookieParser());

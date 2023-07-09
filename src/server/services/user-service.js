@@ -6,14 +6,15 @@ class UserService {
         
         if (!existingUser) throw new Error("User not found");
         
-        const updatedUserData = Object.assign({}, existingUser.toObject(), data);
+        const updatedUserData = JSON.parse(JSON.stringify(existingUser.toObject()));
+        Object.assign(updatedUserData, data);
         
         const updatedUser = await userModel.findOneAndUpdate(
             {email : email},
-            updatedUserData,
+            {$set : data},
           { new: true }
         );
-    
+            console.log(updatedUser);
         if (updatedUser)
           return updatedUser;
     

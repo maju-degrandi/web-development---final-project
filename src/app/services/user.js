@@ -1,14 +1,19 @@
-import { users } from '../datas/users.js';
+import axios from 'axios';
 
 class userService {
-    getUser(user){
-        // this should be a BD request
-
-        let i = users['Users'].findIndex((userU) => userU.email === user.email);
-        if(i > -1 && user.password === users['Users'][i].password){
-            return users['Users'][i];
+    async getUser(user){
+        try {
+            const response = await axios.post('http://localhost:8080/signin', user);
+            
+            if (response.status === 200) {
+                return response.data;
+            }else{
+                return null;
+            }
+        } catch (error) {
+            console.log('Error: ', error)
+            return null;
         }
-        return undefined;
     }
 }
 

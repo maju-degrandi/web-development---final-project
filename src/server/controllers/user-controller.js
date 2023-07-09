@@ -4,12 +4,13 @@ import userService from '../services/user-service.js';
 
 const authController = {
     logout: async (req, res) => {
-      req.session.destroy((err) => {
+        console.log(req.session.email); 
+        req.session.destroy((err) => {
         if(err){
-            res.status(500).json({ message: 'Session destroy error.'})   
+            return res.status(500).json({ message: 'Session destroy error.'})   
         }else {
             res.clearCookie('user-session');
-            res.redirect('/login');
+            return res.status(200).json({ message:'Session finished' });
         }
         });  
     },
@@ -23,7 +24,7 @@ const authController = {
                 name : req.body.name,
                 person : req.body.person,
                 address : req.body.address,
-                birthday : req.body.birthday,
+                birthday : req.body.birthday
             }) 
             
             const login = await authService.signup(newUser.email, newUser.password);
@@ -50,22 +51,24 @@ const authController = {
             const user = await authService.signin(email, password, res);
             
             if(!user) 
-                return res.status(500).json({ message: "Error signin!", error: error });
+                return res;
             
             req.session.email = user.email;
             req.session.name = user.name;
             req.session.isAdmin = user.adm;
             
-            return res.json(user);
+            return res.status(200).json(user);
         } catch (error) {
-            console.error("Error updating 'adm' field", error);
-            return res.status(500).json({ message: "Error signin!", error: error });
+            console.error("Error SignIn", error);
+            return res.status(500).json({ message: "Error signIn!", error: error });
         }
     }, 
     
     updateUserInfo: async (req, res) => {
         try {
-            const email = req.session.email;
+            // ARRUMAR: Deveria ser a sessao
+            // const email = req.session.email;
+            const email = req.body.email;
             
             const updatedUser = await userService.updateUserInfo(email, req.body);
             return res.status(200).json(updatedUser);

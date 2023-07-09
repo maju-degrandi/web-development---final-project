@@ -3,7 +3,7 @@ import {PlaceholderInput} from '../Input/FloatInput'
 import '../../styles/pay.css'
 import { Button } from '../Button';
 
-const PaymentScreen = ({setDonePay}) => {
+const PaymentScreen = ({setDonePay, setDiscount}) => {
   const [paymentMethod, setPaymentMethod] = useState('');
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
@@ -41,7 +41,8 @@ const PaymentScreen = ({setDonePay}) => {
 
   function handleCheckoutPay(e){
     e.preventDefault();
-    
+    if(paymentMethod === 'pix')
+      setDiscount(2);
     setDonePay(true);
   }
   

@@ -4,6 +4,8 @@ import { PlaceholderInput } from '../components/Input/FloatInput';
 import PaymentScreen from '../components/Checkout/Pay';
 import { CartList } from '../components/Cart/CartList';
 import { Button } from '../components/Button';
+import { updateCartInLocalStorage } from '../services/localStorageUtils';
+import axios from 'axios';
 
 import '../styles/checkout.css'
 
@@ -50,19 +52,83 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
             setQttItens(qtt);
         }
     }, [cart]);
+
+    useEffect(()=>{
+        cart[0].total = cart[0].subtotal + shipping - discount;
+        cart[0].shipping = shipping;
+        setCart(cart);
+        updateCartInLocalStorage(cart);
+    }, [shipping])
     
     function handleCheckoutShip(e){
         e.preventDefault();
+        setShipping(5.32);
         setDoneShip(true);
     }
+
+    const handleCreateOrder = async (e, user, cart) => {
+        e.preventDefault();
+        const newOrder = {
+            "user": user._id,
+            "total": cart[0].total
+        }
+
+        console.log(newOrder);
+
+        try{
+            const response = await axios.post(`http://localhost:8080/order/add`, newOrder);
+            return response.data._id;
+        } catch(error){
+            alert('Something went wrong.');
+            console.log(error)
+        }
+    }
+
+    const handleCreateItemOrder = async (e, cart, orderId) => {
+        e.preventDefault();
+        cart.forEach(async function(item, index){
+            if(index > 0){
+                console.log(item)
+                const newItemOrder = {
+                    "order": orderId,
+                    "item": item._id,
+                    "qtt": item.qtt
+                }
     
-    function handleCheckout(e) {
+                console.log(newItemOrder);
+    
+                try{
+                    const response = await axios.post(`http://localhost:8080/item-order/add`, newItemOrder);
+                    console.log(response);
+                    return response;
+                } catch(error){
+                    alert('Something went wrong.');
+                    console.log(error);
+                    return null;
+                }
+            }
+        })
+    }
+    
+    async function handleCheckout(e) {
         if(doneShip && donePay){
-            setCart([{subtotal: 0, total: 0, shipping: 0}]);
-            
-            navigate('/thanks');
-        }else {
-            //error
+            // Create a order
+            const orderId = await handleCreateOrder(e, user, cart);
+            console.log(orderId);
+            // Create each item of the cart in Item Order
+            let response = null;
+            if(orderId)
+                response = handleCreateItemOrder(e, cart, orderId);
+
+            if(response){
+                setCart([{subtotal: 0, total: 0, shipping: 0}]);
+                navigate('/thanks');
+            }
+
+        }else if(!donePay){
+            alert("Please finish the payment");
+        }else{
+            alert("Please finish the shipping");
         }
     }
     
@@ -97,7 +163,7 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
                 </div>
                 
                 <div className='checkout-pay'>
-                    <PaymentScreen setDonePay={setDonePay}/>
+                    <PaymentScreen setDonePay={setDonePay} setDiscount={setDiscount}/>
                 </div>
             </div>
             

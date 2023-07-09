@@ -18,7 +18,7 @@ const orderController = {
 
             return res.status(404).send("Order not created successfuly");
 
-        }catch{
+        }catch (e){
             return res.status(418).send("I'm A TEAPOT");
         }
        

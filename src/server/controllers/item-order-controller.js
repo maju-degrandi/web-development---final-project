@@ -17,7 +17,9 @@ const itemOrderController = {
 
             return res.status(404).send("ItemOrder not created successfuly");
 
-        }catch{
+        }catch(e){
+            
+            console.log(e);
             return res.status(418).send("I'm A TEAPOT");
         }
         

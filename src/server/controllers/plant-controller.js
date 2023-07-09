@@ -1,5 +1,4 @@
 
-import PlantModel from "../models/plant-model.js";
 import plantService from "../services/plant-service.js";
 import { isValidObjectId } from "mongoose";
 

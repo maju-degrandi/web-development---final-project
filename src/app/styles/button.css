@@ -5,7 +5,7 @@
 }
 
 .unfilled-button{
-    width: 200px;
+    width: fit-content;
     height: fit-content;
     background-color: transparent;
     border: 2px solid #5F6C37;
@@ -13,6 +13,8 @@
 }
 
 .filled-button{
+    width: fit-content;
+    height: fit-content;
     background-color: rgb(73, 120, 86);
     border: 2px solid rgb(73, 120, 86);
     color: white;
@@ -25,13 +27,15 @@
 }
     
 button {
+    width: fit-content;
+    height: fit-content;
     background-color: rgb(73, 120, 86);
     border: 2px solid rgb(73, 120, 86);
     font-family: 'Advent Pro';
     font-size: x-large;
     color: white;
-    width: 120px;
-    height: 65px;
+    /* width: 120px;
+    height: 65px; */
     overflow: auto;
     border-radius: 10px;
     cursor: pointer;

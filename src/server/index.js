@@ -8,6 +8,8 @@ import session from 'express-session'
 // Routes
 import plantRouter from './routes/plant-router.js'
 import userRouter from './routes/user-router.js'
+import OrderRouter from './routes/order-router.js'
+import ItemOrderRouter from './routes/item-order-router.js'
 
 dotenv.config()
 const app = express();
@@ -28,6 +30,8 @@ app.use(express.urlencoded({extended: true}));
 // Routers
 app.use(plantRouter);
 app.use(userRouter);
+app.use(OrderRouter);
+app.use(ItemOrderRouter);
 
 
 const PORT = 8080;

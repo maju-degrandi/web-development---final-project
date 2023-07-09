@@ -25,7 +25,7 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
     
     function getAddressUser(user){
         setCountry(user.address.country);
-        setCep(user.address.CEP);
+        setCep(user.address.cep);
         setState(user.address.state);
         setCity(user.address.city);
         setStreet(user.address.street);

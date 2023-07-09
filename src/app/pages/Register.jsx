@@ -1,5 +1,5 @@
 import { useState  } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import backimage from "../assets/flor-fundo1.png";
@@ -9,7 +9,7 @@ import { Input } from '../components/Input';
 import '../styles/forms.css';
 
 export const PageRegister = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [person, setPerson] = useState('');
     const [name, setName] = useState('');
@@ -48,17 +48,16 @@ export const PageRegister = () => {
         
         await axios.post('http://localhost:8080/signup', user)
         .then(response => {
-            console.log(response)
             if(response.status === 200){
                 alert('Successfully registered profile!');
                 navigate('/login');
             }else{
                 console.log(response);
-                alert(`${response.data.message}`);
+                alert(`${response.response.data}`);
             }
         }).catch(error => {
             console.error(error);
-            alert(error);
+            alert(error.response.data);
         });
     }
 

@@ -51,10 +51,10 @@ const authController = {
             if(createdUser)
                 return res.status(200).json(createdUser);
             else
-                return res.status(400).send('Usuário não criado.')
+                return res.status(400).send('User not created.')
         } catch (error) {
             console.log(error);
-            return res.status(400).send('Campos requeridos!')
+            return res.status(400).send('Required fields!')
         }
     },
     

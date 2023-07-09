@@ -1,5 +1,4 @@
 import PlantModel from "../models/plant-model.js";
-import { isValidObjectId } from "mongoose";
 
 const plantService = {
     addPlant: async(body) => {
@@ -11,28 +10,27 @@ const plantService = {
             cover: body.cover,
             water: body.water,
             light: body.light,
+            description: body.description,
             stock: body.stock
         });
         const PlantCreated = await newPlant.save();
         return PlantCreated;
     },
     deletePlant: async (id) => {
-        if(!isValidObjectId(id))
-            return res.status(404).send("Plant not found");
 
         const plant = await PlantModel.findOneAndDelete({ _id: id}).exec();
 
         return plant;
     },
     updatePlant: async (id, body) => {
-        if(!isValidObjectId(id))
-            return res.status(404).send("Plant not found");
         
         const updatedPlant = await PlantModel.findOneAndUpdate(
             { _id: id }, 
-            {   category: body.category,
+            {   name: body.name,
+                category: body.category,
                 cover: body.cover,
                 price: body.price,
+                description: body.description,
                 water: body.water,
                 light: body.light,
                 stock: body.stock },
@@ -42,8 +40,6 @@ const plantService = {
         return updatedPlant;
     },
     getPlant: async (id) => {
-        if(!isValidObjectId(id))
-        return res.status(404).send("Plant not found");
 
         const plantFound = await PlantModel.find({ _id : id});
 

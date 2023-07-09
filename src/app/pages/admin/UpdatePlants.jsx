@@ -1,6 +1,6 @@
-import { v4 as uuidv4 } from 'uuid';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
@@ -8,38 +8,43 @@ import { Button } from '../../components/Button';
 import '../../styles/updatePlants.css';
 
 
-export const UpdatePlants = ({plants, setPlants}) => {
+export const UpdatePlants = () => {
     const params = useParams();
     const navigate = useNavigate();
     
     const [name, setName] = useState('');
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState('Classic');
     const [image, setImage] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
     const [stock, setStock] = useState(0);
     const [light, setLight] = useState(1);
     const [water, setWater] = useState(1);
-    const [isTimeoutComplete, setIsTimeoutComplete] = useState(false);
-   
+    const [isUpdate, setIsUpdate] = useState(false);
+    
     const [plant, setPlant] = useState(null);
     
+    async function handlePlantById(id){
+        try{
+            const response = await axios.get(`http://localhost:8080/plant/${id}`);
+            if(response.status === 200){
+                setPlant(response.data[0]);
+            }
+        } catch(error){
+            console.log(error)
+        }
+    }
+
     useEffect(() =>{
         if(params.itemId){
-            const itemId = params.itemId;  
-            
-            setTimeout(() => {
-                if(plants){
-                    setPlant(plants['Plants'].find(plant => (plant.id).toString() === itemId));
-                    setIsTimeoutComplete(true);
-                }
-            }, 100);
-        }
-    }, [params, plants]);
+            const itemId = params.itemId;
+            setIsUpdate(true);
+            handlePlantById(itemId);
+        }    
+    }, [])
     
     useEffect(() => {
-        if(isTimeoutComplete && plant){
-            console.log(plant.category + '1'+ category)
+        if(plant){
             // edit plant
             setName(plant.name);
             setCategory(plant.category);
@@ -50,74 +55,85 @@ export const UpdatePlants = ({plants, setPlants}) => {
             setDescription(plant.description);
             setStock(plant.stock);
         }
-    }, [plant, isTimeoutComplete]);
+    }, [plant]);
     
     
-    const handleDeleteItem = (e) => {
+    const handleDeleteItem = async (e) => {
         e.preventDefault();
-        
-        const updatedPlants = {
-            ...plants,
-            Plants: plants['Plants'].filter((item) => (item.id).toString() !== (plant.id).toString())
-        };
-        
-        setPlants(updatedPlants);
+
+        console.log(plant._id);
+
+        try{
+            const response = await axios.delete(`http://localhost:8080/plant/${plant._id}`)
+            if(response.status === 200){
+                alert('Planta Deletada com sucesso!');
+                navigate('/shoplist');    
+            }
+        } catch(error){
+            console.log(error)
+        }
     }
 
-    const handleEditItem = (e) => {
+    const handleEditItem = async (e) => {
         e.preventDefault();
         
         const updatedPlant = {
             ...plant,
-            name: name,
-            category: category,
-            cover: image,
-            price: price,
-            description: description,
-            stock: stock,
-            light: light,
-            water: water
+            "name": name,
+            "category": category,
+            "cover": image,
+            "price": price,
+            "description": description,
+            "stock": stock,
+            "light": light,
+            "water": water
         };
-      
-        const updatedPlants = {
-            ...plants,
-            Plants: plants['Plants'].map((item) =>
-                (item.id).toString() === (plant.id).toString() ? updatedPlant : item
-            )
-        };
-      
-        setPlants(updatedPlants);
-        navigate('/shoplist');
+
+        console.log(description);
+
+        try{
+            const response = await axios.put(`http://localhost:8080/plant/${updatedPlant._id}`, updatedPlant)
+            if(response.status === 200){
+                alert('Planta Editada com sucesso!');
+                navigate('/shoplist');       
+            }
+        } catch(error){
+            console.log(error)
+        }
+
     };
       
-    const handleCreateItem = (e) => {
+    const handleCreateItem = async (e) => {
         e.preventDefault();
-        
         const newPlant = {
-            name: name,
-            category: category,
-            id: uuidv4(),
-            isBestSale: false,
-            light: light,
-            water: water,
-            cover: image,
-            price: price,
-            description: description,
-            stock: stock,
+            "name": name,
+            "category": category,
+            "isBestSale": false,
+            "light": light,
+            "water": water,
+            "cover": image,
+            "price": price,
+            "description": description,
+            "stock": stock,
         }
-        
-        setPlants(prevState => ({
-            ...prevState,
-            Plants: [...prevState.Plants, newPlant]
-          }));
-          
-          navigate.call(`/admin/${newPlant.id}`)
+
+        console.log(newPlant)
+
+        try{
+            const response = await axios.post(`http://localhost:8080/plant/add`, newPlant)
+            if(response.status === 200){
+                alert('Planta Adicionada com sucesso!');
+                navigate('/shoplist');    
+            }
+        } catch(error){
+            console.log(error)
+        }
     }
     
     return (
         <div id='update-screen'>
             <div id='update-title'>
-                { isTimeoutComplete && plant ?
+                { isUpdate ?
                     <h1>Edit Item</h1>
                     :
                     <h1>Add Item</h1>
@@ -147,14 +163,14 @@ export const UpdatePlants = ({plants, setPlants}) => {
                 
                 <div className='div-input'>                    
                     <label className='label-text'>Description</label>
-                    <textarea defaultValue={description} className='textarea'></textarea>
+                    <textarea defaultValue={description} onChange={(e) => setDescription(e.target.value)} className='textarea' />
                 </div>
                 
                 <Input require={true} label={'Amount of light needed'} type={'number'} max="5" min="1" value={light} setValue={setLight}/>
                 <Input require={true} label={'Amount of water needed'} type={'number'} max="5" min="1" value={water} setValue={setWater}/>
                 
                 <div className='div-button'>    
-                    { isTimeoutComplete && plant ?
+                    { isUpdate ?
                         <>
                             <Link to={'/shoplist'}>  
                                 <Button text={'Edit'} onClick={handleEditItem} className={'filled-button'}/>

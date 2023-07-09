@@ -1,6 +1,7 @@
 
 import PlantModel from "../models/plant-model.js";
 import plantService from "../services/plant-service.js";
+import { isValidObjectId } from "mongoose";
 
 const plantController = {
     createPlant: async (req, res) => {
@@ -14,6 +15,9 @@ const plantController = {
     
     deletePlant: async (req, res) => {
         const id = req.params.id;
+
+        if(!isValidObjectId(id))
+            return res.status(404).send("Plant not found");
         
         const plant = await plantService.deletePlant(id);
     
@@ -25,7 +29,10 @@ const plantController = {
     
     updatePlant: async (req, res) => {
         const id = req.params.id;
-        
+
+        if(!isValidObjectId(id))
+            return res.status(404).send("Plant not found");
+
         const updatedPlant = await plantService.updatePlant(id, req.body);
 
         if(updatedPlant)
@@ -46,6 +53,9 @@ const plantController = {
     getPlant: async (req, res) => {
         const id = req.params.id;
        
+        if(!isValidObjectId(id))
+            return res.status(404).send("Plant not found");
+
         const plantFound = await plantService.getPlant(id);
         
         if(plantFound)

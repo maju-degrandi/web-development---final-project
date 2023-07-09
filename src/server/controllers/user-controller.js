@@ -3,6 +3,20 @@ import userModel from '../models/user-model.js'
 import userService from '../services/user-service.js';
 
 const authController = {
+    listUsers: async (req, res) => {
+        try {
+            const users = await userService.getUsers();
+
+            if(users)
+                return res.status(200).json(users);
+            else
+                return res.status(500).json( {message: 'Error in Mongo.'} )
+        } catch (error) {
+            console.error(`Error get users: ${error}`);
+            return res.status(500).json({ message: `Error fetching users.` })
+        }
+    },
+    
     logout: async (req, res) => {
         console.log(req.session.email); 
         req.session.destroy((err) => {
@@ -10,7 +24,7 @@ const authController = {
             return res.status(500).json({ message: 'Session destroy error.'})   
         }else {
             res.clearCookie('user-session');
-            return res.status(200).json({ message:'Session finished' });
+            return res.status(200).json({ message: 'Session finished!' });
         }
         });  
     },
@@ -79,14 +93,17 @@ const authController = {
     },
     
     updateUserAdm: async (req, res) => {
-        const { id } = req.params;
+        const { idUser } = req.body;
+        const { idAdmin } = req.body;
         
         try {
-            const user = userService.updateUserAdm(id);
+            const user = await userService.updateUserAdm(idUser, idAdmin);
             
-            if (!user)
+            if (user === -1)
+                return res.status(404).json({ message: "You don't have permission." });
+            else if (user === -2)
                 return res.status(404).json({ message: "User not found" });
-        
+            
             return res.status(200).json({ message: `Field 'adm' successfully updated to ${user.adm}` });
         } catch (error) {
             console.error("Error updating 'adm' field", error);

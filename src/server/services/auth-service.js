@@ -12,8 +12,9 @@ const userService = {
         
         return hash;
     },
+    
     signin: async (email, password, res) => {
-        const user = await UserModel.findOne({ email: email});
+        const user = await UserModel.findOne({ email: email });
 
         if(user === null){
             res.status(401).json({message:"Email not found."});
@@ -24,7 +25,7 @@ const userService = {
             res.status(401).json({message:"Invalid password."});
             return null;
         }
-            
+           
         return user;
     }
 }

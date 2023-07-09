@@ -1,10 +1,23 @@
 import * as React from 'react';
 import '../../styles/input.css';
 
-export const Input = ({ label, type, name, require, max, min, value, setValue, onChange, className}) => {
+export const Input = (
+    {   
+        label, type, name, require, 
+        max, min,
+        value, setValue, 
+        onChange, 
+        className
+    }
+    ) => {
     const handleInputChange = (event) => {
-        if(setValue)
-            setValue(event.target.value);
+        if(setValue){
+            if (type === 'radio') {
+                setValue(value);
+            }
+            else
+                setValue(event.target.value);
+        }
     };
     
     const handOnChange = (event) => {
@@ -24,6 +37,8 @@ export const Input = ({ label, type, name, require, max, min, value, setValue, o
                         type='radio'
                         name={name} 
                         required={require}
+                        
+                        onChange={handleInputChange}
                     />
                 </>
             ) : type === 'number' ? (

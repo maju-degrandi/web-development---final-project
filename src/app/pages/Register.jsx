@@ -1,44 +1,104 @@
-import * as React from 'react';
-import '../styles/forms.css';
+import { useState  } from 'react';
+// import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 import backimage from "../assets/flor-fundo1.png";
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 
+import '../styles/forms.css';
+
 export const PageRegister = () => {
-    function handleRegister(){
-        console.log('');
+    // const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [person, setPerson] = useState('');
+    const [name, setName] = useState('');
+    const [cpf, setCpf] = useState('');
+    const [dayOfBirth, setDayOfBirth] = useState('');
+    const [cep, setCep] = useState('');
+    const [street, setStreet] = useState('');
+    const [number, setNumber] = useState('');
+    const [obs, setObs] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    
+    async function handleRegister(e){
+        e.preventDefault();
+        
+        // Verificar se as senhas correspondem
+        if (password !== confirmPassword) {
+            alert('As senhas não correspondem.');
+            return;
+        }
+        
+        const user = {
+            name: name,
+            email: email,
+            password: password,
+            person: person,
+            cpf: cpf,
+            birthday: dayOfBirth,
+            address: {
+              cep: cep,
+              street: street,
+              number: number,
+              obs: obs
+            },
+          };
+        
+        await axios.post('http://localhost:8080/signup', user)
+        .then(response => {
+            console.log(response)
+            if(response.status === 200){
+                alert('Successfully registered profile!');
+                navigate('/login');
+            }else{
+                console.log(response);
+                alert(`${response.data.message}`);
+            }
+        }).catch(error => {
+            console.error(error);
+            alert(error);
+        });
     }
 
     return (
-         <div className="basic-form" action={handleRegister}>
-                <h1 className="title">Register</h1>
+        <div className="basic-form">
+            <h1 className="title">Register</h1>
 
-                <figure className='background-login'>
-                    <img id="background-image1" src={backimage}/>
-                </figure>
-                <form className="basic-form-form" >
-                    <Input label="E-mail*: " input="email" type="email" require={true}/>
-                    <div className='person-form'>
-                        <label>Person: </label>
-                        <Input label="Physical" input="email" type="radio" name="person" require={true}/>
-                        <Input label="Legal" input="email" type="radio" name="person" require={true}/>
-                    </div>
-                    <Input label="Full Name*: " input="full-name" type="text" require={true}/>
-                    <Input label="CPF*: " input="cpf" type="text" require={true}/>
-                    <Input label="Day of birth*: " input="day-of-birth" type="date" require={true}/>
-                    <div className='flex-form'>
-                        <Input label="CEP*: " input="day-of-birth" type="text" require={true}/>
-                        <Input label="Street*: " input="street" type="text" require={true}/>
-                        <Input label="Number*: " input="numeber" type="text" require={true}/>
-                        <Input label="Observation: " input="obs" type="text" require={false}/>
+            <figure className='background-login'>
+                <img id="background-image1" src={backimage}/>
+            </figure>
+            <form className="basic-form-form"  onSubmit={handleRegister}>
+                <Input label="E-mail*: " type="email" setValue={setEmail} require={true}/>
+                <div className='person-form'>
+                    <label htmlFor='person'>Person:</label>
+                    <Input label="Physical" type="radio" name="person" value={'P'} setValue={setPerson} require={true}/>
+                    <Input label="Legal" type="radio" name="person" value={'L'} setValue={setPerson} require={true}/>
+                </div>
+                <Input label="Full Name*: " type="text" setValue={setName} require={true}/>
+                {   
+                    person === 'P' &&
+                    <Input label="CPF*: " type="text" setValue={setCpf} require={true}/>
+                }
+                {
+                    person === 'L' &&
+                    <Input label="CNPJ*: " type="text" setValue={setCpf} require={true}/>
+                }
+                <Input label="Day of birth*: "  type="date" setValue={setDayOfBirth} require={true}/>
+                <div className='flex-form'>
+                    <Input label="CEP*: "  type="text"  setValue={setCep} require={true}/>
+                    <Input label="Street*: " type="text" setValue={setStreet} require={true}/>
+                    <Input label="Number*: " type="text" setValue={setNumber} require={true}/>
+                    <Input label="Observation: " type="text" setValue={setObs} require={false}/>
 
-                    </div>
-                    <div className='flex-form'>
-                        <Input label="Password: " input="password" type="password" require={true}/>
-                        <Input label="Confirm password: " input="c-password" type="password" require={true}/>
-                    </div>
-                    <Button text="REGISTER" className="basic-button" type="submit" />
-                </form>
-         </div>
+                </div>
+                <div className='flex-form'>
+                    <Input label="Password: " type="password" setValue={setPassword} require={true}/>
+                    <Input label="Confirm password: " type="password" setValue={setConfirmPassword} require={true}/>
+                </div>
+                <Button text="REGISTER" className="basic-button" type="submit" />
+            </form>
+        </div>
     );
 };

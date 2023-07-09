@@ -25,10 +25,10 @@ export const UpdateUser = ({ user, setUser }) => {
   const [cep, setCep] = useState(user.address.cep);
   const [street, setStreet] = useState(user.address.street);
   const [number, setNumber] = useState(user.address.number);
-  const [country, setCountry] = useState(user.address.country);
-  const [city, setCity] = useState(user.address.city);
-  const [state, setState] = useState(user.address.state);
   const [obs, setObs] = useState(user.address.obs);
+  // const [country, setCountry] = useState(user.address.country);
+  // const [city, setCity] = useState(user.address.city);
+  // const [state, setState] = useState(user.address.state);
 
   // Ainda não funciona
   const handleEditUser = async e => {
@@ -39,10 +39,10 @@ export const UpdateUser = ({ user, setUser }) => {
       name: name,
       birth: birth,
       address: {
-        country: country,
+        // country: country,
         cep: cep,
-        state: state,
-        city: city,
+        // state: state,
+        // city: city,
         street: street,
         number: number,
         obs: obs
@@ -79,10 +79,10 @@ export const UpdateUser = ({ user, setUser }) => {
 
             <div>
               <h2>Address</h2>
-              <Input label={'Country'} type={'text'} require={true} value={country} setValue={setCountry} />
+              {/* <Input label={'Country'} type={'text'} require={true} value={country} setValue={setCountry} /> */}
               <Input label={'CEP'} type={'text'} require={true} value={cep} setValue={setCep} />
-              <Input label={'State'} type={'text'} require={true} value={state} setValue={setState} />
-              <Input label={'City'} type={'text'} require={true} value={city} setValue={setCity} />
+              {/* <Input label={'State'} type={'text'} require={true} value={state} setValue={setState} /> */}
+              {/* <Input label={'City'} type={'text'} require={true} value={city} setValue={setCity} /> */}
               <Input label={'Street'} type={'text'} require={true} value={street} setValue={setStreet} />
               <Input label={'Number'} type={'text'} require={true} value={number} setValue={setNumber} />
               <Input label={'Observations'} type={'text'} value={obs} setValue={setObs} />

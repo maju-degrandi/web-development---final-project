@@ -39,10 +39,10 @@ const authController = {
                 person : req.body.person,
                 address : req.body.address,
                 birthday : req.body.birthday
-            }) 
+            });
             
             const login = await authService.signup(newUser.email, newUser.password);
-    
+            
             if(!login) return res.status(406).send("Email already exists.");
     
             newUser.password = login;

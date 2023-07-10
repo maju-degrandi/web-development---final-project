@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 
 import PlantItem from "../components/ShopList/plantItem";
-import { Button } from "../components/Button"
+import { Button } from "../components/Button";
 import "../styles/shoplist.css";
 
 export const PageShopList = ({ user }) => {
@@ -61,7 +61,7 @@ export const PageShopList = ({ user }) => {
                                     light={light}
                                     price={price}
                                     />
-                                {   user.admin ?
+                                {   user.adm ?
                                         <Link to={'/admin/add-item/' + _id}>
                                             <div className="button-add">
                                                 <Button text={'Edit'} className={'add filled-button'}/>
@@ -91,7 +91,7 @@ export const PageShopList = ({ user }) => {
                         } 
             </ul>
             {
-                user.admin &&
+                user.adm &&
                 <>
                     <Link to={'/admin/add-item/'}>
                         <div className="button-add">

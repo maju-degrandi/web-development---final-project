@@ -62,6 +62,7 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
     
     function handleCheckoutShip(e){
         e.preventDefault();
+        alert(`Shipping price is successfully done`);
         setShipping(5.32);
         setDoneShip(true);
     }
@@ -165,7 +166,7 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
                 </div>
                 
                 <div className='checkout-pay'>
-                    <PaymentScreen setDonePay={setDonePay} setDiscount={setDiscount}/>
+                    <PaymentScreen setDonePay={setDonePay} discount={discount} setDiscount={setDiscount}/>
                 </div>
             </div>
             

@@ -112,7 +112,13 @@ export const Item = ( {updateCart, id, cart, setCart} ) => {
                                 <Input type={'number'} name={'quant'} min={'1'} max={stock} value={qtt} setValue={setQtt} onChange={handleChangeQuantity}/>
                             </div>
                             <Link to='/cart'>
-                                <Button className="filled-button buy-button" onClick={handleAddToCart} text="ADD TO CART"/>
+                                {
+                                    stock === 0 ?
+                                    <Button className="filled-button buy-button" onClick={handleAddToCart} text="ADD TO CART" disabled={true}/>
+                                    :
+                                    <Button className="filled-button buy-button" onClick={handleAddToCart} text="ADD TO CART" disabled={false}/>
+                                    
+                                }   
                             </Link>
                         </div>
                     </div>

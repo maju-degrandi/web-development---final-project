@@ -9,7 +9,7 @@ import '../../styles/cart.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export const PageOrders = ({user, setUser, plants}) => {
+export const PageOrders = ({user, setUser}) => {
 
     const [orders, setOrders] = useState(null);
 
@@ -40,22 +40,6 @@ export const PageOrders = ({user, setUser, plants}) => {
         handleGetOrders(user);
         
     }, []);
-    
-    // useEffect(()=>{
-    //     console.log(orders);
-        
-    // }, [orders]);
-    
-    // const handleCheckOrders = (user) => {
-    //     return orderData['Orders'].filter((order) => order.email === user.email);
-    // }
-    
-    // useEffect(() =>{
-    //     if(user){
-    //         // setOrders(handleCheckOrders(user));
-    //         console.log(orders);
-    //     }
-    // }, [user]);
 
 
     return (
@@ -66,7 +50,7 @@ export const PageOrders = ({user, setUser, plants}) => {
             </div>
             <div id='checkout-main'>
                 <div className='checkout-items'>
-                    <OrdersList orders={orders} plants={plants}/>
+                    <OrdersList orders={orders} />
                 </div>
             </div>
             

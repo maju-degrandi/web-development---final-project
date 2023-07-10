@@ -7,7 +7,7 @@ import PlantItem from "../components/ShopList/plantItem";
 import { Button } from "../components/Button"
 import "../styles/shoplist.css";
 
-export const PageShopList = ({user}) => {
+export const PageShopList = ({ user }) => {
     const [plants, setPlants] = useState(null)
     const [plant, setPlant] = useState(null);
     const [ search, setSearchParams] = useSearchParams();

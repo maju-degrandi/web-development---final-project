@@ -61,6 +61,22 @@ const plantController = {
             return res.status(200).json(plantFound);
 
         return res.status(404).send("Plant not found");
+    },
+
+    decreaseStock: async (req, res) => {
+        const id = req.params.id;
+
+        if(!isValidObjectId(id))
+            return res.status(404).send("Plant not found");
+
+        const plantUpdated = await plantService.decreaseStock(id, req.body);
+
+        if(plantUpdated)
+            return res.status(200).json(plantUpdated);
+
+        return res.status(404).send("Plant not found");
+
+
     }
 }
 

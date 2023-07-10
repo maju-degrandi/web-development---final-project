@@ -98,13 +98,15 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
                 console.log(newItemOrder);
     
                 try{
-                    const response = await axios.post(`http://localhost:8080/item-order/add`, newItemOrder);
-                    console.log(response);
-                    return response;
+                    const newitem = await axios.post(`http://localhost:8080/item-order/add`, newItemOrder);
+                    console.log(newitem);
+
+                    const update = await axios.put(`http://localhost:8080/plant/decrease-stock/${item._id}`, {"qtt": item.qtt});
+                    console.log(update);
+
                 } catch(error){
                     alert('Something went wrong.');
                     console.log(error);
-                    return null;
                 }
             }
         })

@@ -6,6 +6,7 @@ const router = express.Router();
 router.post('/plant/add', PlantController.createPlant);    
 router.delete('/plant/:id', PlantController.deletePlant);    
 router.put('/plant/:id', PlantController.updatePlant);
+router.put('/plant/decrease-stock/:id', PlantController.decreaseStock);
 router.get('/plant/:id', PlantController.getPlant);    
 router.get('/plant', PlantController.getAllPlants);
 

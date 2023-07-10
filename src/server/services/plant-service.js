@@ -47,6 +47,19 @@ const plantService = {
             return null;            
         }
     },
+    decreaseStock: async (id, body) => {
+        try{
+            const updatedPlant = await PlantModel.findOneAndUpdate(
+                { _id: id }, 
+                {$inc: { stock: - body.qtt }},
+                {new: true}
+                );
+            return updatedPlant;
+
+        }catch{
+            return null;            
+        }
+    },
     getPlant: async (id) => {
 
         const plantFound = await PlantModel.find({ _id : id});

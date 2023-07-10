@@ -26,6 +26,7 @@ export const PageLogin = ({setUser}) => {
         // set the state of the user
         if(response) {
             // store the user in localStorage
+            sessionStorage.setItem('user', user.email);
             setUser(response);
             updateUserInLocalStorage(user);
             

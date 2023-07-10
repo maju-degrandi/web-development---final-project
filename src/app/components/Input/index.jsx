@@ -50,7 +50,9 @@ export const Input = (
                         min={min}
                         name={name} 
                         required={require}
-                        
+                        onKeyDown={(e) => e.preventDefault()}
+                        onWheel={(e) => e.preventDefault()}
+                                                
                         value={value}
                         onChange={handleInputChange}
                     />

@@ -28,7 +28,7 @@ export const CartItem = ({ updateCart, item, cart, blocked }) => {
                 <div className="title-price">
                     <span className="cart-item-name" data-test_id={'Item ' + 1} >{item.name} </span> 
                     <br/>
-                    <span className="cart-item-name">$ {item.price}</span>
+                    <span className="cart-item-name">$ {item.price*item.qtt}</span>
                 </div>
             </div>
             

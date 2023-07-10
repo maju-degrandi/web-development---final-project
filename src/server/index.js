@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
-import session from 'express-session'
+import session from 'express-session';
 
 // Routes
 import plantRouter from './routes/plant-router.js'
@@ -18,11 +18,8 @@ app.use(cors());
 app.use(session({
     name: 'user-session',
     secret: 'AbEsfqsfgjrafasfxj',
-    resave: true,
-    saveUninitialized: true,
-    cookie: {
-        sameSite: 'strict'
-    }
+    resave: false,
+    saveUninitialized: false
 }));
 app.use(express.json());
 app.use(cookieParser());

@@ -1,0 +1,26 @@
+td {
+    text-align: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.on {
+  border-color: green;
+}
+
+.off {
+  border-color: red;
+}
+
+table {
+    margin-bottom: 50px;
+}
+
+td button {
+    margin: 0 5px 0 0;
+}

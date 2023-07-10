@@ -1,0 +1,46 @@
+.plant-list {
+	list-style-type: none;
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+    min-height: 500px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.shoplist #checkout-main:nth-child(1) {
+    background-color: red !important;
+}
+
+.button-add{
+    text-align: center;
+    padding: 10px;
+}
+
+.link{
+    color:rgba(95, 108, 55, 1);
+}
+
+.link:hover{
+    color:rgb(160, 172, 120);
+}
+
+.add{
+    width: 180px;
+    height: 60px;
+	font-family: 'Advent Pro';
+    font-size: 30px;
+    
+    background: #497856;
+    color: white;
+}
+
+.add:hover{
+    background-color: #a8a8a8;
+}
+
+.plant{
+	margin: 10px 10px;
+	border-radius: 20px;
+}

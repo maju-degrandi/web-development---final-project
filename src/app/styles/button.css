@@ -1,0 +1,55 @@
+/* button-outline -> unfilled-button */
+.unfilled-button:hover{
+    background-color: #5F6C37;
+    color: white;
+}
+
+.unfilled-button{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #5F6C37;
+    color: #5F6C37;
+}
+
+.filled-button{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    background-color: rgb(73, 120, 86);
+    border: 2px solid rgb(73, 120, 86);
+    color: white;
+}
+
+.filled-button:hover{
+    background-color: rgb(53, 84, 61);
+    border: 2px solid rgb(53, 84, 61);
+}
+    
+button {
+    display: inline-table;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(73, 120, 86);
+    border: 2px solid rgb(73, 120, 86);
+    font-family: 'Advent Pro';
+    font-size: x-large;
+    color: white;
+    /* width: 120px;
+    height: 65px; */
+    overflow: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.full {
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .filled-button{
+        font-size: x-large;
+    }
+}

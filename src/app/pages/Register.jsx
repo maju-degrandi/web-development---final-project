@@ -27,7 +27,7 @@ export const PageRegister = () => {
         
         // Verificar se as senhas correspondem
         if (password !== confirmPassword) {
-            alert('As senhas não correspondem.');
+            alert('Passwords do not match.');
             return;
         }
         

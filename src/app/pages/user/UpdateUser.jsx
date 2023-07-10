@@ -39,18 +39,15 @@ export const UpdateUser = ({ user, setUser }) => {
       name: name,
       birth: birth,
       address: {
-        // country: country,
         cep: cep,
-        // state: state,
-        // city: city,
         street: street,
         number: number,
         obs: obs
       },
     };
     
-    const response = await axios.put('http://localhost:8080/updateInfoUser', updatedUser);
     try {
+      const response = await axios.put('http://localhost:8080/updateInfoUser', updatedUser);
       if (response.status === 200){
         setUser(response.data);
         alert('Data updated successfully!')
@@ -60,6 +57,7 @@ export const UpdateUser = ({ user, setUser }) => {
         console.log(response.status);
       }
     } catch (error) {
+      alert('Something went wrong, please be sure you filled the fields with a valid value.');
       console.log('Error: ', error)
     }
   };
@@ -79,10 +77,7 @@ export const UpdateUser = ({ user, setUser }) => {
 
             <div>
               <h2>Address</h2>
-              {/* <Input label={'Country'} type={'text'} require={true} value={country} setValue={setCountry} /> */}
               <Input label={'CEP'} type={'text'} require={true} value={cep} setValue={setCep} />
-              {/* <Input label={'State'} type={'text'} require={true} value={state} setValue={setState} /> */}
-              {/* <Input label={'City'} type={'text'} require={true} value={city} setValue={setCity} /> */}
               <Input label={'Street'} type={'text'} require={true} value={street} setValue={setStreet} />
               <Input label={'Number'} type={'text'} require={true} value={number} setValue={setNumber} />
               <Input label={'Observations'} type={'text'} value={obs} setValue={setObs} />

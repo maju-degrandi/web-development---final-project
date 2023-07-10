@@ -28,7 +28,7 @@ export const Input = (
     
     return (
         <div className="div-input">
-            <label className={'label-' + type} htmlFor={label}>{label}</label><br />
+            <label className={'label-' + type} htmlFor={label}>{label}</label>
                 
             {type === 'radio' ? (
                 <>

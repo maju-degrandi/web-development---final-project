@@ -86,6 +86,7 @@ const authController = {
             
             const updatedUser = await userService.updateUserInfo(email, req.body);
             return res.status(200).json(updatedUser);
+            
         } catch (error) {
             console.error(error);
             return res.status(500).send("Error updating user information");

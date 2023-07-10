@@ -73,7 +73,7 @@ export const PageOrders = ({user, setUser, plants}) => {
         </div>
         <div className='profile-button'>
             <Link to={'/user'}>
-                <Button text={'Voltar'} className={'unfilled-button'}></Button>
+                <Button text={'Back'} className={'unfilled-button'}></Button>
             </Link>
         </div>
         </>

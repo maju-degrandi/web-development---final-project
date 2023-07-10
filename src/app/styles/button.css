@@ -7,6 +7,7 @@
 .unfilled-button{
     width: fit-content;
     height: fit-content;
+    padding: 10px 20px;
     background-color: transparent;
     border: 2px solid #5F6C37;
     color: #5F6C37;
@@ -15,18 +16,19 @@
 .filled-button{
     width: fit-content;
     height: fit-content;
+    padding: 10px 20px;
     background-color: rgb(73, 120, 86);
     border: 2px solid rgb(73, 120, 86);
     color: white;
 }
 
 .filled-button:hover{
-    /* border: 3px solid #515d30; */
     background-color: rgb(53, 84, 61);
     border: 2px solid rgb(53, 84, 61);
 }
     
 button {
+    display: inline-table;
     width: fit-content;
     height: fit-content;
     background-color: rgb(73, 120, 86);
@@ -39,7 +41,7 @@ button {
     overflow: auto;
     border-radius: 10px;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px 20px;
 }
 
 .full {

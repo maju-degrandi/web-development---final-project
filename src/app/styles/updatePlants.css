@@ -15,12 +15,6 @@
 
 form#update-form a{
     margin: 20px 0;
-    width: 40%;
-}
-
-form#update-form a button{
-    width: 100%;
-    height: 45px;
 }
 
 .div-input label{
@@ -42,6 +36,7 @@ form#update-form a button{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 @media screen and (max-width : 600px) {

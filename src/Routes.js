@@ -13,6 +13,7 @@ import { UpdateUser } from "./app/pages/user/UpdateUser.jsx";
 import { PageOrders } from "./app/pages/user/Orders.jsx";
 
 import { UpdatePlants } from "./app/pages/admin/UpdatePlants.jsx";
+import { UserTable } from "./app/pages/admin/UpdateUsers.jsx";
 
 import { PageItem } from './app/pages/Item.jsx';
 import { PageShopList } from "./app/pages/ShopList.jsx";
@@ -21,7 +22,7 @@ import { Checkout }  from "./app/pages/Checkout.jsx";
 import { ThankYouPage } from "./app/pages/CheckoutFinish.jsx";
 
 export function MyRoutes({ user, setUser, cart, setCart, updateCart, plant, setPlant }) {
-  const isAdmin = user && user.admin; 
+  const isAdmin = user && user.adm; 
   
   return (
     <Routes>
@@ -43,6 +44,7 @@ export function MyRoutes({ user, setUser, cart, setCart, updateCart, plant, setP
         <Route path="/admin">
             <Route element={<UpdatePlants plants={plant} setPlants={setPlant} />} path="add-item/" />
             <Route element={<UpdatePlants plants={plant} setPlants={setPlant} />} path="add-item/:itemId" />
+            <Route element={<UserTable />} path="getUsers" />
         </Route>
       )}
       

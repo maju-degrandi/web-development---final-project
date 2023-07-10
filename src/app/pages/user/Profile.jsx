@@ -16,7 +16,7 @@ export const PageProfile = ({user, setUser}) => {
 
         if (loggedInUser && loggedInUser !== '{}') {
             const foundUser = JSON.parse(loggedInUser);
-            
+            console.log(foundUser)
             setUser(foundUser);
         }
     }, []);
@@ -39,9 +39,13 @@ export const PageProfile = ({user, setUser}) => {
                         <p>Address: {user.address && user.address.CEP} {user.address && user.address.street}</p>
                     </div>
                     <div className='div-buttons'>
-                        {!user.admin &&   
+                        {!user.adm ?  
                             <Link to="/user/myorders">
                                 <Button text="My Orders" className="filled-button basic-button"/>
+                            </Link>
+                            :
+                            <Link to="/admin/getUsers">
+                                <Button text="Users" className="filled-button basic-button"/>
                             </Link>
                         }
                         <Link to="/user/editinfo">

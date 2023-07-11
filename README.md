@@ -177,12 +177,10 @@ Linux, Windows e macOS:
 * Clone este repositório em sua máquina local:
 ```
 git clone https://github.com/maju-degrandi/web-development---final-project.git
-
 ```
 * Acesse o diretório do projeto:
 ```
 cd web-development---final-project
-
 ```
 * Acesse e instale as dependências do projeto usando o npm em ambos os diretórios:
 ```
@@ -194,7 +192,6 @@ npm install
 * Como ainda está em ambiente de teste, você precisará adicionar um arquivo .env no diretório server/ com a string de conexão de um banco no MongoDB. Ao criá-lo, adicione a linha:
 ```
 CONN_STR='string_de_conexao'
-
 ```
 
 ### ☕ Usando Beleaf
@@ -206,12 +203,10 @@ Após a conclusão da instalação e configuração, você pode executar o proje
 * Inicie o servidor no diretório server:
 ```
 npm run dev
-
 ```
 * Inicie a aplicação no diretório app/
 ```
 npm start
-
 ```
 
 

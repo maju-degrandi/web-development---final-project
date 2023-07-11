@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { Header } from './app/components/Header/index.jsx';
-import { Footer } from './app/components/Footer/index.jsx';
+import { Header } from './components/Header/index.jsx';
+import { Footer } from './components/Footer/index.jsx';
 import { MyRoutes } from "./Routes.js";
-import * as serviceLS from './app/services/localStorageUtils.js'
+import * as serviceLS from './services/localStorageUtils.js'
 
 import './App.css';
 

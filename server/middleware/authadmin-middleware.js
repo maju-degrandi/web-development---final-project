@@ -2,7 +2,7 @@
 const adminMiddleware = {
     checkAdmin : (req, res, next) => {
         const isAdmin = req.session.isAdmin; 
-        console.log(req.session)
+        
         if (isAdmin) 
           next();
         else

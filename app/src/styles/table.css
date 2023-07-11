@@ -3,11 +3,13 @@ td {
 }
 
 .circle {
+  display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 2px solid;
-}
+  background-color: transparent;
+  }
 
 .on {
   border-color: green;

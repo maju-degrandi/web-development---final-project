@@ -38,7 +38,6 @@ export const PageShopList = ({ user }) => {
     
     useEffect(() => {
         handleSetPlant();
-        console.log(plants);
     }, [plants, search]);
     
     return (    

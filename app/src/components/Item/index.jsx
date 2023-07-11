@@ -57,7 +57,7 @@ export const Item = ( {updateCart, id, cart, setCart} ) => {
 
         if(item > -1){
                 cart[0].subtotal += plant.price * qtt;
-                console.log(cart[item].stock)
+                
                 cart[item].qtt += Number(qtt);
                 if(cart[item].qtt > cart[item].stock) 
                     cart[item].qtt = cart[item].stock;

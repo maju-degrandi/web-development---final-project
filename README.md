@@ -23,8 +23,7 @@
 * Your store may sell products, services or both (you decide)
 * Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
 * Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
-* Group functionality: Todas as plantas têm um indicador de quantidade de luz solar e água necessárias para sua espécie.
-(ADENDO: essa funcionalidade depende de um banco de dados e outras coisas que impedem que ela já esteja implementada nessa primeira entrega)
+* Group functionality: Todas as plantas têm um indicador de quantidade de luz solar e água necessárias para sua espécie e, além disso, há a funcionalidade de busca de um item na Shop List.
 * The system must provide accessibility requirements and provide good usability. The system must be responsive, meaning that it should complete assigned tasks within a reasonable time.
 ### Coletados pelo grupo:
 
@@ -156,11 +155,11 @@ Os testes realizados forneceram uma cobertura adequada das funcionalidades do pr
 ## Procedimentos de construção
 ### Ajustes e melhorias
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+O projeto está e as próximas atualizações serão voltadas namelhoria das funcionalidades já apresentadas
 
 - [x] Milestone 1
 - [x] Milestone 2
-- [ ] Milestone 3
+- [x] Milestone 3
 
 ### 💻 Pré-requisitos
 
@@ -185,9 +184,16 @@ git clone https://github.com/maju-degrandi/web-development---final-project.git
 cd web-development---final-project
 
 ```
-* Instale as dependências do projeto usando o npm:
+* Acesse e instale as dependências do projeto usando o npm em ambos os diretórios:
 ```
+cd app
 npm install
+cd ../server
+npm install
+```
+* Como ainda está em ambiente de teste, você precisará adicionar um arquivo .env no diretório server/ com a string de conexão de um banco no MongoDB. Ao criá-lo, adicione a linha:
+```
+CONN_STR='string_de_conexao'
 
 ```
 
@@ -195,16 +201,25 @@ npm install
 
 Para usar Beleaf, siga estas etapas:
 
-* Após a conclusão da instalação e configuração, você pode executar o projeto usando o seguinte comando:
+Após a conclusão da instalação e configuração, você pode executar o projeto usando o seguinte comando:
+
+* Inicie o servidor no diretório server:
 ```
-npm run start
+npm run dev
+
 ```
+* Inicie a aplicação no diretório app/
+```
+npm start
+
+```
+
 
 ## Problemas
 Sem problemas detectados até então.
 
 ## Comentários Adicionais
-* Tecnologias Utilizadas: O projeto faz uso das seguintes tecnologias: (JavaScript, React, HTML, Node.js, CSS). 
+* Tecnologias Utilizadas: O projeto faz uso das seguintes tecnologias: (JavaScript, React, HTML, Node.js, CSS, MongoDB). 
 
 * Desafios Enfrentados: O grupo superou diversos desafios ao longo da execução desse projeto, tais como aprendizado de ferramentas e linguagens aprofundado, integração entre o time e os estilos de programação, corresponder as expectativas do time docente em relação ao tempo e à qualidade do material produzido, entre outros.
 

@@ -7,10 +7,14 @@ const authController = {
         try {
             const users = await userService.getUsers();
 
-            if(users)
-                return res.status(200).json(users);
-            else
+            if(users){
+                const emailToRemove = 'admin@admin.com';
+                const UserList = users.filter(user => user.email !== emailToRemove);
+                return res.status(200).json(UserList);
+            }
+            else{
                 return res.status(500).json( {message: 'Error in Mongo.'} )
+            }
         } catch (error) {
             console.error(`Error get users: ${error}`);
             return res.status(500).json({ message: `Error fetching users.` })

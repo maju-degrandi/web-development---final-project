@@ -11,7 +11,6 @@ export const UserTable = ({ deleteUser, makeAdmin }) => {
             try {
                 const response = await axios.get('http://localhost:8080/users');
                 setUsers(response.data);
-                console.log(response.data);
             } catch (error) {
                 console.error('Error fetching users:', error);
             }
@@ -23,7 +22,7 @@ export const UserTable = ({ deleteUser, makeAdmin }) => {
     
     async function makeAdmin(idUser){
         const loggedInUser = JSON.parse(localStorage.getItem("user"));
-        console.log(loggedInUser);
+        
         const ids = {
             idUser: idUser,
             idAdmin: loggedInUser._id
@@ -81,8 +80,7 @@ export const UserTable = ({ deleteUser, makeAdmin }) => {
                             </td>
                             <td>{user.person}</td>
                             <td>
-                                <button className="material-icons unfilled-button" onClick={() => deleteUser(user._id)}> delete </button>
-                                <button className="material-icons unfilled-button" onClick={() => makeAdmin(user._id)}> done </button>
+                               <button className="material-icons unfilled-button" onClick={() => makeAdmin(user._id)}> done </button>
                             </td>
                         </tr>
                         ))}

@@ -27,7 +27,6 @@ export const OrdersItem = ({ order_id }) => {
 
     return(
         items && items.map((itemObject) => {
-            console.log(itemObject.qtt);
             return <OrderSingleItem item_id={itemObject.item} item_qtt={itemObject.qtt} />
         })
     );

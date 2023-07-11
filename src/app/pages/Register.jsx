@@ -52,7 +52,6 @@ export const PageRegister = () => {
                 alert('Successfully registered profile!');
                 navigate('/login');
             }else{
-                console.log(response);
                 alert(`${response.response.data}`);
             }
         }).catch(error => {

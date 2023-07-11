@@ -74,7 +74,6 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
             "total": cart[0].total
         }
 
-        console.log(newOrder);
 
         try{
             const response = await axios.post(`http://localhost:8080/order/add`, newOrder);
@@ -89,22 +88,16 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
         e.preventDefault();
         cart.forEach(async function(item, index){
             if(index > 0){
-                console.log(item)
                 const newItemOrder = {
                     "order": orderId,
                     "item": item._id,
                     "qtt": item.qtt
                 }
     
-                console.log(newItemOrder);
-    
                 try{
                     const newitem = await axios.post(`http://localhost:8080/item-order/add`, newItemOrder);
-                    console.log(newitem);
-
+                   
                     const update = await axios.put(`http://localhost:8080/plant/decrease-stock/${item._id}`, {"qtt": item.qtt});
-                    console.log(update);
-
                 } catch(error){
                     alert('Something went wrong.');
                     console.log(error);
@@ -117,7 +110,7 @@ export const Checkout = ({cart, setCart, updateCart, user}) => {
         if(doneShip && donePay){
             // Create a order
             const orderId = await handleCreateOrder(e, user, cart);
-            console.log(orderId);
+           
             // Create each item of the cart in Item Order
             let response = null;
             if(orderId)

@@ -10,8 +10,7 @@ export const Header = ({user}) => {
     const [isOpen, setIsOpen] = useState(false);
 
     function toggle() {
-        setIsOpen(!isOpen);
-        console.log(isOpen);    
+        setIsOpen(!isOpen);    
     }
 
     return (

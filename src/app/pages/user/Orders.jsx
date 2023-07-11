@@ -16,11 +16,9 @@ export const PageOrders = ({user, setUser}) => {
     async function handleGetOrders(user){
 
         try{
-            console.log(user._id);
             const orders = await axios.get(`http://localhost:8080/order/${user._id}`);
             if(orders.status === 200){                
                 setOrders(orders.data);
-                console.log(orders.data);
             }
             
             

@@ -18,7 +18,6 @@ const authController = {
     },
     
     logout: async (req, res) => {
-        console.log(req.session.email); 
         req.session.destroy((err) => {
         if(err){
             return res.status(500).json({ message: 'Session destroy error.'})   
@@ -80,7 +79,6 @@ const authController = {
     
     updateUserInfo: async (req, res) => {
         try {
-            // ARRUMAR: Deveria ser a sessao
             // const email = req.session.email;
             const email = req.body.email;
             

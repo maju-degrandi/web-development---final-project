@@ -6,7 +6,6 @@ const orderController = {
     createOrder: async (req, res) => {
         
         try{
-            console.log(req.body);
             const newOrder = new OrderModel({
                 user: req.body.user,
                 date: req.body.date,
